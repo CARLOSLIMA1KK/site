@@ -1,15 +1,14 @@
 import Button from "./Button";
-import Pill from "./Pill";
 import MockupFrame from "./MockupFrame";
 import { SITE } from "@/lib/site";
 
 // Hero padrão das páginas internas. Aceita mockup opcional à direita.
+// Obs.: as pills (selos) ficam apenas na Home; aqui o prop é ignorado.
 export default function PageHero({
   eyebrow,
   title,
   highlight,
   subtitle,
-  pills = [],
   primary = { label: SITE.ctaPrimary, href: SITE.ctaPrimaryHref },
   secondary,
   mockup,
@@ -39,13 +38,6 @@ export default function PageHero({
                     {secondary.label}
                   </Button>
                 )}
-              </div>
-            )}
-            {pills.length > 0 && (
-              <div className="mt-8 flex flex-wrap items-center gap-2">
-                {pills.map((p) => (
-                  <Pill key={p} tone="outline">{p}</Pill>
-                ))}
               </div>
             )}
           </div>
