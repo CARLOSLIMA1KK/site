@@ -5,7 +5,6 @@ import Card from "@/components/Card";
 import Icon from "@/components/Icon";
 import SectionWrapper from "@/components/SectionWrapper";
 import StatBand from "@/components/StatBand";
-import LogoWall from "@/components/LogoWall";
 import MockupFrame from "@/components/MockupFrame";
 import WhiteLabelDemo from "@/components/WhiteLabelDemo";
 import FAQ from "@/components/FAQ";
@@ -21,7 +20,6 @@ import {
   PILLARS,
   AUDIENCES,
   FAQ_HOME,
-  PARTNER_LOGOS,
   PLATFORM_CAPABILITIES,
   ACCESS_PROFILES,
   REPORT_VIEWS,
@@ -33,13 +31,6 @@ export default function HomePage() {
   return (
     <>
       <Hero />
-
-      {/* Prova social — LogoWall */}
-      <section className="border-y border-line bg-white py-12">
-        <div className="container-page">
-          <LogoWall logos={PARTNER_LOGOS} title="Escolas e redes que já têm a sua plataforma" />
-        </div>
-      </section>
 
       {/* Impacto */}
       <StatBand
@@ -323,7 +314,7 @@ function Hero() {
       <div className="absolute -right-32 -top-32 h-96 w-96 rounded-full bg-verde-100 blur-3xl" aria-hidden="true" />
       <div className="absolute -left-40 top-40 h-96 w-96 rounded-full bg-azul-100/70 blur-3xl" aria-hidden="true" />
 
-      <div className="container-page relative py-16 sm:py-20 lg:py-28">
+      <div className="container-page relative pb-16 pt-8 sm:pb-20 sm:pt-10 lg:pb-24 lg:pt-12">
         <div className="grid items-center gap-12 lg:grid-cols-[1.05fr_1fr]">
           <div className="animate-fade-up">
             <Pill tone="verde">
