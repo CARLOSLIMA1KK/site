@@ -47,7 +47,7 @@ const COLUMNS = [
 
 export default function Footer() {
   return (
-    <footer className="bg-verde-900 text-white">
+    <footer className="surface-dark text-white">
       <div className="container-page py-16">
         <div className="grid gap-10 lg:grid-cols-[1.4fr_repeat(4,1fr)]">
           <div>

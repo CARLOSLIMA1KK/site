@@ -13,7 +13,7 @@ export default function SectionWrapper({
   className = "",
   containerClassName = "",
 }) {
-  const bg = dark ? "bg-verde-900 text-white" : soft ? "bg-bg-soft" : "bg-white";
+  const bg = dark ? "surface-dark text-white" : soft ? "bg-bg-soft" : "bg-white";
   return (
     <section id={id} className={`py-16 sm:py-20 lg:py-24 ${bg} ${className}`}>
       <div className={`container-page ${containerClassName}`}>

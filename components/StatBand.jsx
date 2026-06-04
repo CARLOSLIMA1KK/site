@@ -3,7 +3,7 @@ import { CountUp, Stagger, StaggerItem } from "./Motion";
 // Faixa escura com números de impacto em amarelo (count-up).
 export default function StatBand({ stats = [], title, subtitle }) {
   return (
-    <section className="bg-verde-900 py-16 sm:py-20 text-white">
+    <section className="surface-dark py-16 sm:py-20 text-white">
       <div className="container-page">
         {(title || subtitle) && (
           <div className="mb-12 max-w-2xl">

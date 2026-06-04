@@ -62,7 +62,7 @@ export default function PlataformaPage() {
 
       <SectionWrapper>
         <div className="grid items-center gap-10 lg:grid-cols-2">
-          <Reveal className="rounded-lg bg-verde-900 p-8 text-white">
+          <Reveal className="rounded-lg surface-dark p-8 text-white">
             <h3 className="font-display text-h3 font-bold">Infraestrutura & segurança</h3>
             <p className="mt-3 text-white/80">
               Hospedagem em nuvem com alta disponibilidade, backups e tratamento de dados em

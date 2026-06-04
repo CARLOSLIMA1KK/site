@@ -87,7 +87,7 @@ export default function RedacaoPage() {
             ["Evolução visível", "Pais e alunos enxergam o progresso da nota ao longo do ano."],
           ].map(([t, d]) => (
             <StaggerItem key={t} className="h-full">
-              <div className="h-full rounded-lg bg-verde-900 p-7 text-white">
+              <div className="h-full rounded-lg surface-dark p-7 text-white">
                 <h3 className="font-display text-xl font-bold">{t}</h3>
                 <p className="mt-2 text-[15px] text-white/80">{d}</p>
               </div>

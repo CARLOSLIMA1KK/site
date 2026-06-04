@@ -403,7 +403,7 @@ function Testimonial() {
         </Reveal>
 
         <Reveal delay={0.1}>
-          <div className="rounded-lg bg-verde-900 p-8 text-white">
+          <div className="rounded-lg surface-dark p-8 text-white">
             <p className="eyebrow text-amarelo-300">Case em números</p>
             <div className="mt-5 grid grid-cols-2 gap-6">
               {[

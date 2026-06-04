@@ -44,7 +44,7 @@ export default function ParaRedesPage() {
 
       <SectionWrapper soft>
         <div className="grid items-stretch gap-6 lg:grid-cols-3">
-          <Reveal className="lg:col-span-1 rounded-lg bg-verde-900 p-8 text-white">
+          <Reveal className="lg:col-span-1 rounded-lg surface-dark p-8 text-white">
             <Pill tone="light">Negócio de impacto</Pill>
             <h3 className="mt-4 font-display text-h3 font-bold">Educação com evidências</h3>
             <p className="mt-3 text-white/80">

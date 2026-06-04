@@ -42,7 +42,7 @@ export default function ParaEditorasPage() {
       </SectionWrapper>
 
       <SectionWrapper soft>
-        <Reveal className="rounded-lg bg-verde-900 p-8 text-white sm:p-12">
+        <Reveal className="rounded-lg surface-dark p-8 text-white sm:p-12">
           <h3 className="font-display text-h3 font-bold">Modelo de parceria</h3>
           <p className="mt-3 max-w-2xl text-white/80">
             Trabalhamos com licenciamento recorrente, normalmente por aluno ativo, com a opção de

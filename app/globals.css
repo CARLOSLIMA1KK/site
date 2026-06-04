@@ -71,6 +71,12 @@
     @apply inline-flex items-center gap-2 text-sm font-semibold uppercase tracking-[0.14em] text-verde-700;
   }
 
+  /* Superfície escura de marca: degradê navy → azul da logo */
+  .surface-dark {
+    background-color: var(--verde-900);
+    background-image: linear-gradient(135deg, #0b1033 0%, #0e1e4d 52%, #15327a 100%);
+  }
+
   /* Detalhe gráfico brasileiro abstrato: malha de pontos */
   .dot-grid {
     background-image: radial-gradient(rgba(10, 37, 64, 0.12) 1px, transparent 1px);

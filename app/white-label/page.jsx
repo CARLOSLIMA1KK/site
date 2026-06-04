@@ -84,7 +84,7 @@ export default function WhiteLabelPage() {
               />
             </ul>
           </Reveal>
-          <Reveal delay={0.1} className="rounded-lg bg-verde-900 p-8 text-white">
+          <Reveal delay={0.1} className="rounded-lg surface-dark p-8 text-white">
             <h3 className="font-display text-h3 font-bold">Para Sistemas de Ensino & Editoras</h3>
             <p className="mt-3 text-white/80">
               Embarque a KodarEdu no seu sistema ou material didático e ofereça avaliação, banco de
