@@ -5,6 +5,7 @@ import MockupFrame from "@/components/MockupFrame";
 import Card from "@/components/Card";
 import CTASection from "@/components/CTASection";
 import { Reveal, Stagger, StaggerItem } from "@/components/Motion";
+import { REPORT_VIEWS as VISOES } from "@/lib/site";
 
 export const metadata = {
   title: "Relatórios & Inteligência de Dados",
@@ -12,15 +13,6 @@ export const metadata = {
     "Relatórios por aluno, turma, disciplina, competência e habilidade. Réguas ENEM/SAEB por TRI, comparativos de evolução e integração com ERP escolar.",
   alternates: { canonical: "/plataforma/relatorios" },
 };
-
-const VISOES = [
-  { title: "Por aluno", text: "Desempenho individual, evolução e pontos de atenção." },
-  { title: "Por turma", text: "Comparativos entre turmas e ranking interno." },
-  { title: "Por disciplina", text: "Onde a escola avança e onde precisa reforçar." },
-  { title: "Por competência", text: "Leitura pedagógica alinhada à BNCC." },
-  { title: "Por habilidade", text: "Granularidade que orienta o plano de aula." },
-  { title: "Por rede", text: "Visão consolidada multiunidade para secretarias." },
-];
 
 const PRINTS = [
   { src: "/assets/prints/relatorio-gestor.svg", title: "Dashboard do gestor", text: "Indicadores-chave em uma só tela.", alt: "Painel do gestor com indicadores" },

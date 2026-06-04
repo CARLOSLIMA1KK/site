@@ -3,7 +3,14 @@ import { Stagger, StaggerItem } from "./Motion";
 
 // Lista de capacidades com check verde. Aceita strings ou {title, text}.
 export default function FeatureList({ items = [], columns = 2, icon = "check" }) {
-  const grid = columns === 1 ? "sm:grid-cols-1" : columns === 3 ? "sm:grid-cols-2 lg:grid-cols-3" : "sm:grid-cols-2";
+  const grid =
+    columns === 1
+      ? "sm:grid-cols-1"
+      : columns === 4
+        ? "sm:grid-cols-2 lg:grid-cols-4"
+        : columns === 3
+          ? "sm:grid-cols-2 lg:grid-cols-3"
+          : "sm:grid-cols-2";
   return (
     <Stagger className={`grid gap-x-8 gap-y-5 ${grid}`}>
       {items.map((item, i) => {

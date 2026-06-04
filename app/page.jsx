@@ -11,6 +11,7 @@ import WhiteLabelDemo from "@/components/WhiteLabelDemo";
 import FreeToolCTA from "@/components/FreeToolCTA";
 import FAQ from "@/components/FAQ";
 import CTASection from "@/components/CTASection";
+import FeatureList from "@/components/FeatureList";
 import { Reveal, Stagger, StaggerItem } from "@/components/Motion";
 import {
   SITE,
@@ -21,6 +22,9 @@ import {
   AUDIENCES,
   FAQ_HOME,
   PARTNER_LOGOS,
+  PLATFORM_CAPABILITIES,
+  ACCESS_PROFILES,
+  REPORT_VIEWS,
 } from "@/lib/site";
 
 const SEALS = ["White Label", "IA", "TRI", "LGPD", "Acessível"];
@@ -64,8 +68,27 @@ export default function HomePage() {
         </Stagger>
       </SectionWrapper>
 
+      {/* A Plataforma — capacidades (resumo de /plataforma) */}
+      <SectionWrapper
+        id="a-plataforma"
+        eyebrow="A Plataforma"
+        title="Um hub completo para o ciclo avaliativo"
+        subtitle="Robusta por dentro, simples por fora: tudo o que a escola precisa para avaliar, sem complexidade para quem usa."
+      >
+        <FeatureList items={PLATFORM_CAPABILITIES} columns={4} icon="check" />
+        <Reveal className="mt-8 flex flex-wrap gap-3">
+          <Button href="/plataforma" variant="secondary" arrow>
+            Conhecer a plataforma
+          </Button>
+          <Button href="/plataforma/tour" variant="ghost">
+            Fazer o tour pelas telas
+          </Button>
+        </Reveal>
+      </SectionWrapper>
+
       {/* Soluções em destaque */}
       <SectionWrapper
+        soft
         eyebrow="Soluções"
         title="Tudo o que sua escola precisa — reunido"
         subtitle="Simulados por TRI, redação com IA, banco de questões, plataforma adaptativa e relatórios. O melhor das melhores plataformas, em uma marca: a sua."
@@ -96,7 +119,7 @@ export default function HomePage() {
       </SectionWrapper>
 
       {/* White Label em destaque */}
-      <SectionWrapper soft eyebrow="White Label" title="A cara da sua marca — de verdade">
+      <SectionWrapper eyebrow="White Label" title="A cara da sua marca — de verdade">
         <Reveal>
           <WhiteLabelDemo />
         </Reveal>
@@ -105,6 +128,59 @@ export default function HomePage() {
             Conhecer a personalização
           </Button>
         </Reveal>
+      </SectionWrapper>
+
+      {/* Relatórios & Acessos (resumo de /plataforma/relatorios e /plataforma/acessos) */}
+      <SectionWrapper soft eyebrow="Inteligência de dados & acessos">
+        <div className="grid gap-10 lg:grid-cols-2">
+          {/* Relatórios */}
+          <Reveal>
+            <h2 className="font-display text-h3 font-bold text-ink">Relatórios que viram decisão</h2>
+            <p className="mt-3 text-slate">
+              A mesma avaliação, lida em vários níveis — com réguas ENEM/SAEB por TRI e integração ao
+              ERP escolar.
+            </p>
+            <ul className="mt-5 flex flex-wrap gap-2">
+              {REPORT_VIEWS.map((v) => (
+                <li key={v.title}>
+                  <Pill tone="verde">{v.title}</Pill>
+                </li>
+              ))}
+            </ul>
+            <div className="mt-6">
+              <Button href="/plataforma/relatorios" variant="ghost">
+                Ver relatórios & inteligência de dados
+              </Button>
+            </div>
+          </Reveal>
+
+          {/* Acessos & Perfis */}
+          <Reveal delay={0.1}>
+            <h2 className="font-display text-h3 font-bold text-ink">Cada perfil vê só o que precisa</h2>
+            <p className="mt-3 text-slate">
+              Acessos por nível, do aluno ao gestor de rede — simples para quem usa, seguro para a
+              instituição.
+            </p>
+            <div className="mt-5 space-y-2.5">
+              {ACCESS_PROFILES.map((p) => (
+                <div key={p.name} className="flex items-center gap-3 rounded-md border border-line bg-white px-4 py-3">
+                  <span className="flex h-9 w-9 flex-none items-center justify-center rounded-md bg-azul-100 text-azul-600">
+                    <Icon name={p.icon} size={18} />
+                  </span>
+                  <span>
+                    <span className="text-[15px] font-semibold text-ink">{p.name}</span>{" "}
+                    <span className="text-[14px] text-slate">— {p.desc}</span>
+                  </span>
+                </div>
+              ))}
+            </div>
+            <div className="mt-6">
+              <Button href="/plataforma/acessos" variant="ghost">
+                Ver acessos & permissões
+              </Button>
+            </div>
+          </Reveal>
+        </div>
       </SectionWrapper>
 
       {/* 3 pilares de autoridade */}

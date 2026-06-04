@@ -5,6 +5,7 @@ import Card from "@/components/Card";
 import Button from "@/components/Button";
 import CTASection from "@/components/CTASection";
 import { Reveal, Stagger, StaggerItem } from "@/components/Motion";
+import { PLATFORM_CAPABILITIES as CAPACIDADES } from "@/lib/site";
 
 export const metadata = {
   title: "A Plataforma — um hub para todo o ciclo avaliativo",
@@ -12,17 +13,6 @@ export const metadata = {
     "Plataforma em nuvem, leve, 100% responsiva e acessível. White label, com acessos por perfil, provas híbridas e suporte humano por WhatsApp.",
   alternates: { canonical: "/plataforma" },
 };
-
-const CAPACIDADES = [
-  { title: "Em nuvem e leve", text: "Roda no navegador, sem instalação e sem infraestrutura sua." },
-  { title: "100% responsiva", text: "Mesma experiência no computador, tablet e celular." },
-  { title: "Acessível (AA)", text: "Recursos para baixa visão e daltonismo, navegação por teclado." },
-  { title: "Personalizável (white label)", text: "A cara da sua marca: cores, logo, links e domínio." },
-  { title: "Acessos por nível", text: "Cada perfil vê só o que precisa, do aluno ao gestor." },
-  { title: "Provas híbridas", text: "Online, impressas ou as duas — com leitor de gabarito." },
-  { title: "Suporte humano", text: "Atendimento por WhatsApp, inclusive nos fins de semana." },
-  { title: "Segura e em conformidade", text: "Infraestrutura em nuvem e tratamento de dados conforme a LGPD." },
-];
 
 const PERFIS = [
   { title: "Aluno", text: "Faz avaliações, vê notas, trilhas e evolução.", icon: "rocket", print: "/assets/prints/simulado-andamento.svg" },

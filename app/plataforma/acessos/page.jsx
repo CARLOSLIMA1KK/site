@@ -3,6 +3,7 @@ import SectionWrapper from "@/components/SectionWrapper";
 import Icon from "@/components/Icon";
 import CTASection from "@/components/CTASection";
 import { Reveal } from "@/components/Motion";
+import { ACCESS_PROFILES as PROFILES } from "@/lib/site";
 
 export const metadata = {
   title: "Acessos & Perfis",
@@ -10,14 +11,6 @@ export const metadata = {
     "Cada perfil vê e faz exatamente o que precisa: aluno, professor/corretor, coordenação, gestor e rede (multiunidade). Veja a tabela de permissões.",
   alternates: { canonical: "/plataforma/acessos" },
 };
-
-const PROFILES = [
-  { name: "Aluno", desc: "Faz avaliações, vê notas, trilhas e evolução." },
-  { name: "Professor", desc: "Cria, aplica e corrige avaliações e redações." },
-  { name: "Coordenação", desc: "Acompanha turmas e indicadores pedagógicos." },
-  { name: "Gestor", desc: "Visão completa da escola e relatórios." },
-  { name: "Rede", desc: "Consolidação multiunidade para secretarias." },
-];
 
 // matriz: cada permissão x perfis [aluno, prof, coord, gestor, rede]
 const PERMISSIONS = [
