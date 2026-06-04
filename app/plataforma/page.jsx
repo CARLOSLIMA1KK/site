@@ -25,9 +25,9 @@ export default function PlataformaPage() {
     <>
       <PageHero
         eyebrow="A Plataforma"
-        title="Um hub para todo o"
+        title="Uma plataforma completa para todo o"
         highlight="ciclo avaliativo."
-        subtitle="Criar, aplicar, corrigir e analisar — em uma plataforma em nuvem, acessível e white label, que sua escola adota sem precisar de TI."
+        subtitle="Criar, aplicar, corrigir e analisar — provas, simulados, redação e relatórios em uma plataforma em nuvem, acessível e white label, que sua escola adota sem precisar de TI."
         pills={["White Label", "Acessível", "Nuvem", "Híbrida"]}
         secondary={{ label: "Fazer o tour", href: "/plataforma/tour" }}
         mockup={{

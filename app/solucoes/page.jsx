@@ -43,9 +43,9 @@ export default function SolucoesPage() {
     <>
       <PageHero
         eyebrow="Soluções"
-        title="O melhor das melhores plataformas,"
+        title="Tudo o que sua escola precisa para avaliar,"
         highlight="reunido na sua marca."
-        subtitle="Avaliação, conteúdo e gestão em um só lugar — com tag de formato (digital, impresso ou híbrido) em cada solução."
+        subtitle="Uma plataforma completa: avaliação, conteúdo e gestão em um só lugar — com tag de formato (digital, impresso ou híbrido) em cada solução."
         pills={["Digital", "Impresso", "Híbrido", "White Label"]}
       />
 
