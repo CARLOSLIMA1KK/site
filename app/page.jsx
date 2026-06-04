@@ -10,7 +10,7 @@ import WhiteLabelDemo from "@/components/WhiteLabelDemo";
 import FAQ from "@/components/FAQ";
 import CTASection from "@/components/CTASection";
 import FeatureList from "@/components/FeatureList";
-import Highlight from "@/components/Highlight";
+import TypingHeadline from "@/components/TypingHeadline";
 import { Reveal, Stagger, StaggerItem } from "@/components/Motion";
 import {
   SITE,
@@ -320,10 +320,7 @@ function Hero() {
       <div className="container-page relative pb-16 pt-8 sm:pb-20 sm:pt-10 lg:pb-24 lg:pt-12">
         <div className="grid items-center gap-12 lg:grid-cols-[1.05fr_1fr]">
           <div className="animate-fade-up">
-            <h1 className="font-display text-display font-extrabold text-ink">
-              A plataforma educacional <Highlight color="amarelo">completa</Highlight>.{" "}
-              <span className="text-verde-700">Com a sua marca.</span>
-            </h1>
+            <TypingHeadline />
             <p className="mt-5 max-w-xl text-lg leading-relaxed text-slate">
               Crie, aplique, corrija e analise avaliações com tecnologia inteligente, de provas e
               simulados por TRI à redação com IA e relatórios. Tudo white label, sem precisar de equipe
