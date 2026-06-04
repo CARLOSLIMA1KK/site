@@ -1,8 +1,8 @@
 # Prompts de imagem — Personas da Home (KodarEdu)
 
-Gere 5 fotos (uma por perfil) e salve **com estes nomes exatos**, substituindo os placeholders:
+Gere 4 fotos (uma por perfil) e salve **com estes nomes exatos**, substituindo os placeholders:
 
-- `aluno.jpg` · `professor.jpg` · `coordenacao.jpg` · `gestor.jpg` · `rede.jpg`
+- `aluno.jpg` · `professor.jpg` · `gestao.jpg` (Gestor/Coordenação) · `rede.jpg`
 
 **Specs:** proporção **4:3 (horizontal)**, ~1200×900px ou maior, foto **sem texto/legenda**,
 deixe um respiro no canto superior esquerdo (lá entra um selo de ícone). Use a mesma
@@ -26,17 +26,12 @@ fotógrafa/estilo nas 5 para ficarem coesas.
 > tablet and gesturing while explaining, warm engaged expression, blurred desks and whiteboard in the
 > background. Approachable and professional. [+ estilo compartilhado]
 
-## 3) coordenacao.jpg
-> A Brazilian pedagogical coordinator, 35–50 years old, reviewing performance charts on a laptop or
-> tablet at a desk, thoughtful and confident, light office with plants softly blurred, holding a pen.
-> Analytical, caring, organized mood. [+ estilo compartilhado]
+## 3) gestao.jpg  (Gestor / Coordenação)
+> A Brazilian school manager or pedagogical coordinator, 38–52 years old, at a desk reviewing
+> performance charts on a laptop and printed reports, thoughtful and confident, light office with
+> plants softly blurred, holding a pen. Analytical, organized, leadership mood. [+ estilo compartilhado]
 
-## 4) gestor.jpg
-> A Brazilian school director/manager, 40–55 years old, in a bright modern office, looking confidently
-> at a dashboard on a monitor or tablet, well dressed (smart casual), subtle smile, blurred office
-> background. Leadership and trust. [+ estilo compartilhado]
-
-## 5) rede.jpg
+## 4) rede.jpg
 > A Brazilian education-network manager or secretary of education, 40–55 years old, in a more
 > institutional/corporate setting, confident posture, reviewing data on a large screen or tablet,
 > professional attire, blurred modern office or meeting room. Strategic, institutional, trustworthy.

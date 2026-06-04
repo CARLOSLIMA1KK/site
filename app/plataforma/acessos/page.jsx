@@ -15,17 +15,17 @@ export const metadata = {
   alternates: { canonical: "/plataforma/acessos" },
 };
 
-// matriz: cada permissão x perfis [aluno, prof, coord, gestor, rede]
+// matriz: cada permissão x perfis [aluno, professor, gestor/coordenação, rede]
 const PERMISSIONS = [
-  ["Realizar avaliações", [true, false, false, false, false]],
-  ["Ver evolução pessoal", [true, false, false, false, false]],
-  ["Criar e aplicar provas", [false, true, false, false, false]],
-  ["Corrigir redações", [false, true, false, false, false]],
-  ["Relatórios de turma", [false, true, true, true, true]],
-  ["Relatórios da escola", [false, false, true, true, true]],
-  ["Gestão de usuários", [false, false, true, true, true]],
-  ["Visão multiunidade", [false, false, false, false, true]],
-  ["Configurar white label", [false, false, false, true, true]],
+  ["Realizar avaliações", [true, false, false, false]],
+  ["Ver evolução pessoal", [true, false, false, false]],
+  ["Criar e aplicar provas", [false, true, false, false]],
+  ["Corrigir redações", [false, true, false, false]],
+  ["Relatórios de turma", [false, true, true, true]],
+  ["Relatórios da escola", [false, false, true, true]],
+  ["Gestão de usuários", [false, false, true, true]],
+  ["Visão multiunidade", [false, false, false, true]],
+  ["Configurar white label", [false, false, true, true]],
 ];
 
 export default function AcessosPage() {
@@ -142,8 +142,7 @@ function articleFor(name) {
   const map = {
     Aluno: "o aluno",
     Professor: "o professor",
-    Coordenação: "a coordenação",
-    Gestor: "o gestor",
+    "Gestor/Coordenação": "a gestão e a coordenação",
     Rede: "a rede de ensino",
   };
   return map[name] || `o perfil ${name}`;

@@ -15,8 +15,7 @@ const H = 675;
 const PERSONAS = [
   ["aluno", "Aluno", "#1BA559", "#1E50E0"],
   ["professor", "Professor", "#1E50E0", "#1BA559"],
-  ["coordenacao", "Coordenação", "#0E7C40", "#1E50E0"],
-  ["gestor", "Gestor", "#0B1033", "#1E50E0"],
+  ["gestao", "Gestor/Coordenação", "#0B1033", "#1E50E0"],
   ["rede", "Rede de ensino", "#1E50E0", "#0B1033"],
 ];
 
