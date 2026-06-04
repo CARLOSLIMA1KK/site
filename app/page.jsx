@@ -267,24 +267,27 @@ function DataAndAccess() {
           <Stagger className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
             {ACCESS_PROFILES.map((p) => (
               <StaggerItem key={p.name} className="h-full">
-                <div className="group flex h-full flex-col overflow-hidden rounded-lg border border-line bg-white shadow-card transition duration-300 hover:-translate-y-1 hover:shadow-pop">
-                  <div className="relative overflow-hidden border-b border-line bg-bg-soft">
-                    {/* eslint-disable-next-line @next/next/no-img-element */}
-                    <img
-                      src={p.print}
-                      alt={`Tela do perfil ${p.name}`}
-                      loading="lazy"
-                      className="aspect-[16/9] w-full object-cover object-top transition-transform duration-500 group-hover:scale-[1.04]"
-                    />
-                    <span className="absolute left-3 top-3 flex h-10 w-10 items-center justify-center rounded-lg bg-white/95 text-azul-600 shadow-card backdrop-blur">
-                      <Icon name={p.icon} size={20} />
-                    </span>
+                <Link href="/plataforma/acessos" className="block h-full">
+                  <div className="group flex h-full flex-col overflow-hidden rounded-lg border border-line bg-white shadow-card transition duration-300 hover:-translate-y-1 hover:shadow-pop">
+                    <div className="relative aspect-[4/3] overflow-hidden bg-gradient-to-br from-verde-100 to-azul-100">
+                      {/* eslint-disable-next-line @next/next/no-img-element */}
+                      <img
+                        src={p.photo}
+                        alt={`Perfil ${p.name} usando a KodarEdu`}
+                        loading="lazy"
+                        className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.04]"
+                      />
+                      <span className="absolute left-3 top-3 flex h-10 w-10 items-center justify-center rounded-lg bg-white/95 text-azul-600 shadow-card backdrop-blur">
+                        <Icon name={p.icon} size={20} />
+                      </span>
+                    </div>
+                    <div className="flex flex-1 flex-col p-5">
+                      <h4 className="font-display text-lg font-bold text-ink">{p.name}</h4>
+                      <p className="mt-1 text-[14px] leading-relaxed text-slate">{p.desc}</p>
+                      <span className="mt-3 text-sm font-semibold text-verde-700">Ver mais →</span>
+                    </div>
                   </div>
-                  <div className="flex flex-1 flex-col p-5">
-                    <h4 className="font-display text-lg font-bold text-ink">{p.name}</h4>
-                    <p className="mt-1 text-[14px] leading-relaxed text-slate">{p.desc}</p>
-                  </div>
-                </div>
+                </Link>
               </StaggerItem>
             ))}
             {/* card-CTA fechando a grade */}
