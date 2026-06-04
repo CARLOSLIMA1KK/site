@@ -34,7 +34,7 @@ function Gallery({ items }) {
     <div className="grid gap-8 md:grid-cols-3">
       {items.map((it) => (
         <figure key={it.title}>
-          <MockupFrame src={it.src} alt={it.title} type={it.type} placeholder label={it.type ? undefined : it.title} />
+          <MockupFrame src={it.src} alt={it.title} type={it.type} label={it.type ? undefined : it.title} />
           <figcaption className="mt-4">
             <h3 className="font-display text-lg font-bold text-ink">{it.title}</h3>
             <p className="mt-1 text-[15px] text-slate">{it.text}</p>
@@ -57,7 +57,7 @@ export default function TourPage() {
         eyebrow="Tour pela Plataforma"
         title="A KodarEdu"
         highlight="por dentro."
-        subtitle="Navegue pelas telas por perfil e veja, na prática, como cada usuário usa a plataforma no dia a dia. (Imagens ilustrativas — placeholders.)"
+        subtitle="Navegue pelas telas por perfil e veja, na prática, como cada usuário usa a plataforma no dia a dia."
         pills={["Aluno", "Professor", "Gestor"]}
         secondary={{ label: "Ver relatórios", href: "/plataforma/relatorios" }}
       />

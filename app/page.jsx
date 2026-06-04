@@ -360,7 +360,6 @@ function Hero() {
                 src="/assets/prints/app-mobile.svg"
                 alt="App da plataforma no celular, com a marca da escola"
                 type="mobile"
-                placeholder={false}
                 className="!w-44"
               />
             </div>

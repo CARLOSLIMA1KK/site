@@ -1,5 +1,5 @@
-// Moldura de navegador ou celular para prints da plataforma.
-export default function MockupFrame({ src, alt, type = "browser", label, placeholder = true, className = "" }) {
+// Moldura de navegador ou celular para as telas da plataforma.
+export default function MockupFrame({ src, alt, type = "browser", label, className = "" }) {
   if (type === "mobile") {
     return (
       <div className={`relative mx-auto w-[260px] ${className}`}>
@@ -10,7 +10,6 @@ export default function MockupFrame({ src, alt, type = "browser", label, placeho
             <img src={src} alt={alt} loading="lazy" className="aspect-[9/19] w-full object-cover" />
           </div>
         </div>
-        {placeholder && <PlaceholderTag />}
       </div>
     );
   }
@@ -30,16 +29,7 @@ export default function MockupFrame({ src, alt, type = "browser", label, placeho
       <div className="relative">
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img src={src} alt={alt} loading="lazy" className="block w-full" />
-        {placeholder && <PlaceholderTag />}
       </div>
     </div>
-  );
-}
-
-function PlaceholderTag() {
-  return (
-    <span className="absolute right-3 top-3 z-10 rounded-full bg-azul-900/80 px-2.5 py-1 text-[10px] font-semibold uppercase tracking-wider text-white backdrop-blur">
-      Placeholder
-    </span>
   );
 }
