@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Logo from "./Logo";
-import Pill from "./Pill";
+import Icon from "./Icon";
 import { SITE } from "@/lib/site";
 
 const COLUMNS = [
@@ -53,22 +53,24 @@ export default function Footer() {
           <div>
             <Logo variant="light" />
             <p className="mt-4 max-w-xs text-sm leading-relaxed text-white/70">{SITE.description}</p>
-            <div className="mt-5 flex flex-wrap gap-2">
-              <Pill tone="light">LGPD</Pill>
-              <Pill tone="light">BNCC</Pill>
-              <Pill tone="light">Acessível</Pill>
-            </div>
-            <div className="mt-5 flex gap-3" aria-label="Redes sociais">
-              {["instagram", "linkedin", "youtube"].map((s) => (
-                <a
-                  key={s}
-                  href="#"
-                  aria-label={s}
-                  className="flex h-9 w-9 items-center justify-center rounded-full bg-white/10 transition hover:bg-white/20"
-                >
-                  <span className="text-xs font-bold capitalize">{s[0]}</span>
-                </a>
-              ))}
+            <div className="mt-5 space-y-2 text-sm">
+              <a href={`mailto:${SITE.email}`} className="flex items-center gap-2 text-white/80 transition hover:text-white">
+                <Icon name="mail" size={16} />
+                {SITE.email}
+              </a>
+              <a href={SITE.phoneHref} className="flex items-center gap-2 text-white/80 transition hover:text-white">
+                <Icon name="phone" size={16} />
+                {SITE.phone}
+              </a>
+              <a
+                href={SITE.whatsapp}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-2 text-white/80 transition hover:text-white"
+              >
+                <Icon name="chat" size={16} />
+                Falar no WhatsApp
+              </a>
             </div>
           </div>
 

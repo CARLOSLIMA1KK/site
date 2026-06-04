@@ -25,6 +25,9 @@ const PATHS = {
   wand: "M5 19 16 8m-3-3 3 3M18 4l.7 1.8L20.5 6l-1.8.7L18 8.5l-.7-1.8L15.5 6l1.8-.5L18 4Z",
   flag: "M5 21V4m0 0h12l-2 4 2 4H5",
   list: "M8 6h13M8 12h13M8 18h13M3.5 6h.01M3.5 12h.01M3.5 18h.01",
+  mail: "M3 6h18v12H3V6Zm0 1.5 9 6 9-6",
+  phone: "M6.5 3.5 9 4l1 4-2 1.5a10 10 0 0 0 4.5 4.5L14 13l4 1 .5 2.6a1.5 1.5 0 0 1-1.6 1.8A14 14 0 0 1 4.6 5a1.5 1.5 0 0 1 1.9-1.5Z",
+  chat: "M4 5h16v11H9l-4 4v-4H4V5Zm4 4h8M8 12h5",
 };
 
 export default function Icon({ name, size = 24, className = "" }) {

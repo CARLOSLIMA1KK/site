@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Button from "./Button";
+import { SITE } from "@/lib/site";
 
 const INSTITUTION_TYPES = [
   "Escola privada",
@@ -47,7 +48,7 @@ export default function QualifierForm() {
           Um especialista da KodarEdu vai falar com você em breve. Quer adiantar? Chame no WhatsApp.
         </p>
         <div className="mt-6 flex justify-center">
-          <Button href="https://wa.me/5500000000000" external variant="secondary">
+          <Button href={SITE.whatsapp} external variant="secondary">
             Falar no WhatsApp
           </Button>
         </div>

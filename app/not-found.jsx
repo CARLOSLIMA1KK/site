@@ -1,5 +1,6 @@
 import Button from "@/components/Button";
 import Pill from "@/components/Pill";
+import { SITE } from "@/lib/site";
 
 export default function NotFound() {
   return (
@@ -17,7 +18,7 @@ export default function NotFound() {
           <Button href="/" variant="primary" arrow>
             Voltar para a Home
           </Button>
-          <Button href="/contato" variant="secondary">
+          <Button href={SITE.whatsapp} external variant="secondary">
             Falar com especialista
           </Button>
         </div>
