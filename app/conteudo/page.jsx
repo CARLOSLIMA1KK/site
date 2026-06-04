@@ -27,7 +27,7 @@ export default function ConteudoPage() {
         eyebrow="Conteúdo"
         title="Ideias para avaliar e"
         highlight="ensinar melhor."
-        subtitle="Artigos sobre ENEM, redação, TRI, avaliação adaptativa, SAEB, gestão escolar e white label — para gestores e professores. (Conteúdo ilustrativo.)"
+        subtitle="Artigos sobre ENEM, redação, TRI, avaliação adaptativa, SAEB, gestão escolar e white label, para gestores e professores. (Conteúdo ilustrativo.)"
         pills={["ENEM", "Redação", "TRI", "Gestão"]}
       />
 

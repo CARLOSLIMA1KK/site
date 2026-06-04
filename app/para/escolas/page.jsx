@@ -32,7 +32,7 @@ export default function ParaEscolasPage() {
         eyebrow="Para Escolas"
         title="Mais tempo ao professor,"
         highlight="mais resultado no ENEM."
-        subtitle="A KodarEdu organiza toda a jornada avaliativa da sua escola — criação, aplicação, correção e análise — com a sua marca e sem precisar de equipe de TI."
+        subtitle="A KodarEdu organiza toda a jornada avaliativa da sua escola, criação, aplicação, correção e análise, com a sua marca e sem precisar de equipe de TI."
         pills={["Ensino Fundamental e Médio", "White Label", "Sem TI"]}
       />
 

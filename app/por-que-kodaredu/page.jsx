@@ -33,7 +33,7 @@ export default function PorQuePage() {
         eyebrow="Diferenciais"
         title="Por que a"
         highlight="KodarEdu?"
-        subtitle="Reunimos em uma só plataforma white label o melhor das principais soluções de avaliação do mercado — e fomos além."
+        subtitle="Reunimos em uma só plataforma white label o melhor das principais soluções de avaliação do mercado, e fomos além."
         pills={["Tudo em uma", "White Label", "IA + humano", "TRI"]}
       />
 
@@ -80,6 +80,6 @@ function Mark({ on }) {
       <Icon name="check" size={16} />
     </span>
   ) : (
-    <span className="text-line" aria-label="Não">—</span>
+    <span className="text-line" aria-label="Não">, </span>
   );
 }

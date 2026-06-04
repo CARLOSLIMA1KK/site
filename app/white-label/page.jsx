@@ -7,7 +7,7 @@ import CTASection from "@/components/CTASection";
 import { Reveal, Stagger, StaggerItem } from "@/components/Motion";
 
 export const metadata = {
-  title: "White Label — a plataforma com a cara da sua marca",
+  title: "White Label, a plataforma com a cara da sua marca",
   description:
     "Personalize a KodarEdu com seu logo, cores, links e domínio próprio. Plataforma white label de avaliação e ENEM, implantada sem precisar de TI.",
   alternates: { canonical: "/white-label" },
@@ -16,7 +16,7 @@ export const metadata = {
 const PERSONALIZA = [
   { title: "Logo e identidade", text: "Seu logotipo em todas as telas, e-mails e relatórios." },
   { title: "Paleta de cores", text: "A plataforma assume as cores da sua marca por completo." },
-  { title: "Domínio próprio", text: "app.suaescola.edu.br — sem qualquer menção à KodarEdu." },
+  { title: "Domínio próprio", text: "app.suaescola.edu.br, sem qualquer menção à KodarEdu." },
   { title: "Links e menus", text: "Aponte para o seu site, portal do aluno e canais oficiais." },
   { title: "E-mails e certificados", text: "Comunicações e certificados saem com a sua assinatura." },
   { title: "App na sua marca", text: "Opcional: app nas lojas com o nome e ícone da instituição." },
@@ -35,7 +35,7 @@ export default function WhiteLabelPage() {
         eyebrow="White Label"
         title="Não é a nossa plataforma."
         highlight="É a sua."
-        subtitle="A KodarEdu veste a identidade da sua instituição: cores, logo, links, domínio e até um app próprio. Seus alunos veem a sua marca — e a tecnologia roda nos bastidores."
+        subtitle="A KodarEdu veste a identidade da sua instituição: cores, logo, links, domínio e até um app próprio. Seus alunos veem a sua marca, e a tecnologia roda nos bastidores."
         pills={["Domínio próprio", "App na sua marca", "Sem TI", "Implantação rápida"]}
         secondary={{ label: "Ver a plataforma", href: "/plataforma" }}
       />
@@ -74,7 +74,7 @@ export default function WhiteLabelPage() {
             <h3 className="font-display text-h3 font-bold text-ink">Implantação sem TI</h3>
             <p className="mt-3 text-slate">
               Cuidamos de tudo: nuvem, segurança, atualizações e a configuração da sua marca. Você só
-              traz o logo e as cores — e em poucos dias a plataforma está no ar com suporte humano
+              traz o logo e as cores, e em poucos dias a plataforma está no ar com suporte humano
               dedicado por WhatsApp, inclusive nos fins de semana.
             </p>
             <ul className="mt-5">
@@ -89,7 +89,7 @@ export default function WhiteLabelPage() {
             <p className="mt-3 text-white/80">
               Embarque a KodarEdu no seu sistema ou material didático e ofereça avaliação, banco de
               itens e relatórios sob a <strong className="text-white">sua bandeira</strong>. Modelo de
-              parceria e licenciamento — inclusive com conteúdo/banco licenciado.
+              parceria e licenciamento, inclusive com conteúdo/banco licenciado.
             </p>
             <div className="mt-6 rounded-md bg-white/10 p-5">
               <p className="text-sm text-white/70">Modelo flexível</p>

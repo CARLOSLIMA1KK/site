@@ -5,7 +5,7 @@ import CTASection from "@/components/CTASection";
 import { Stagger, StaggerItem } from "@/components/Motion";
 
 export const metadata = {
-  title: "Soluções — avaliações, recursos e Edu.IA",
+  title: "Soluções, avaliações, recursos e Edu.IA",
   description:
     "Simulados ENEM e SAEB, trilha adaptativa (CAT), Produção Textual com IA, Banco de Itens, criação e correção de provas, integração físico-digital e o assistente Edu.IA.",
   alternates: { canonical: "/solucoes" },
@@ -44,7 +44,7 @@ export default function SolucoesPage() {
         eyebrow="Soluções"
         title="Tudo o que sua escola precisa para avaliar,"
         highlight="reunido na sua marca."
-        subtitle="Uma plataforma completa em três frentes: Avaliações & Ferramentas, Recursos Edu e Edu.IA — com tag de formato (digital, impresso ou híbrido) em cada solução."
+        subtitle="Uma plataforma completa em três frentes: Avaliações & Ferramentas, Recursos Edu e Edu.IA, com tag de formato (digital, impresso ou híbrido) em cada solução."
         pills={["Avaliações", "Recursos Edu", "Edu.IA", "White Label"]}
       />
 

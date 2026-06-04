@@ -8,7 +8,7 @@ import CTASection from "@/components/CTASection";
 import { Reveal, Stagger, StaggerItem } from "@/components/Motion";
 
 export const metadata = {
-  title: "Produção Textual — escrita com IA, OCR e especialista",
+  title: "Produção Textual, escrita com IA, OCR e especialista",
   description:
     "Desenvolvimento da escrita do Fundamental ao ENEM, em diversos gêneros. Temas definidos por você ou do banco com 5.000+ temas, correção IA + especialista e OCR para redações manuscritas.",
   alternates: { canonical: "/solucoes/redacao" },
@@ -55,7 +55,7 @@ export default function RedacaoPage() {
         eyebrow="Avaliações & Ferramentas · Produção Textual"
         title="Produção Textual com IA,"
         highlight="do Fundamental ao ENEM."
-        subtitle="Muito além da redação do ENEM: desenvolva a escrita em diversos gêneros, do Ensino Fundamental ao Médio — com correção que une IA e corretor humano, OCR para textos manuscritos e temas definidos pela sua escola."
+        subtitle="Muito além da redação do ENEM: desenvolva a escrita em diversos gêneros, do Ensino Fundamental ao Médio, com correção que une IA e corretor humano, OCR para textos manuscritos e temas definidos pela sua escola."
         pills={["Com IA", "OCR manuscrito", "5.000+ temas", "Diversos gêneros"]}
         mockup={{
           src: "/assets/prints/redacao-correcao.svg",
@@ -64,23 +64,23 @@ export default function RedacaoPage() {
         }}
       />
 
-      <StatBand stats={STATS} title="Escrita que evolui de verdade" subtitle="Tecnologia e especialistas a serviço do desenvolvimento da escrita — com a marca da sua escola." />
+      <StatBand stats={STATS} title="Escrita que evolui de verdade" subtitle="Tecnologia e especialistas a serviço do desenvolvimento da escrita, com a marca da sua escola." />
 
       {/* Muito além do ENEM */}
       <SectionWrapper
         eyebrow="Diversos gêneros · Fund. → Médio"
         title="Muito além da redação do ENEM"
-        subtitle="Desenvolva a escrita em vários gêneros e em todas as etapas — do Ensino Fundamental ao Médio — com critérios adaptados a cada tipo de texto."
+        subtitle="Desenvolva a escrita em vários gêneros e em todas as etapas, do Ensino Fundamental ao Médio, com critérios adaptados a cada tipo de texto."
       >
         <FeatureList items={GENEROS} columns={3} icon="brush" />
       </SectionWrapper>
 
       {/* Temas: cliente define + banco */}
-      <SectionWrapper soft eyebrow="Temas" title="Você define os temas — ou usa o nosso banco">
+      <SectionWrapper soft eyebrow="Temas" title="Você define os temas, ou usa o nosso banco">
         <div className="grid items-center gap-10 lg:grid-cols-2">
           <Reveal>
             <p className="text-lg leading-relaxed text-slate">
-              A sua escola cria os próprios temas, do jeito que a equipe pedagógica quiser — ou escolhe
+              A sua escola cria os próprios temas, do jeito que a equipe pedagógica quiser, ou escolhe
               no nosso <strong className="text-ink">banco com mais de 5.000 temas</strong> prontos, com
               coletâneas e textos de apoio, alinhados ao ENEM e à BNCC.
             </p>
@@ -108,7 +108,7 @@ export default function RedacaoPage() {
           <Reveal>
             <p className="text-lg leading-relaxed text-slate">
               O aluno escreve no papel e <strong className="text-ink">fotografa a redação</strong>: o
-              OCR extrai o texto manuscrito da imagem e a IA faz a correção. Sem redigitar nada — o
+              OCR extrai o texto manuscrito da imagem e a IA faz a correção. Sem redigitar nada, o
               manuscrito entra direto no fluxo de correção.
             </p>
             <div className="mt-6">
@@ -143,7 +143,7 @@ export default function RedacaoPage() {
           <Reveal>
             <p className="text-lg leading-relaxed text-slate">
               Cada texto recebe nota e comentários por competência, com marcações no próprio texto. O
-              aluno entende <strong className="text-ink">o que fez bem e o que ajustar</strong> — e o
+              aluno entende <strong className="text-ink">o que fez bem e o que ajustar</strong>, e o
               professor recupera horas que iam para a correção manual.
             </p>
             <ol className="mt-6 space-y-3">
@@ -182,7 +182,7 @@ export default function RedacaoPage() {
       <SectionWrapper soft eyebrow="Impacto" title="Recurso que vira benefício" center>
         <Stagger className="grid gap-6 md:grid-cols-3">
           {[
-            ["IA + corretor humano", "A velocidade da IA com o olhar de um especialista — não só automático."],
+            ["IA + corretor humano", "A velocidade da IA com o olhar de um especialista, não só automático."],
             ["Mais escrita por ciclo", "A escola produz e corrige mais sem sobrecarregar a equipe."],
             ["Evolução visível", "Pais e alunos enxergam o progresso da nota ao longo do ano."],
           ].map(([t, d]) => (
@@ -198,7 +198,7 @@ export default function RedacaoPage() {
 
       <CTASection
         title="Quero Produção Textual na minha escola"
-        subtitle="Ofereça desenvolvimento da escrita em diversos gêneros, com IA, OCR e devolutiva detalhada — e devolva horas aos seus professores."
+        subtitle="Ofereça desenvolvimento da escrita em diversos gêneros, com IA, OCR e devolutiva detalhada, e devolva horas aos seus professores."
       />
     </>
   );

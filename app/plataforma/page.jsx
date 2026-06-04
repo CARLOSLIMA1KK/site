@@ -8,7 +8,7 @@ import { Reveal, Stagger, StaggerItem } from "@/components/Motion";
 import { PLATFORM_CAPABILITIES as CAPACIDADES } from "@/lib/site";
 
 export const metadata = {
-  title: "A Plataforma — um hub para todo o ciclo avaliativo",
+  title: "A Plataforma, um hub para todo o ciclo avaliativo",
   description:
     "Plataforma em nuvem, leve, 100% responsiva e acessível. White label, com acessos por perfil, provas híbridas e suporte humano por WhatsApp.",
   alternates: { canonical: "/plataforma" },
@@ -27,7 +27,7 @@ export default function PlataformaPage() {
         eyebrow="A Plataforma"
         title="Uma plataforma completa para todo o"
         highlight="ciclo avaliativo."
-        subtitle="Criar, aplicar, corrigir e analisar — provas, simulados, redação e relatórios em uma plataforma em nuvem, acessível e white label, que sua escola adota sem precisar de TI."
+        subtitle="Criar, aplicar, corrigir e analisar, provas, simulados, redação e relatórios em uma plataforma em nuvem, acessível e white label, que sua escola adota sem precisar de TI."
         pills={["White Label", "Acessível", "Nuvem", "Híbrida"]}
         secondary={{ label: "Fazer o tour", href: "/plataforma/tour" }}
         mockup={{
@@ -40,7 +40,7 @@ export default function PlataformaPage() {
       <SectionWrapper
         eyebrow="Capacidades"
         title="Robusta por dentro, simples por fora"
-        subtitle="Os fundamentos que fazem a KodarEdu funcionar para a escola toda — sem complexidade para quem usa."
+        subtitle="Os fundamentos que fazem a KodarEdu funcionar para a escola toda, sem complexidade para quem usa."
       >
         <FeatureList items={CAPACIDADES} columns={2} />
       </SectionWrapper>

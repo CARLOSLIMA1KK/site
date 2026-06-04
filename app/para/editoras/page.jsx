@@ -36,7 +36,7 @@ export default function ParaEditorasPage() {
       <SectionWrapper
         eyebrow="White label como produto"
         title="Sua marca na frente, nossa tecnologia atrás"
-        subtitle="Acelere seu portfólio digital com uma plataforma de avaliação madura — sem montar um time de engenharia."
+        subtitle="Acelere seu portfólio digital com uma plataforma de avaliação madura, sem montar um time de engenharia."
       >
         <FeatureList items={RECURSOS} columns={3} />
       </SectionWrapper>

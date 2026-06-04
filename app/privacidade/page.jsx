@@ -39,7 +39,7 @@ const SECTIONS = [
   },
   {
     h: "8. Contato do Encarregado (DPO)",
-    p: "Para exercer seus direitos ou esclarecer dúvidas, entre em contato pelo e-mail privacidade@kodaredu.com.br. [Placeholder — substituir pelo canal oficial.]",
+    p: "Para exercer seus direitos ou esclarecer dúvidas, entre em contato pelo e-mail privacidade@kodaredu.com.br. [Placeholder, substituir pelo canal oficial.]",
   },
 ];
 
@@ -51,7 +51,7 @@ export default function PrivacidadePage() {
         <h1 className="mt-4 font-display text-h2 font-bold text-ink">Política de Privacidade</h1>
         <p className="mt-3 text-sm text-slate">
           Última atualização: junho de 2026 ·{" "}
-          <span className="font-medium">Documento modelo — revisar com o jurídico antes da publicação.</span>
+          <span className="font-medium">Documento modelo, revisar com o jurídico antes da publicação.</span>
         </p>
 
         <div className="mt-10 space-y-8">

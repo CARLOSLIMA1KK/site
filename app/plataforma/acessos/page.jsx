@@ -9,7 +9,7 @@ import { Reveal, Stagger, StaggerItem } from "@/components/Motion";
 import { ACCESS_PROFILES as PROFILES } from "@/lib/site";
 
 export const metadata = {
-  title: "Acessos & Perfis — o que cada usuário tem na plataforma",
+  title: "Acessos & Perfis, o que cada usuário tem na plataforma",
   description:
     "Veja tudo o que a KodarEdu oferece por perfil: aluno, professor, coordenação, gestor e rede. Acessos por nível, recursos por persona e a tabela completa de permissões.",
   alternates: { canonical: "/plataforma/acessos" },
@@ -35,7 +35,7 @@ export default function AcessosPage() {
         eyebrow="A Plataforma · Acessos & Perfis"
         title="Cada perfil vê só o"
         highlight="que precisa."
-        subtitle="Do aluno ao gestor de rede, a KodarEdu controla acessos por nível — simples para quem usa, seguro para a instituição. Veja tudo o que cada perfil tem."
+        subtitle="Do aluno ao gestor de rede, a KodarEdu controla acessos por nível, simples para quem usa, seguro para a instituição. Veja tudo o que cada perfil tem."
         pills={["5 perfis", "Permissões por nível", "Multiunidade"]}
       />
 
@@ -70,7 +70,7 @@ export default function AcessosPage() {
         </Stagger>
       </SectionWrapper>
 
-      {/* Detalhe por perfil (SEO) — todo o potencial de cada um */}
+      {/* Detalhe por perfil (SEO), todo o potencial de cada um */}
       {PROFILES.map((p, idx) => (
         <SectionWrapper key={p.slug} id={`perfil-${p.slug}`} soft={idx % 2 === 0}>
           <div className="grid items-center gap-10 lg:grid-cols-2">
@@ -121,7 +121,7 @@ export default function AcessosPage() {
                           <Icon name="check" size={18} />
                         </span>
                       ) : (
-                        <span className="text-line" aria-label="Não">—</span>
+                        <span className="text-line" aria-label="Não">, </span>
                       )}
                     </td>
                   ))}

@@ -10,7 +10,7 @@ import { PLANS, PLANS_FAQ, SITE } from "@/lib/site";
 export const metadata = {
   title: "Planos & Preços",
   description:
-    "Três planos white label — Essencial, Profissional e Redes/Enterprise. IA, simulados TRI, redação e relatórios, com garantia de 30 dias e implantação sem TI.",
+    "Três planos white label, Essencial, Profissional e Redes/Enterprise. IA, simulados TRI, redação e relatórios, com garantia de 30 dias e implantação sem TI.",
   alternates: { canonical: "/planos" },
 };
 
@@ -19,7 +19,7 @@ export default function PlanosPage() {
     <>
       <PageHero
         eyebrow="Planos & Preços"
-        title="Do essencial ao enterprise —"
+        title="Do essencial ao enterprise, "
         highlight="sempre white label."
         subtitle="Escolha o plano que acompanha o momento da sua instituição. Todos rodam com a sua marca, com garantia de 30 dias e implantação sem precisar de TI."
         pills={["White Label", "Garantia de 30 dias", "Sem TI"]}

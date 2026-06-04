@@ -26,7 +26,7 @@ export default function TermosPage() {
         <h1 className="mt-4 font-display text-h2 font-bold text-ink">Termos de Uso</h1>
         <p className="mt-3 text-sm text-slate">
           Última atualização: junho de 2026 ·{" "}
-          <span className="font-medium">Documento modelo — revisar com o jurídico antes da publicação.</span>
+          <span className="font-medium">Documento modelo, revisar com o jurídico antes da publicação.</span>
         </p>
         <div className="mt-10 space-y-8">
           {SECTIONS.map((s) => (

@@ -44,7 +44,7 @@ export default function HomePage() {
         soft
         eyebrow="Ciclo avaliativo completo"
         title="Da criação à decisão pedagógica, em uma só plataforma"
-        subtitle="A KodarEdu cuida de toda a jornada avaliativa — com IA onde acelera e especialista humano onde importa."
+        subtitle="A KodarEdu cuida de toda a jornada avaliativa, com IA onde acelera e especialista humano onde importa."
       >
         <Stagger className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
           {JOURNEY.map((j) => (
@@ -59,7 +59,7 @@ export default function HomePage() {
         </Stagger>
       </SectionWrapper>
 
-      {/* A Plataforma — capacidades (resumo de /plataforma) */}
+      {/* A Plataforma, capacidades (resumo de /plataforma) */}
       <SectionWrapper
         id="a-plataforma"
         eyebrow="A Plataforma"
@@ -81,7 +81,7 @@ export default function HomePage() {
       <SectionWrapper
         soft
         eyebrow="Soluções"
-        title="Tudo o que sua escola precisa — reunido"
+        title="Tudo o que sua escola precisa, reunido"
         subtitle="Simulados ENEM e SAEB, trilha adaptativa, Produção Textual, Banco de Itens, provas com IA e o Edu.IA. O melhor das melhores plataformas, em uma marca: a sua."
       >
         <Stagger className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
@@ -110,7 +110,7 @@ export default function HomePage() {
       </SectionWrapper>
 
       {/* White Label em destaque */}
-      <SectionWrapper eyebrow="White Label" title="A cara da sua marca — de verdade">
+      <SectionWrapper eyebrow="White Label" title="A cara da sua marca, de verdade">
         <Reveal>
           <WhiteLabelDemo />
         </Reveal>
@@ -121,7 +121,7 @@ export default function HomePage() {
         </Reveal>
       </SectionWrapper>
 
-      {/* Inteligência de dados & acessos — showcase visual */}
+      {/* Inteligência de dados & acessos, showcase visual */}
       <DataAndAccess />
 
       {/* 3 pilares de autoridade */}
@@ -193,11 +193,11 @@ function DataAndAccess() {
             Dados que viram decisão. Acessos que organizam.
           </h2>
           <p className="mt-4 text-lg text-slate">
-            Cada avaliação gera inteligência acionável — e cada perfil enxerga exatamente o que precisa.
+            Cada avaliação gera inteligência acionável, e cada perfil enxerga exatamente o que precisa.
           </p>
         </Reveal>
 
-        {/* Relatórios — mockup com chips flutuantes */}
+        {/* Relatórios, mockup com chips flutuantes */}
         <div className="grid items-center gap-12 lg:grid-cols-[1fr_1.1fr]">
           <Reveal>
             <Pill tone="verde">Relatórios</Pill>
@@ -205,7 +205,7 @@ function DataAndAccess() {
               Relatórios que viram decisão pedagógica
             </h3>
             <p className="mt-3 text-slate">
-              A mesma avaliação, lida em vários níveis — com réguas ENEM/SAEB por TRI e integração ao
+              A mesma avaliação, lida em vários níveis, com réguas ENEM/SAEB por TRI e integração ao
               ERP escolar.
             </p>
             <ul className="mt-5 flex flex-wrap gap-2">
@@ -249,14 +249,14 @@ function DataAndAccess() {
           </Reveal>
         </div>
 
-        {/* Acessos & Perfis — cards com miniatura de tela */}
+        {/* Acessos & Perfis, cards com miniatura de tela */}
         <div className="mt-20">
           <Reveal className="mb-8 flex flex-wrap items-end justify-between gap-4">
             <div className="max-w-2xl">
               <Pill tone="azul">Acessos & perfis</Pill>
               <h3 className="mt-3 font-display text-h3 font-bold text-ink">Cada perfil vê só o que precisa</h3>
               <p className="mt-2 text-slate">
-                Acessos por nível, do aluno ao gestor de rede — simples para quem usa, seguro para a instituição.
+                Acessos por nível, do aluno ao gestor de rede, simples para quem usa, seguro para a instituição.
               </p>
             </div>
             <Button href="/plataforma/acessos" variant="secondary" arrow className="hidden sm:inline-flex">
@@ -328,7 +328,7 @@ function Hero() {
               <span className="text-verde-700">Com a sua marca.</span>
             </h1>
             <p className="mt-5 max-w-xl text-lg leading-relaxed text-slate">
-              Crie, aplique, corrija e analise avaliações com tecnologia inteligente — de provas e
+              Crie, aplique, corrija e analise avaliações com tecnologia inteligente, de provas e
               simulados por TRI à redação com IA e relatórios. Tudo white label, sem precisar de equipe
               de TI.
             </p>

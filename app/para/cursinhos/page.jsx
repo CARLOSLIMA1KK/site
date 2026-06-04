@@ -32,7 +32,7 @@ export default function ParaCursinhosPage() {
         eyebrow="Para Cursinhos"
         title="Mais aprovações,"
         highlight="com a sua marca."
-        subtitle="A KodarEdu dá ao seu cursinho simulados por TRI, redação com IA, ranking e trilhas adaptativas — tudo white label, do jeito que seus alunos esperam."
+        subtitle="A KodarEdu dá ao seu cursinho simulados por TRI, redação com IA, ranking e trilhas adaptativas, tudo white label, do jeito que seus alunos esperam."
         pills={["TRI", "Redação", "Ranking", "White Label"]}
       />
 
@@ -52,7 +52,7 @@ export default function ParaCursinhosPage() {
 
       <CTASection
         title="Quero a KodarEdu no meu cursinho"
-        subtitle="Aumente as aprovações com simulados por TRI e redação com IA — sob a marca do seu cursinho."
+        subtitle="Aumente as aprovações com simulados por TRI e redação com IA, sob a marca do seu cursinho."
       />
     </>
   );

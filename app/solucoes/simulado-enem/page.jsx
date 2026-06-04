@@ -15,7 +15,7 @@ export const metadata = {
 
 const RECURSOS = [
   { title: "Padrão ENEM real", text: "Estrutura, áreas e tempo fiéis à prova oficial." },
-  { title: "Correção por TRI", text: "Ajustada à régua oficial — nota com previsibilidade." },
+  { title: "Correção por TRI", text: "Ajustada à régua oficial, nota com previsibilidade." },
   { title: "Ranking e gabarito comentado", text: "Engajamento dos alunos e estudo guiado." },
   { title: "Relatório por área e habilidade", text: "A coordenação enxerge onde reforçar." },
   { title: "Simulado personalizado", text: "Conteúdos definidos pela sua equipe pedagógica." },
@@ -35,7 +35,7 @@ export default function SimuladoEnemPage() {
         eyebrow="Avaliações & Ferramentas"
         title="Simulados ENEM com correção por"
         highlight="TRI de verdade."
-        subtitle="Aplique simulados no padrão ENEM e entregue notas por TRI ajustadas à régua oficial — com ranking, gabarito comentado e relatórios por área e habilidade."
+        subtitle="Aplique simulados no padrão ENEM e entregue notas por TRI ajustadas à régua oficial, com ranking, gabarito comentado e relatórios por área e habilidade."
         pills={["TRI", "Padrão ENEM", "Ranking", "White Label"]}
         mockup={{
           src: "/assets/prints/relatorio-tri.svg",
@@ -94,7 +94,7 @@ export default function SimuladoEnemPage() {
 
       <CTASection
         title="Quero o Simulado ENEM na minha escola"
-        subtitle="Leve simulados por TRI no padrão ENEM para seus alunos — com a marca da sua instituição."
+        subtitle="Leve simulados por TRI no padrão ENEM para seus alunos, com a marca da sua instituição."
       />
     </>
   );

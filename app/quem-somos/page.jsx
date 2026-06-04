@@ -25,7 +25,7 @@ export default function QuemSomosPage() {
         eyebrow="Quem Somos"
         title="Tecnologia educacional"
         highlight="com alma pedagógica."
-        subtitle="A KodarEdu nasceu para reunir, em uma só plataforma white label, o melhor da avaliação educacional — com rigor metodológico e a marca de cada instituição."
+        subtitle="A KodarEdu nasceu para reunir, em uma só plataforma white label, o melhor da avaliação educacional, com rigor metodológico e a marca de cada instituição."
         pills={["Missão", "Tecnologia", "Conformidade"]}
       />
 
@@ -34,8 +34,8 @@ export default function QuemSomosPage() {
           <Reveal>
             <p className="text-lg leading-relaxed text-slate">
               Acreditamos que avaliar bem é o primeiro passo para ensinar melhor. Por isso construímos
-              uma plataforma que cuida de toda a jornada avaliativa — criar, aplicar, corrigir e
-              analisar — com inteligência de dados acionável e a identidade de cada escola.
+              uma plataforma que cuida de toda a jornada avaliativa, criar, aplicar, corrigir e
+              analisar, com inteligência de dados acionável e a identidade de cada escola.
             </p>
             <p className="mt-4 text-lg leading-relaxed text-slate">
               Reunimos o melhor das principais soluções do mercado em um único produto white label,

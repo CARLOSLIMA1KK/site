@@ -7,7 +7,7 @@ export default function Logo({ variant = "dark", className = "" }) {
   return (
     <Link
       href="/"
-      aria-label="KodarEdu — página inicial"
+      aria-label="KodarEdu, página inicial"
       className={`inline-flex items-baseline font-display text-2xl font-extrabold leading-none tracking-tight ${className}`}
     >
       <span style={{ color: base }}>kodar</span>
