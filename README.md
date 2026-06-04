@@ -51,7 +51,11 @@ scripts/
 - [x] Tokens de design + Header/Footer
 - [x] Componentes reutilizáveis base
 - [x] **Home** completa
-- [ ] Páginas internas (aguardando OK) — ver ordem de construção no `BRIEF.md §11`
+- [x] **Todas as 31 páginas** do `BRIEF.md` construídas (P0, P1 e P2)
+- [ ] Passada final: substituir placeholders (prints, números, contatos, textos legais)
+
+Todas as rotas verificadas (build estático + smoke test HTTP 200). Conteúdo de
+exemplo marcado como ilustrativo onde aplicável (depoimentos, mídia, blog, cases).
 
 ## Prints da plataforma a fornecer
 
