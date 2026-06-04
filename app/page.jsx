@@ -320,10 +320,7 @@ function Hero() {
       <div className="container-page relative pb-16 pt-8 sm:pb-20 sm:pt-10 lg:pb-24 lg:pt-12">
         <div className="grid items-center gap-12 lg:grid-cols-[1.05fr_1fr]">
           <div className="animate-fade-up">
-            <Pill tone="verde">
-              <span className="h-1.5 w-1.5 rounded-full bg-verde-500" /> Plataforma educacional completa · White label
-            </Pill>
-            <h1 className="mt-5 font-display text-display font-extrabold text-ink">
+            <h1 className="font-display text-display font-extrabold text-ink">
               A plataforma educacional <Highlight color="amarelo">completa</Highlight>.{" "}
               <span className="text-verde-700">Com a sua marca.</span>
             </h1>
