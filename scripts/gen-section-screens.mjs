@@ -265,8 +265,42 @@ function eduIA() {
   return s;
 }
 
+// ---- CRIAR PROVA (editor + gerar com IA) ----
+function provasEditor() {
+  let s = txt(232, 116, "Nova prova · Matemática · 3º A", 20, C.ink, 800);
+  s += card(224, 150, 600, 420);
+  for (let i = 0; i < 3; i++) {
+    const y = 174 + i * 132;
+    s += card(244, y, 560, 116, 12);
+    s += `<rect x="244" y="${y}" width="6" height="116" rx="3" fill="${[C.verde, C.azul, C.amarelo][i]}"/>`;
+    s += txt(272, y + 30, `Questão ${i + 1}`, 14, C.ink, 700);
+    s += bar(272, y + 44, 500, 10, C.line, 5);
+    s += bar(272, y + 62, 440, 10, C.line, 5);
+    for (let a = 0; a < 4; a++) {
+      const cx = 284 + a * 70;
+      s += `<circle cx="${cx}" cy="${y + 92}" r="8" fill="none" stroke="${C.line}" stroke-width="2"/>`;
+      if (a === i % 4) s += `<circle cx="${cx}" cy="${y + 92}" r="4" fill="${C.verde}"/>`;
+    }
+  }
+  s += card(848, 150, 328, 420);
+  s += txt(872, 184, "Gerar com IA", 15, C.ink, 700);
+  s += card(872, 204, 280, 92, 12);
+  s += txt(892, 232, "Gere 10 questões de", 12, C.slate);
+  s += txt(892, 252, "funções do 2º grau,", 12, C.slate);
+  s += txt(892, 272, "nível médio", 12, C.slate);
+  s += bar(872, 312, 280, 46, C.amarelo, 23) + txt(942, 340, "✨ Gerar questões", 13, C.ink, 700);
+  ["Banco de Itens", "Dificuldade", "Habilidade BNCC"].forEach((t, i) => {
+    const y = 378 + i * 44;
+    s += card(872, y, 280, 34, 10);
+    s += txt(892, y + 22, t, 12, C.slate);
+    s += `<circle cx="1128" cy="${y + 17}" r="9" fill="${C.verde}" opacity=".2"/><circle cx="1128" cy="${y + 17}" r="4" fill="${C.verde}"/>`;
+  });
+  return s;
+}
+
 const screens = [
   ["secao-relatorios", relatorios(), { title: "Relatórios", accent: C.verde, nav: 3, avatar: C.azul }],
+  ["provas-editor", provasEditor(), { title: "Criar prova", accent: C.verde, nav: 1, avatar: C.verde }],
   ["edu-ia-professor", eduIA(), { title: "Edu.IA · Assistente", accent: C.azul, nav: 1, avatar: C.azul }],
   ["perfil-aluno", aluno(), { title: "Aluno", accent: C.azul, nav: 0, avatar: C.azul }],
   ["perfil-professor", professor(), { title: "Professor", accent: C.verde, nav: 1, avatar: C.verde }],
@@ -337,3 +371,71 @@ function redacaoOcr() {
 
 writeFileSync(join(OUT, "redacao-ocr.svg"), redacaoOcr());
 console.log("✓", "redacao-ocr.svg");
+
+// ---- LEITOR / OMR / IA (composição própria) ----
+function omrLeitor() {
+  // bolhas OMR na folha
+  let bubbles = "";
+  for (let r = 0; r < 9; r++) {
+    const y = 252 + r * 40;
+    bubbles += `<text x="150" y="${y + 5}" font-family="Verdana,sans-serif" font-size="13" fill="${C.slate}">${r + 1}</text>`;
+    for (let a = 0; a < 5; a++) {
+      const cx = 192 + a * 46;
+      const filled = a === (r * 2 + 1) % 5;
+      bubbles += `<circle cx="${cx}" cy="${y}" r="11" fill="${filled ? C.navy : "#FFFFFF"}" stroke="${filled ? C.navy : C.line}" stroke-width="2"/>`;
+    }
+  }
+  // grade de correção (direita)
+  let marks = "";
+  const wrong = new Set([7, 14, 22]);
+  for (let i = 0; i < 30; i++) {
+    const cx = 730 + (i % 6) * 64;
+    const cy = 470 + Math.floor(i / 6) * 38;
+    const bad = wrong.has(i);
+    marks += `<circle cx="${cx}" cy="${cy}" r="13" fill="${bad ? "#FDECEC" : C.verdeSoft}"/>`;
+    marks += bad
+      ? `<path d="M${cx - 5} ${cy - 5} l10 10 m0 -10 l-10 10" stroke="#D14343" stroke-width="2.4" stroke-linecap="round"/>`
+      : `<path d="M${cx - 5} ${cy} l3 3 7 -7" stroke="${C.verde}" stroke-width="2.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>`;
+  }
+  return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 750" role="img" aria-label="Leitor OMR: identificação automática do aluno e extração de respostas">
+  <rect width="1200" height="750" fill="${C.bg}"/>
+  <!-- pilha (lote da turma) -->
+  <rect x="128" y="168" width="430" height="510" rx="14" fill="#FFFFFF" stroke="${C.line}"/>
+  <rect x="118" y="159" width="436" height="514" rx="14" fill="#FFFFFF" stroke="${C.line}"/>
+  <!-- folha principal -->
+  <rect x="108" y="150" width="440" height="520" rx="14" fill="#FFFFFF" stroke="${C.line}"/>
+  <rect x="108" y="150" width="440" height="56" rx="14" fill="${C.azul}" opacity=".12"/>
+  <text x="138" y="186" font-family="Verdana,sans-serif" font-size="16" font-weight="700" fill="${C.ink}">Folha de respostas · OMR</text>
+  ${bubbles}
+  <!-- celular lendo (app com câmera) -->
+  <g transform="translate(372 470)">
+    <rect x="0" y="0" width="150" height="220" rx="20" fill="${C.navy}"/>
+    <rect x="10" y="14" width="130" height="192" rx="10" fill="#FFFFFF"/>
+    <g stroke="${C.amarelo}" stroke-width="4" fill="none" stroke-linecap="round">
+      <path d="M26 40 v-12 h12"/><path d="M124 40 v-12 h-12"/><path d="M26 176 v12 h12"/><path d="M124 176 v12 h-12"/>
+    </g>
+    ${[0, 1, 2, 3].map((r) => [0, 1, 2, 3].map((c) => `<circle cx="${40 + c * 24}" cy="${64 + r * 28}" r="7" fill="${(r + c) % 3 === 0 ? C.navy : "#FFFFFF"}" stroke="${C.line}" stroke-width="1.5"/>`).join("")).join("")}
+  </g>
+  <!-- badge OMR + IA -->
+  <rect x="566" y="384" width="126" height="50" rx="25" fill="${C.navy}"/>
+  <text x="629" y="415" text-anchor="middle" font-family="Verdana,sans-serif" font-size="15" font-weight="800" fill="#FFFFFF">OMR + IA</text>
+  <path d="M576 470 h100 m-16 -10 l16 10 -16 10" stroke="${C.azul}" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- card resultado -->
+  <rect x="690" y="150" width="430" height="520" rx="16" fill="#FFFFFF" stroke="${C.line}"/>
+  <text x="720" y="194" font-family="Verdana,sans-serif" font-size="16" font-weight="700" fill="${C.ink}">Identificação automática</text>
+  <circle cx="742" cy="246" r="24" fill="${C.verde}"/>
+  <text x="742" y="252" text-anchor="middle" font-family="Verdana,sans-serif" font-size="16" font-weight="800" fill="#FFFFFF">AS</text>
+  <text x="780" y="240" font-family="Verdana,sans-serif" font-size="16" font-weight="700" fill="${C.ink}">Ana Souza</text>
+  <text x="780" y="262" font-family="Verdana,sans-serif" font-size="13" fill="${C.slate}">3º A · Matrícula 2024-0157</text>
+  <line x1="720" y1="298" x2="1090" y2="298" stroke="${C.line}"/>
+  <text x="720" y="338" font-family="Verdana,sans-serif" font-size="13" fill="${C.slate}">Respostas extraídas</text>
+  <text x="720" y="384" font-family="Verdana,sans-serif" font-size="40" font-weight="800" fill="${C.verde}">90/90</text>
+  <text x="980" y="338" font-family="Verdana,sans-serif" font-size="13" fill="${C.slate}">Nota</text>
+  <text x="980" y="384" font-family="Verdana,sans-serif" font-size="40" font-weight="800" fill="${C.ink}">8,4</text>
+  <text x="720" y="436" font-family="Verdana,sans-serif" font-size="13" fill="${C.slate}">Correção por questão</text>
+  ${marks}
+</svg>`;
+}
+
+writeFileSync(join(OUT, "omr-leitor.svg"), omrLeitor());
+console.log("✓", "omr-leitor.svg");

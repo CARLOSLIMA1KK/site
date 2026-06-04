@@ -21,7 +21,7 @@ const body = Public_Sans({
 export const metadata = {
   metadataBase: new URL("https://www.kodaredu.com.br"),
   title: {
-    default: "KodarEdu — Plataforma de avaliação e ENEM white label para escolas",
+    default: "KodarEdu · Plataforma de avaliação e ENEM white label para escolas",
     template: "%s · KodarEdu",
   },
   description: SITE.description,
@@ -37,7 +37,7 @@ export const metadata = {
     type: "website",
     locale: "pt_BR",
     siteName: "KodarEdu",
-    title: "KodarEdu — Plataforma de avaliação e ENEM white label",
+    title: "KodarEdu · Plataforma de avaliação e ENEM white label",
     description: SITE.description,
   },
   twitter: { card: "summary_large_image" },
@@ -45,7 +45,7 @@ export const metadata = {
 };
 
 export const viewport = {
-  themeColor: "#0B3D2E",
+  themeColor: "#0B1033",
 };
 
 export default function RootLayout({ children }) {
