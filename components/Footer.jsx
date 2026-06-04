@@ -7,7 +7,6 @@ const COLUMNS = [
   {
     title: "Plataforma",
     links: [
-      { label: "Visão Geral", href: "/plataforma" },
       { label: "Tour", href: "/plataforma/tour" },
       { label: "White Label", href: "/white-label" },
       { label: "Relatórios", href: "/plataforma/relatorios" },

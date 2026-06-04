@@ -68,11 +68,11 @@ export default function HomePage() {
       >
         <FeatureList items={PLATFORM_CAPABILITIES} columns={4} icon="check" />
         <Reveal className="mt-8 flex flex-wrap gap-3">
-          <Button href="/plataforma" variant="secondary" arrow>
-            Conhecer a plataforma
-          </Button>
-          <Button href="/plataforma/tour" variant="ghost">
+          <Button href="/plataforma/tour" variant="secondary" arrow>
             Fazer o tour pelas telas
+          </Button>
+          <Button href="/plataforma/relatorios" variant="ghost">
+            Ver relatórios & dados
           </Button>
         </Reveal>
       </SectionWrapper>
@@ -336,8 +336,8 @@ function Hero() {
               <Button href={SITE.ctaPrimaryHref} variant="primary" size="lg" arrow>
                 {SITE.ctaPrimary}
               </Button>
-              <Button href="/plataforma" variant="secondary" size="lg">
-                Conhecer a plataforma
+              <Button href="/solucoes" variant="secondary" size="lg">
+                Conhecer as soluções
               </Button>
             </div>
             <div className="mt-8 flex flex-wrap items-center gap-2">
