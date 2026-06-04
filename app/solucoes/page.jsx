@@ -44,8 +44,8 @@ export default function SolucoesPage() {
         eyebrow="Soluções"
         title="Tudo o que sua escola precisa para avaliar,"
         highlight="reunido na sua marca."
-        subtitle="Uma plataforma completa: avaliação, conteúdo e gestão em um só lugar — com tag de formato (digital, impresso ou híbrido) em cada solução."
-        pills={["Digital", "Impresso", "Híbrido", "White Label"]}
+        subtitle="Uma plataforma completa em três frentes: Avaliações & Ferramentas, Recursos Edu e Edu.IA — com tag de formato (digital, impresso ou híbrido) em cada solução."
+        pills={["Avaliações", "Recursos Edu", "Edu.IA", "White Label"]}
       />
 
       {CATEGORIES.map((cat, idx) => (

@@ -25,7 +25,7 @@ import {
   REPORT_VIEWS,
 } from "@/lib/site";
 
-const SEALS = ["Simulados por TRI", "Redação com IA", "Banco de questões", "Adaptativa", "Relatórios"];
+const SEALS = ["Simulados ENEM/SAEB", "Trilha adaptativa", "Produção Textual", "Banco de Itens", "Edu.IA"];
 
 export default function HomePage() {
   return (
@@ -82,7 +82,7 @@ export default function HomePage() {
         soft
         eyebrow="Soluções"
         title="Tudo o que sua escola precisa — reunido"
-        subtitle="Simulados por TRI, redação com IA, banco de questões, plataforma adaptativa e relatórios. O melhor das melhores plataformas, em uma marca: a sua."
+        subtitle="Simulados ENEM e SAEB, trilha adaptativa, Produção Textual, Banco de Itens, provas com IA e o Edu.IA. O melhor das melhores plataformas, em uma marca: a sua."
       >
         <Stagger className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {FEATURED_SOLUTIONS.map((s) => (

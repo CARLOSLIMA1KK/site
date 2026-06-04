@@ -9,7 +9,7 @@ import { DIFFERENTIATORS } from "@/lib/site";
 export const metadata = {
   title: "Por que a KodarEdu",
   description:
-    "Tudo em uma só plataforma white label: simulados TRI, redação com IA, banco de questões, adaptativa e relatórios. Veja por que a KodarEdu é diferente.",
+    "Tudo em uma só plataforma white label: simulados TRI, Produção Textual com IA, Banco de Itens, trilha adaptativa, provas com IA e Edu.IA. Veja por que a KodarEdu é diferente.",
   alternates: { canonical: "/por-que-kodaredu" },
 };
 
@@ -17,8 +17,9 @@ const COMPARISON = [
   ["White label de verdade (cores, logo, links, domínio, app)", true, false],
   ["Simulados ENEM/SAEB com TRI na régua oficial", true, false],
   ["Redação com IA + especialista humano", true, false],
-  ["Banco de questões autoral com criação por IA", true, false],
-  ["Plataforma adaptativa (CAT) e trilhas", true, false],
+  ["Banco de Itens autoral com criação por IA", true, false],
+  ["Trilha adaptativa (CAT)", true, false],
+  ["Edu.IA: assistente do professor", true, false],
   ["Relatórios por competência e habilidade", true, true],
   ["Online, impresso e híbrido", true, false],
   ["Implantação sem TI + suporte humano (WhatsApp)", true, false],
