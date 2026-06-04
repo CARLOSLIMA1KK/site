@@ -5,35 +5,34 @@ import CTASection from "@/components/CTASection";
 import { Stagger, StaggerItem } from "@/components/Motion";
 
 export const metadata = {
-  title: "Soluções — avaliação, conteúdo e gestão",
+  title: "Soluções — avaliações, recursos e Edu.IA",
   description:
-    "Simulados ENEM/SAEB/vestibulares por TRI, redação com IA, banco de questões, plataforma adaptativa e criação/correção de provas. Online, impresso ou híbrido.",
+    "Simulados ENEM e SAEB, trilha adaptativa (CAT), Produção Textual com IA, Banco de Itens, criação e correção de provas, integração físico-digital e o assistente Edu.IA.",
   alternates: { canonical: "/solucoes" },
 };
 
 const CATEGORIES = [
   {
-    title: "Avaliação & Simulados",
+    title: "Avaliações & Ferramentas",
     items: [
-      { title: "Simulado ENEM (TRI)", href: "/solucoes/simulado-enem", tag: "TRI", text: "Padrão ENEM com correção por TRI na régua oficial.", icon: "target" },
-      { title: "Simulado SAEB", href: "/solucoes/simulado-saeb", tag: "BNCC", text: "Diagnóstico alinhado ao SAEB com benchmark nacional.", icon: "chart" },
-      { title: "Simulado de Vestibulares", href: "/solucoes/simulado-vestibulares", tag: "Bancas", text: "Simulados fiéis às principais bancas e vestibulares.", icon: "book" },
-      { title: "Avaliação Diagnóstica/Processual", href: "/solucoes/avaliacao", tag: "BNCC", text: "Avaliações diagnósticas e somativas do Fund. ao Médio.", icon: "check" },
+      { title: "Simulados ENEM", href: "/solucoes/simulado-enem", tag: "TRI", text: "Padrão ENEM com correção por TRI na régua oficial.", icon: "target" },
+      { title: "Simulados SAEB", href: "/solucoes/simulado-saeb", tag: "BNCC", text: "Diagnóstico alinhado ao SAEB com benchmark nacional.", icon: "chart" },
+      { title: "Trilha adaptativa (CAT)", href: "/solucoes/adaptativa", tag: "CAT", text: "Teste adaptativo e trilhas personalizadas.", icon: "bolt" },
+      { title: "Produção Textual", href: "/solucoes/redacao", tag: "Com IA", text: "Redação no padrão ENEM com IA + corretor humano.", icon: "brush" },
     ],
   },
   {
-    title: "Conteúdo & Aprendizagem",
+    title: "Recursos Edu",
     items: [
-      { title: "Correção de Redação", href: "/solucoes/redacao", tag: "Com IA", text: "Padrão ENEM com IA + corretor humano.", icon: "brush" },
-      { title: "Banco de Questões / Itens", href: "/solucoes/banco-de-questoes", tag: "Autoral", text: "Milhares de itens inéditos com filtros e IA.", icon: "list" },
-      { title: "Plataforma Adaptativa", href: "/solucoes/adaptativa", tag: "CAT", text: "Teste adaptativo e trilhas personalizadas.", icon: "bolt" },
-      { title: "Material de Revisão", href: "/solucoes/revisa", tag: "Híbrido", text: "Cadernos impressos + app inteligente.", icon: "book" },
+      { title: "Banco de Itens", href: "/solucoes/banco-de-questoes", tag: "Autoral", text: "Milhares de itens inéditos com filtros e IA.", icon: "list" },
+      { title: "Criação e Correção de Provas", href: "/solucoes/provas", tag: "Com IA", text: "Gere questões com IA, aplique e corrija automaticamente.", icon: "chip" },
+      { title: "Integração físico-digital", href: "/solucoes/integracao", tag: "Híbrido", text: "Impresso e online integrados, com dados num só lugar.", icon: "book" },
     ],
   },
   {
-    title: "Gestão Avaliativa",
+    title: "Edu.IA",
     items: [
-      { title: "Criação & Correção de Provas", href: "/solucoes/provas", tag: "Com IA", text: "Crie, imprima ou aplique online; correção automática.", icon: "chip" },
+      { title: "Edu.IA para professores", href: "/solucoes/edu-ia", tag: "IA", text: "Assistente de IA com várias ferramentas para o professor.", icon: "bolt" },
     ],
   },
 ];

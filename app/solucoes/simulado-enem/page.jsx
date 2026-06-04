@@ -32,8 +32,8 @@ export default function SimuladoEnemPage() {
   return (
     <>
       <PageHero
-        eyebrow="Avaliação & Simulados"
-        title="Simulado ENEM com correção por"
+        eyebrow="Avaliações & Ferramentas"
+        title="Simulados ENEM com correção por"
         highlight="TRI de verdade."
         subtitle="Aplique simulados no padrão ENEM e entregue notas por TRI ajustadas à régua oficial — com ranking, gabarito comentado e relatórios por área e habilidade."
         pills={["TRI", "Padrão ENEM", "Ranking", "White Label"]}

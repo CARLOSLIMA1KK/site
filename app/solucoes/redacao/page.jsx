@@ -6,9 +6,9 @@ import CTASection from "@/components/CTASection";
 import { Reveal, Stagger, StaggerItem } from "@/components/Motion";
 
 export const metadata = {
-  title: "Correção de Redação com IA + especialista",
+  title: "Produção Textual — redação com IA + especialista",
   description:
-    "Correção de redação no padrão ENEM combinando IA e corretor humano: grade de competências, devolutiva detalhada, banco de temas e evolução por aluno e turma.",
+    "Produção Textual: correção de redação no padrão ENEM combinando IA e corretor humano — grade de competências, devolutiva detalhada, banco de temas e evolução por aluno e turma.",
   alternates: { canonical: "/solucoes/redacao" },
 };
 
@@ -33,8 +33,8 @@ export default function RedacaoPage() {
   return (
     <>
       <PageHero
-        eyebrow="Conteúdo & Aprendizagem"
-        title="Correção de redação no padrão ENEM:"
+        eyebrow="Avaliações & Ferramentas · Produção Textual"
+        title="Produção Textual no padrão ENEM:"
         highlight="IA + especialista."
         subtitle="Una a velocidade da inteligência artificial ao olhar de um corretor humano. Devolutiva por competência, marcações no texto e evolução acompanhada por aluno e turma."
         pills={["Com IA", "Padrão ENEM", "5 competências", "White Label"]}

@@ -235,8 +235,39 @@ function relatorios() {
   return s;
 }
 
+// ---- EDU.IA (assistente do professor) ----
+function eduIA() {
+  // barra de prompt
+  let s = card(224, 116, 952, 64, 14);
+  s += `<circle cx="258" cy="148" r="12" fill="${C.azul}"/>`;
+  s += txt(286, 153, "Peça ao Edu.IA: “Crie um plano de aula sobre funções para o 9º ano”", 15, C.slate);
+  s += bar(1020, 128, 132, 40, C.amarelo, 20) + txt(1052, 153, "✨ Gerar", 14, C.ink, 700);
+  // ferramentas
+  s += txt(232, 214, "Ferramentas", 14, C.slate, 700);
+  const tools = [
+    ["Plano de aula", C.verde], ["Atividades", C.azul], ["Questões", C.amarelo],
+    ["Resumos", C.verde], ["Adaptar nível", C.azul], ["Feedback", C.amarelo],
+  ];
+  tools.forEach(([t, col], i) => {
+    const x = 224 + (i % 3) * 326;
+    const y = 232 + Math.floor(i / 3) * 118;
+    s += card(x, y, 300, 98, 14);
+    s += `<rect x="${x + 20}" y="${y + 22}" width="40" height="40" rx="10" fill="${col}" opacity=".16"/>`;
+    s += `<rect x="${x + 31}" y="${y + 33}" width="18" height="18" rx="5" fill="${col}"/>`;
+    s += txt(x + 76, y + 42, t, 15, C.ink, 700);
+    s += bar(x + 76, y + 56, 150, 10, C.line, 5);
+  });
+  // resposta gerada
+  s += card(224, 480, 952, 116, 14);
+  s += `<rect x="248" y="504" width="150" height="24" rx="12" fill="${C.verde}" opacity=".14"/>` + txt(266, 521, "✨ Edu.IA gerou", 12, C.verde, 700);
+  s += txt(412, 521, "Plano de aula · 9º ano — Funções", 14, C.ink, 700);
+  [820, 900, 760].forEach((w, i) => { s += bar(248, 544 + i * 18, w, 10, C.line, 5); });
+  return s;
+}
+
 const screens = [
   ["secao-relatorios", relatorios(), { title: "Relatórios", accent: C.verde, nav: 3, avatar: C.azul }],
+  ["edu-ia-professor", eduIA(), { title: "Edu.IA · Assistente", accent: C.azul, nav: 1, avatar: C.azul }],
   ["perfil-aluno", aluno(), { title: "Aluno", accent: C.azul, nav: 0, avatar: C.azul }],
   ["perfil-professor", professor(), { title: "Professor", accent: C.verde, nav: 1, avatar: C.verde }],
   ["perfil-coordenacao", coordenacao(), { title: "Coordenação", accent: C.azul, nav: 2, avatar: C.amarelo }],

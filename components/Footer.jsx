@@ -17,13 +17,14 @@ const COLUMNS = [
   {
     title: "Soluções",
     links: [
-      { label: "Simulado ENEM", href: "/solucoes/simulado-enem" },
-      { label: "Simulado SAEB", href: "/solucoes/simulado-saeb" },
-      { label: "Vestibulares", href: "/solucoes/simulado-vestibulares" },
-      { label: "Redação", href: "/solucoes/redacao" },
-      { label: "Banco de Questões", href: "/solucoes/banco-de-questoes" },
-      { label: "Adaptativa", href: "/solucoes/adaptativa" },
-      { label: "Provas", href: "/solucoes/provas" },
+      { label: "Simulados ENEM", href: "/solucoes/simulado-enem" },
+      { label: "Simulados SAEB", href: "/solucoes/simulado-saeb" },
+      { label: "Trilha adaptativa", href: "/solucoes/adaptativa" },
+      { label: "Produção Textual", href: "/solucoes/redacao" },
+      { label: "Banco de Itens", href: "/solucoes/banco-de-questoes" },
+      { label: "Criação de Provas", href: "/solucoes/provas" },
+      { label: "Integração físico-digital", href: "/solucoes/integracao" },
+      { label: "Edu.IA", href: "/solucoes/edu-ia" },
     ],
   },
   {
