@@ -1,0 +1,93 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Base / Brasil refinado */
+  --verde-900: #0b3d2e;
+  --verde-700: #0e6e4e;
+  --verde-500: #1b9e6b;
+  --verde-100: #e6f4ee;
+
+  --azul-900: #0a2540;
+  --azul-600: #1456c4;
+  --azul-100: #e8f0fe;
+
+  --amarelo-500: #ffc400;
+  --amarelo-300: #ffe08a;
+
+  /* Neutros */
+  --ink: #0f1b17;
+  --slate: #4a5b54;
+  --line: #e3e8e6;
+  --bg: #ffffff;
+  --bg-soft: #f6f9f8;
+
+  /* Semânticos */
+  --success: var(--verde-500);
+  --cta: var(--amarelo-500);
+  --cta-ink: #1a1300;
+
+  /* Raios e sombras */
+  --radius-sm: 10px;
+  --radius: 18px;
+  --radius-lg: 28px;
+  --shadow-card: 0 10px 30px rgba(10, 37, 64, 0.08);
+  --shadow-pop: 0 20px 50px rgba(10, 37, 64, 0.14);
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: var(--bg);
+    color: var(--ink);
+    font-feature-settings: "ss01", "cv01";
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  ::selection {
+    background-color: var(--amarelo-300);
+    color: var(--ink);
+  }
+
+  /* Foco visível — acessibilidade AA */
+  :where(a, button, input, select, textarea, [tabindex]):focus-visible {
+    outline: 3px solid var(--azul-600);
+    outline-offset: 2px;
+    border-radius: 4px;
+  }
+}
+
+@layer components {
+  .container-page {
+    @apply mx-auto w-full max-w-container px-5 sm:px-6 lg:px-8;
+  }
+
+  .eyebrow {
+    @apply inline-flex items-center gap-2 text-sm font-semibold uppercase tracking-[0.14em] text-verde-700;
+  }
+
+  /* Detalhe gráfico brasileiro abstrato: malha de pontos */
+  .dot-grid {
+    background-image: radial-gradient(rgba(10, 37, 64, 0.12) 1px, transparent 1px);
+    background-size: 22px 22px;
+  }
+}
+
+/* Respeitar prefers-reduced-motion */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+}

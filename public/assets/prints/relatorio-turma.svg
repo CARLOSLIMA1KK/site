@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 750" role="img" aria-label="Desempenho por turma">
+  <rect width="1200" height="750" fill="#F6F9F8"/>
+  <!-- sidebar -->
+  <rect x="0" y="0" width="220" height="750" fill="#0E6E4E"/>
+  <rect x="28" y="32" width="34" height="34" rx="9" fill="#FFC400"/>
+  <rect x="72" y="40" width="96" height="16" rx="6" fill="#FFFFFF" opacity=".9"/>
+  <rect x="28" y="110" width="120" height="14" rx="7" fill="#FFFFFF" opacity=".4"/><rect x="28" y="158" width="150" height="14" rx="7" fill="#FFFFFF" opacity=".95"/><rect x="28" y="206" width="120" height="14" rx="7" fill="#FFFFFF" opacity=".4"/><rect x="28" y="254" width="120" height="14" rx="7" fill="#FFFFFF" opacity=".4"/><rect x="28" y="302" width="120" height="14" rx="7" fill="#FFFFFF" opacity=".4"/>
+  <!-- topbar -->
+  <rect x="220" y="0" width="980" height="72" fill="#FFFFFF"/>
+  <line x1="220" y1="72" x2="1200" y2="72" stroke="#E3E8E6"/>
+  <rect x="252" y="28" width="240" height="18" rx="9" fill="#0F1B17" opacity=".85"/>
+  <rect x="1050" y="22" width="110" height="30" rx="15" fill="#FFC400"/>
+  <rect x="252" y="104" width="916" height="540" rx="16" fill="#FFFFFF" stroke="#E3E8E6"/><rect x="300" y="510" width="56" height="90" rx="8" fill="#FFC400"/><rect x="395" y="439" width="56" height="161" rx="8" fill="#1B9E6B"/><rect x="490" y="368" width="56" height="232" rx="8" fill="#1B9E6B"/><rect x="585" y="297" width="56" height="303" rx="8" fill="#FFC400"/><rect x="680" y="226" width="56" height="374" rx="8" fill="#1B9E6B"/><rect x="775" y="155" width="56" height="445" rx="8" fill="#1B9E6B"/><rect x="870" y="444" width="56" height="156" rx="8" fill="#FFC400"/><rect x="965" y="373" width="56" height="227" rx="8" fill="#1B9E6B"/><rect x="1060" y="302" width="56" height="298" rx="8" fill="#1B9E6B"/>
+</svg>
