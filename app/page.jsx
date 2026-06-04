@@ -35,8 +35,8 @@ export default function HomePage() {
       {/* Impacto */}
       <StatBand
         stats={STATS}
-        title="Autoridade que vira resultado"
-        subtitle="Dados precisos, presença nacional e a confiança de instituições que querem estar entre as melhores."
+        title="Números que comprovam o impacto"
+        subtitle="Estudantes impactados, avaliações aplicadas e produções textuais corrigidas, com a confiança de instituições por todo o país."
       />
 
       {/* Jornada avaliativa em 4 passos */}

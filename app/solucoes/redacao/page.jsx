@@ -16,10 +16,10 @@ export const metadata = {
 
 // Números desta solução (placeholders editáveis)
 const STATS = [
-  { value: 800, suffix: "+", label: "Correções realizadas" },
+  { value: 1, suffix: "M+", label: "Produções corrigidas" },
   { value: 5000, suffix: "+", label: "Temas no banco" },
   { value: 12, suffix: "+", label: "Gêneros textuais" },
-  { value: 5, label: "Competências avaliadas" },
+  { value: 99, suffix: "%", label: "de satisfação", stars: true },
 ];
 
 const GENEROS = [
