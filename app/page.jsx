@@ -8,7 +8,6 @@ import StatBand from "@/components/StatBand";
 import LogoWall from "@/components/LogoWall";
 import MockupFrame from "@/components/MockupFrame";
 import WhiteLabelDemo from "@/components/WhiteLabelDemo";
-import FreeToolCTA from "@/components/FreeToolCTA";
 import FAQ from "@/components/FAQ";
 import CTASection from "@/components/CTASection";
 import FeatureList from "@/components/FeatureList";
@@ -227,9 +226,6 @@ export default function HomePage() {
 
       {/* Depoimento + case */}
       <Testimonial />
-
-      {/* KodarEdu Labs — captação */}
-      <FreeToolCTA />
 
       {/* FAQ */}
       <SectionWrapper eyebrow="Dúvidas frequentes" title="Perguntas que toda escola faz" center>

@@ -16,7 +16,6 @@ const ROUTES = [
   "/solucoes/revisa",
   "/solucoes/provas",
   "/planos",
-  "/labs",
   "/para/escolas",
   "/para/cursinhos",
   "/para/redes",

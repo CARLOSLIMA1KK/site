@@ -1,12 +1,11 @@
 import PageHero from "@/components/PageHero";
 import SectionWrapper from "@/components/SectionWrapper";
 import PricingTable from "@/components/PricingTable";
-import FreeToolCTA from "@/components/FreeToolCTA";
 import FAQ from "@/components/FAQ";
 import CTASection from "@/components/CTASection";
 import Pill from "@/components/Pill";
 import { Reveal } from "@/components/Motion";
-import { PLANS, PLANS_FAQ } from "@/lib/site";
+import { PLANS, PLANS_FAQ, SITE } from "@/lib/site";
 
 export const metadata = {
   title: "Planos & Preços",
@@ -25,7 +24,7 @@ export default function PlanosPage() {
         subtitle="Escolha o plano que acompanha o momento da sua instituição. Todos rodam com a sua marca, com garantia de 30 dias e implantação sem precisar de TI."
         pills={["White Label", "Garantia de 30 dias", "Sem TI"]}
         primary={{ label: "Solicitar proposta", href: "/contato" }}
-        secondary={{ label: "Testar o Labs grátis", href: "/labs" }}
+        secondary={{ label: "Falar com especialista", href: SITE.whatsapp, external: true }}
       />
 
       <SectionWrapper>
@@ -36,8 +35,6 @@ export default function PlanosPage() {
           </p>
         </Reveal>
       </SectionWrapper>
-
-      <FreeToolCTA />
 
       <SectionWrapper soft eyebrow="Cobrança & implantação" title="Perguntas sobre planos" center>
         <FAQ items={PLANS_FAQ} />
