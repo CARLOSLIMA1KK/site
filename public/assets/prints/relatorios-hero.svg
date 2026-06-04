@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 750" role="img" aria-label="Relatórios">
+  <rect width="1200" height="750" fill="#F6F8FB"/>
+  <!-- sidebar -->
+  <rect x="0" y="0" width="200" height="750" fill="#0B1033"/>
+  <rect x="24" y="28" width="30" height="30" rx="8" fill="#FFC400"/>
+  <rect x="62" y="36" width="86" height="14" rx="7" fill="#FFFFFF" opacity=".92"/>
+  
+      <rect x="28" y="104" width="16" height="16" rx="4" fill="#FFFFFF" opacity=".45"/>
+      <rect x="54" y="106" width="84" height="12" rx="6" fill="#FFFFFF" opacity=".4"/>
+      <rect x="28" y="154" width="16" height="16" rx="4" fill="#FFFFFF" opacity=".45"/>
+      <rect x="54" y="156" width="84" height="12" rx="6" fill="#FFFFFF" opacity=".4"/>
+      <rect x="28" y="204" width="16" height="16" rx="4" fill="#FFFFFF" opacity=".45"/>
+      <rect x="54" y="206" width="84" height="12" rx="6" fill="#FFFFFF" opacity=".4"/><rect x="14" y="242" width="172" height="40" rx="10" fill="#FFFFFF" opacity=".12"/>
+      <rect x="28" y="254" width="16" height="16" rx="4" fill="#FFFFFF" opacity=".95"/>
+      <rect x="54" y="256" width="104" height="12" rx="6" fill="#FFFFFF" opacity=".95"/>
+      <rect x="28" y="304" width="16" height="16" rx="4" fill="#FFFFFF" opacity=".45"/>
+      <rect x="54" y="306" width="84" height="12" rx="6" fill="#FFFFFF" opacity=".4"/>
+  <rect x="24" y="690" width="152" height="36" rx="10" fill="#FFFFFF" opacity=".10"/>
+  <!-- topbar -->
+  <rect x="200" y="0" width="1000" height="72" fill="#FFFFFF"/>
+  <line x1="200" y1="72" x2="1200" y2="72" stroke="#E4E7EC"/>
+  <text x="232" y="44" font-family="Verdana, sans-serif" font-size="20" font-weight="700" fill="#0B1033">Relatórios</text>
+  <rect x="970" y="24" width="120" height="26" rx="13" fill="#1E50E0" opacity=".12"/>
+  <circle cx="1130" cy="36" r="16" fill="#1E50E0"/>
+  <text x="232" y="116" font-family="Verdana, sans-serif" font-size="22" font-weight="800" fill="#0B1033">Relatórios</text><rect x="224" y="150" width="138" height="34" rx="17" fill="#1BA559"/><text x="244" y="172" font-family="Verdana, sans-serif" font-size="12" font-weight="600" fill="#FFFFFF">Competência</text><rect x="374" y="150" width="138" height="34" rx="17" fill="none" stroke="#E4E7EC"/><text x="394" y="172" font-family="Verdana, sans-serif" font-size="12" font-weight="600" fill="#475569">Habilidade</text><rect x="524" y="150" width="138" height="34" rx="17" fill="none" stroke="#E4E7EC"/><text x="544" y="172" font-family="Verdana, sans-serif" font-size="12" font-weight="600" fill="#475569">Turma</text><rect x="674" y="150" width="138" height="34" rx="17" fill="none" stroke="#E4E7EC"/><text x="694" y="172" font-family="Verdana, sans-serif" font-size="12" font-weight="600" fill="#475569">Período</text><rect x="224" y="206" width="620" height="364" rx="16" fill="#FFFFFF" stroke="#E4E7EC"/><text x="248" y="238" font-family="Verdana, sans-serif" font-size="14" font-weight="700" fill="#0B1033">Evolução por competência</text><polygon points="286,500 286,440 352,395.2652078772105 418,361.1224839454675 484,343.6281029269727 550,341.70909493456753 616,347.6227185150194 682,350.27209981231715 748,339.9581966839171 814,312.53317566270323 814,500" fill="#1BA559" opacity=".10"/><polyline points="286,440 352,395.2652078772105 418,361.1224839454675 484,343.6281029269727 550,341.70909493456753 616,347.6227185150194 682,350.27209981231715 748,339.9581966839171 814,312.53317566270323" fill="none" stroke="#1BA559" stroke-width="4" stroke-linecap="round"/><polyline points="286,444 352,434.37004884397936 418,432.01117022985864 484,433.0101126918697 550,432.32486767870296 616,425.47957906435227 682,410.06913621652046 748,386.5676702226435 814,358.16917111984833" fill="none" stroke="#1E50E0" stroke-width="4" stroke-linecap="round"/><rect x="868" y="206" width="308" height="170" rx="16" fill="#FFFFFF" stroke="#E4E7EC"/><text x="892" y="238" font-family="Verdana, sans-serif" font-size="13" font-weight="400" fill="#475569">Precisão (TRI)</text><text x="892" y="292" font-family="Verdana,sans-serif" font-size="38" font-weight="800" fill="#1BA559">99,7%</text><text x="892" y="326" font-family="Verdana, sans-serif" font-size="12" font-weight="400" fill="#475569">vs. resultado oficial</text><rect x="868" y="392" width="308" height="178" rx="16" fill="#FFFFFF" stroke="#E4E7EC"/><text x="892" y="424" font-family="Verdana, sans-serif" font-size="13" font-weight="400" fill="#475569">Habilidades mapeadas</text><rect x="892" y="446" width="180" height="12" rx="6" fill="#F6F8FB"/><rect x="892" y="446" width="60" height="12" rx="6" fill="#1BA559"/><rect x="892" y="476" width="180" height="12" rx="6" fill="#F6F8FB"/><rect x="892" y="476" width="94" height="12" rx="6" fill="#1E50E0"/><rect x="892" y="506" width="180" height="12" rx="6" fill="#F6F8FB"/><rect x="892" y="506" width="128" height="12" rx="6" fill="#1BA559"/><rect x="892" y="536" width="180" height="12" rx="6" fill="#F6F8FB"/><rect x="892" y="536" width="162" height="12" rx="6" fill="#1E50E0"/>
+</svg>

@@ -351,8 +351,8 @@ function Hero() {
 
           <div className="relative animate-fade-up [animation-delay:160ms]">
             <MockupFrame
-              src="/assets/prints/relatorio-gestor.svg"
-              alt="Painel de relatórios da KodarEdu com indicadores de desempenho"
+              src="/assets/prints/painel-escola.svg"
+              alt="Painel inicial da KodarEdu com a visão geral da escola"
               label="app.suaescola.edu.br"
             />
             <div className="absolute -bottom-6 -left-4 hidden w-44 sm:block">

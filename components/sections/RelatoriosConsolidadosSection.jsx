@@ -27,7 +27,7 @@ export default function RelatoriosConsolidadosSection({ soft = false }) {
         </Reveal>
         <Reveal delay={0.1} className="lg:order-1">
           <MockupFrame
-            src="/assets/prints/secao-relatorios.svg"
+            src="/assets/prints/relatorios-consolidado.svg"
             alt="Painel de relatórios consolidados por aluno, turma e questão"
             label="Relatórios consolidados"
           />

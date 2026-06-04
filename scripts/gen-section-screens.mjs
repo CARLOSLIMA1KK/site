@@ -298,8 +298,87 @@ function provasEditor() {
   return s;
 }
 
+// ---- PAINEL DA ESCOLA (Home hero) ----
+function painelEscola() {
+  let s = txt(232, 116, "Olá, Colégio Aurora 👋", 22, C.ink, 800) + txt(232, 140, "Resumo da sua escola hoje", 14, C.slate);
+  s += `<rect x="224" y="160" width="952" height="92" rx="16" fill="${C.verde}"/>`;
+  s += txt(252, 196, "Próximo: 2º Simulado ENEM", 18, "#FFFFFF", 700);
+  s += `<text x="252" y="224" font-family="Verdana,sans-serif" font-size="13" fill="#FFFFFF" opacity=".85">Quinta, 14h · 1.248 alunos inscritos</text>`;
+  s += bar(1004, 184, 148, 44, C.amarelo, 22) + txt(1034, 212, "Ver agenda", 13, C.ink, 700);
+  const kpis = [["Alunos ativos", "1.248", C.azul], ["Simulados no mês", "12", C.verde], ["Nota média", "712", C.amarelo]];
+  kpis.forEach(([k, v, col], i) => {
+    const x = 224 + i * 316;
+    s += card(x, 272, 292, 108);
+    s += txt(x + 22, 304, k, 13, C.slate);
+    s += `<text x="${x + 22}" y="348" font-family="Verdana,sans-serif" font-size="30" font-weight="800" fill="${col}">${v}</text>`;
+  });
+  s += card(224, 400, 952, 170);
+  s += txt(248, 432, "Evolução da escola", 14, C.ink, 700);
+  let pts = [];
+  for (let i = 0; i <= 9; i++) pts.push([262 + i * 98, 540 - (36 + Math.sin(i / 1.3) * 24 + i * 8)]);
+  const line = pts.map((p) => p.join(",")).join(" ");
+  s += `<polygon points="262,540 ${line} ${262 + 9 * 98},540" fill="${C.verde}" opacity=".12"/>`;
+  s += `<polyline points="${line}" fill="none" stroke="${C.verde}" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>`;
+  s += pts.map((p) => `<circle cx="${p[0]}" cy="${p[1]}" r="5" fill="${C.azul}"/>`).join("");
+  return s;
+}
+
+// ---- RELATÓRIOS (hero da página de relatórios) ----
+function relatoriosHero() {
+  let s = txt(232, 116, "Relatórios", 22, C.ink, 800);
+  ["Competência", "Habilidade", "Turma", "Período"].forEach((t, i) => {
+    const x = 224 + i * 150;
+    s += i === 0 ? bar(x, 150, 138, 34, C.verde, 17) : `<rect x="${x}" y="150" width="138" height="34" rx="17" fill="none" stroke="${C.line}"/>`;
+    s += txt(x + 20, 172, t, 12, i === 0 ? "#FFFFFF" : C.slate, 600);
+  });
+  s += card(224, 206, 620, 364);
+  s += txt(248, 238, "Evolução por competência", 14, C.ink, 700);
+  let p1 = [], p2 = [];
+  for (let i = 0; i <= 8; i++) {
+    p1.push([286 + i * 66, 500 - (60 + Math.sin(i / 1.5) * 40 + i * 20)]);
+    p2.push([286 + i * 66, 500 - (30 + Math.cos(i / 1.7) * 26 + i * 14)]);
+  }
+  const l1 = p1.map((p) => p.join(",")).join(" ");
+  const l2 = p2.map((p) => p.join(",")).join(" ");
+  s += `<polygon points="286,500 ${l1} ${286 + 8 * 66},500" fill="${C.verde}" opacity=".10"/>`;
+  s += `<polyline points="${l1}" fill="none" stroke="${C.verde}" stroke-width="4" stroke-linecap="round"/>`;
+  s += `<polyline points="${l2}" fill="none" stroke="${C.azul}" stroke-width="4" stroke-linecap="round"/>`;
+  s += card(868, 206, 308, 170);
+  s += txt(892, 238, "Precisão (TRI)", 13, C.slate);
+  s += `<text x="892" y="292" font-family="Verdana,sans-serif" font-size="38" font-weight="800" fill="${C.verde}">99,7%</text>`;
+  s += txt(892, 326, "vs. resultado oficial", 12, C.slate);
+  s += card(868, 392, 308, 178);
+  s += txt(892, 424, "Habilidades mapeadas", 13, C.slate);
+  for (let i = 0; i < 4; i++) {
+    const y = 446 + i * 30;
+    s += bar(892, y, 180, 12, C.bg, 6) + bar(892, y, 60 + i * 34, 12, i % 2 ? C.azul : C.verde, 6);
+  }
+  return s;
+}
+
+// ---- RELATÓRIOS CONSOLIDADOS (tabela, p/ a seção reutilizável) ----
+function relatoriosConsolidado() {
+  let s = txt(232, 116, "Relatórios consolidados", 22, C.ink, 800);
+  s += card(224, 150, 952, 420);
+  s += txt(252, 188, "Turma", 12, C.slate, 700) + txt(560, 188, "Média", 12, C.slate, 700) + txt(724, 188, "Acima da média", 12, C.slate, 700) + txt(1060, 188, "Evolução", 12, C.slate, 700);
+  s += `<line x1="248" y1="204" x2="1152" y2="204" stroke="${C.line}"/>`;
+  const rows = [["3º A", 742, 68, "+12%"], ["3º B", 680, 54, "+8%"], ["3º C", 760, 72, "+15%"], ["2º A", 655, 49, "+5%"], ["2º B", 705, 61, "+9%"]];
+  rows.forEach(([t, m, a, e], i) => {
+    const y = 240 + i * 64;
+    s += `<text x="252" y="${y + 6}" font-family="Verdana,sans-serif" font-size="15" font-weight="700" fill="${C.ink}">${t}</text>`;
+    s += `<text x="560" y="${y + 6}" font-family="Verdana,sans-serif" font-size="15" font-weight="700" fill="${C.ink}">${m}</text>`;
+    s += bar(724, y - 6, 300, 14, C.bg, 7) + bar(724, y - 6, (300 * a) / 100, 14, i % 2 ? C.azul : C.verde, 7);
+    s += `<text x="1152" y="${y + 6}" text-anchor="end" font-family="Verdana,sans-serif" font-size="14" font-weight="700" fill="${C.verde}">${e}</text>`;
+    if (i < 4) s += `<line x1="248" y1="${y + 32}" x2="1152" y2="${y + 32}" stroke="${C.line}"/>`;
+  });
+  return s;
+}
+
 const screens = [
   ["secao-relatorios", relatorios(), { title: "Relatórios", accent: C.verde, nav: 3, avatar: C.azul }],
+  ["painel-escola", painelEscola(), { title: "Início", accent: C.verde, nav: 0, avatar: C.verde }],
+  ["relatorios-hero", relatoriosHero(), { title: "Relatórios", accent: C.azul, nav: 3, avatar: C.azul }],
+  ["relatorios-consolidado", relatoriosConsolidado(), { title: "Relatórios", accent: C.verde, nav: 3, avatar: C.verde }],
   ["provas-editor", provasEditor(), { title: "Criar prova", accent: C.verde, nav: 1, avatar: C.verde }],
   ["edu-ia-professor", eduIA(), { title: "Edu.IA · Assistente", accent: C.azul, nav: 1, avatar: C.azul }],
   ["perfil-aluno", aluno(), { title: "Aluno", accent: C.azul, nav: 0, avatar: C.azul }],

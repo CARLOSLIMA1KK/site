@@ -30,8 +30,8 @@ export default function RelatoriosPage() {
         subtitle="Transforme cada avaliação em inteligência acionável: visão por aluno, turma, competência e habilidade, com réguas ENEM/SAEB por TRI e integração ao ERP escolar."
         pills={["TRI", "Réguas ENEM/SAEB", "Exportável", "Integra com ERP"]}
         mockup={{
-          src: "/assets/prints/relatorio-gestor.svg",
-          alt: "Painel de relatórios da KodarEdu",
+          src: "/assets/prints/relatorios-hero.svg",
+          alt: "Painel de relatórios da KodarEdu com evolução por competência",
           label: "app.suaescola.edu.br/relatorios",
         }}
       />
