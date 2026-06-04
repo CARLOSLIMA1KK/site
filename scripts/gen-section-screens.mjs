@@ -279,3 +279,61 @@ for (const [slug, inner, opts] of screens) {
   writeFileSync(join(OUT, `${slug}.svg`), chrome(inner, opts));
   console.log("✓", `${slug}.svg`);
 }
+
+// ---- OCR: da redação manuscrita à correção (composição própria) ----
+function redacaoOcr() {
+  const ink = "#33415C";
+  let hand = "";
+  for (let r = 0; r < 11; r++) {
+    const y = 244 + r * 34;
+    const len = r === 10 ? 180 : 330;
+    let d = `M 150 ${y}`;
+    const segs = 16;
+    for (let i = 1; i <= segs; i++) {
+      const x = 150 + (len / segs) * i;
+      const yy = y + Math.sin(i * 1.6 + r * 0.8) * 4.5;
+      d += ` L ${x.toFixed(1)} ${yy.toFixed(1)}`;
+    }
+    hand += `<path d="${d}" fill="none" stroke="${ink}" stroke-width="3" stroke-linecap="round" opacity="${r === 10 ? 0.45 : 0.9}"/>`;
+  }
+  let typed = "";
+  [320, 360, 300, 340, 270, 320].forEach((wl, i) => {
+    typed += `<rect x="720" y="${236 + i * 30}" width="${wl}" height="12" rx="6" fill="${C.line}"/>`;
+  });
+  let comps = "";
+  [92, 84, 88, 76, 90].forEach((v, i) => {
+    const y = 452 + i * 34;
+    comps += `<text x="720" y="${y + 12}" font-family="Verdana,sans-serif" font-size="13" fill="${C.slate}">C${i + 1}</text>`;
+    comps += `<rect x="752" y="${y}" width="280" height="14" rx="7" fill="${C.bg}"/>`;
+    comps += `<rect x="752" y="${y}" width="${(280 * v) / 100}" height="14" rx="7" fill="${i % 2 ? C.azul : C.verde}"/>`;
+    comps += `<text x="1092" y="${y + 12}" text-anchor="end" font-family="Verdana,sans-serif" font-size="12" font-weight="700" fill="${C.ink}">${v * 2}</text>`;
+  });
+  return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 750" role="img" aria-label="OCR: da redação manuscrita à correção">
+  <rect width="1200" height="750" fill="${C.bg}"/>
+  <g transform="rotate(-4 360 420)">
+    <rect x="120" y="150" width="430" height="520" rx="14" fill="#FFFFFF" stroke="${C.line}"/>
+    <rect x="120" y="150" width="430" height="54" rx="14" fill="${C.verde}" opacity=".12"/>
+    <text x="150" y="184" font-family="Verdana,sans-serif" font-size="16" font-weight="700" fill="${C.ink}">Redação manuscrita</text>
+    ${hand}
+    <g stroke="${C.amarelo}" stroke-width="4" fill="none" stroke-linecap="round">
+      <path d="M150 612 h-24 v-24"/><path d="M520 612 h24 v-24"/>
+      <path d="M150 612 h-24 v-24"/>
+    </g>
+  </g>
+  <circle cx="156" cy="156" r="26" fill="${C.navy}"/>
+  <circle cx="156" cy="156" r="9" fill="#FFFFFF" opacity=".9"/>
+  <g>
+    <rect x="566" y="384" width="118" height="50" rx="25" fill="${C.navy}"/>
+    <text x="625" y="415" text-anchor="middle" font-family="Verdana,sans-serif" font-size="17" font-weight="800" fill="#FFFFFF">OCR</text>
+    <path d="M576 470 h98 m-16 -10 l16 10 -16 10" stroke="${C.azul}" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+  <rect x="690" y="150" width="430" height="470" rx="16" fill="#FFFFFF" stroke="${C.line}"/>
+  <text x="720" y="196" font-family="Verdana,sans-serif" font-size="16" font-weight="700" fill="${C.ink}">Texto digitalizado + correção</text>
+  ${typed}
+  <line x1="720" y1="430" x2="1092" y2="430" stroke="${C.line}"/>
+  ${comps}
+</svg>`;
+}
+
+writeFileSync(join(OUT, "redacao-ocr.svg"), redacaoOcr());
+console.log("✓", "redacao-ocr.svg");
