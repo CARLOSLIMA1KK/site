@@ -344,8 +344,8 @@ function Testimonial() {
               ))}
             </div>
             <div className="mt-7">
-              <Button href="/depoimentos" variant="whiteOutline">
-                Ver mais cases
+              <Button href="/contato" variant="whiteOutline">
+                Quero resultados assim
               </Button>
             </div>
           </div>
