@@ -25,15 +25,16 @@ const PRINTS = [
   ["acessos-perfis", "Telas por perfil", "dashboard"],
 ];
 
+// Paleta da logo KodarEdu
 const C = {
-  bg: "#F6F9F8",
+  bg: "#F6F8FB",
   card: "#FFFFFF",
-  line: "#E3E8E6",
-  ink: "#0F1B17",
-  slate: "#4A5B54",
-  verde: "#1B9E6B",
-  verde700: "#0E6E4E",
-  azul: "#1456C4",
+  line: "#E4E7EC",
+  ink: "#0B1033",
+  slate: "#475569",
+  verde: "#1BA559",
+  verde700: "#0B1033", // navy da logo (sidebar)
+  azul: "#1E50E0",
   amarelo: "#FFC400",
 };
 

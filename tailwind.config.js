@@ -8,25 +8,26 @@ module.exports = {
   theme: {
     extend: {
       colors: {
+        // Paleta da logo KodarEdu — verde (E), amarelo (d), azul (u), navy (kodar)
         verde: {
-          900: "#0B3D2E",
-          700: "#0E6E4E",
-          500: "#1B9E6B",
-          100: "#E6F4EE",
+          900: "#0B1033", // navy da logo — fundo escuro de marca
+          700: "#0A6E36", // verde escuro p/ texto/links (AA em branco)
+          500: "#1BA559", // verde da logo (a letra "E")
+          100: "#E6F6EC",
         },
         azul: {
-          900: "#0A2540",
-          600: "#1456C4",
-          100: "#E8F0FE",
+          900: "#0B1033", // navy da logo
+          600: "#1E50E0", // azul da logo (a letra "u")
+          100: "#E8EEFD",
         },
         amarelo: {
-          500: "#FFC400",
+          500: "#FFC400", // amarelo da logo (a letra "d")
           300: "#FFE08A",
         },
-        ink: "#0F1B17",
-        slate: "#4A5B54",
-        line: "#E3E8E6",
-        "bg-soft": "#F6F9F8",
+        ink: "#0B1033", // navy da logo (texto/títulos escuros)
+        slate: "#475569",
+        line: "#E4E7EC",
+        "bg-soft": "#F6F8FB",
         cta: "#FFC400",
         "cta-ink": "#1A1300",
       },

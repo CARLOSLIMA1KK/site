@@ -3,25 +3,25 @@
 @tailwind utilities;
 
 :root {
-  /* Base / Brasil refinado */
-  --verde-900: #0b3d2e;
-  --verde-700: #0e6e4e;
-  --verde-500: #1b9e6b;
-  --verde-100: #e6f4ee;
+  /* Paleta da logo KodarEdu — verde (E), amarelo (d), azul (u), navy (kodar) */
+  --verde-900: #0b1033; /* navy da logo — fundo escuro de marca */
+  --verde-700: #0a6e36; /* verde escuro p/ texto/links (AA) */
+  --verde-500: #1ba559; /* verde da logo */
+  --verde-100: #e6f6ec;
 
-  --azul-900: #0a2540;
-  --azul-600: #1456c4;
-  --azul-100: #e8f0fe;
+  --azul-900: #0b1033; /* navy da logo */
+  --azul-600: #1e50e0; /* azul da logo */
+  --azul-100: #e8eefd;
 
-  --amarelo-500: #ffc400;
+  --amarelo-500: #ffc400; /* amarelo da logo */
   --amarelo-300: #ffe08a;
 
   /* Neutros */
-  --ink: #0f1b17;
-  --slate: #4a5b54;
-  --line: #e3e8e6;
+  --ink: #0b1033; /* navy da logo */
+  --slate: #475569;
+  --line: #e4e7ec;
   --bg: #ffffff;
-  --bg-soft: #f6f9f8;
+  --bg-soft: #f6f8fb;
 
   /* Semânticos */
   --success: var(--verde-500);

@@ -44,7 +44,7 @@ export default function PricingTable({ plans = [] }) {
             <ul className="mt-7 space-y-3 border-t border-line pt-6">
               {plan.features.map((f) => (
                 <li key={f} className="flex gap-2.5 text-[15px] text-ink">
-                  <span className="mt-0.5 flex-none text-verde-500">
+                  <span className="mt-0.5 flex-none text-verde-700">
                     <Icon name="check" size={18} />
                   </span>
                   {f}

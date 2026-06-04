@@ -1,12 +1,12 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 760" role="img" aria-label="App mobile com a marca da escola">
-  <rect width="360" height="760" fill="#F6F9F8"/>
-  <rect width="360" height="150" fill="#0E6E4E"/>
+  <rect width="360" height="760" fill="#F6F8FB"/>
+  <rect width="360" height="150" fill="#0B1033"/>
   <rect x="24" y="40" width="40" height="40" rx="10" fill="#FFC400"/>
   <rect x="76" y="52" width="140" height="16" rx="8" fill="#fff" opacity=".95"/>
   <rect x="24" y="100" width="200" height="14" rx="7" fill="#fff" opacity=".5"/>
-  <rect x="24" y="186" width="96" height="92" rx="14" fill="#FFFFFF" stroke="#E3E8E6"/><rect x="40" y="210" width="64" height="28" rx="7" fill="#1B9E6B"/><rect x="132" y="186" width="96" height="92" rx="14" fill="#FFFFFF" stroke="#E3E8E6"/><rect x="148" y="210" width="64" height="28" rx="7" fill="#1456C4"/><rect x="240" y="186" width="96" height="92" rx="14" fill="#FFFFFF" stroke="#E3E8E6"/><rect x="256" y="210" width="64" height="28" rx="7" fill="#FFC400"/>
-  <rect x="24" y="300" width="312" height="180" rx="16" fill="#FFFFFF" stroke="#E3E8E6"/>
-  <rect x="48" y="340" width="288" height="12" rx="6" fill="#F6F9F8"/><rect x="48" y="340" width="224" height="12" rx="6" fill="#1B9E6B"/><rect x="48" y="384" width="288" height="12" rx="6" fill="#F6F9F8"/><rect x="48" y="384" width="156.79999999999998" height="12" rx="6" fill="#FFC400"/><rect x="48" y="428" width="288" height="12" rx="6" fill="#F6F9F8"/><rect x="48" y="428" width="257.59999999999997" height="12" rx="6" fill="#1B9E6B"/>
+  <rect x="24" y="186" width="96" height="92" rx="14" fill="#FFFFFF" stroke="#E4E7EC"/><rect x="40" y="210" width="64" height="28" rx="7" fill="#1BA559"/><rect x="132" y="186" width="96" height="92" rx="14" fill="#FFFFFF" stroke="#E4E7EC"/><rect x="148" y="210" width="64" height="28" rx="7" fill="#1E50E0"/><rect x="240" y="186" width="96" height="92" rx="14" fill="#FFFFFF" stroke="#E4E7EC"/><rect x="256" y="210" width="64" height="28" rx="7" fill="#FFC400"/>
+  <rect x="24" y="300" width="312" height="180" rx="16" fill="#FFFFFF" stroke="#E4E7EC"/>
+  <rect x="48" y="340" width="288" height="12" rx="6" fill="#F6F8FB"/><rect x="48" y="340" width="224" height="12" rx="6" fill="#1BA559"/><rect x="48" y="384" width="288" height="12" rx="6" fill="#F6F8FB"/><rect x="48" y="384" width="156.79999999999998" height="12" rx="6" fill="#FFC400"/><rect x="48" y="428" width="288" height="12" rx="6" fill="#F6F8FB"/><rect x="48" y="428" width="257.59999999999997" height="12" rx="6" fill="#1BA559"/>
   <rect x="24" y="640" width="312" height="52" rx="26" fill="#FFC400"/>
-  <rect x="120" y="660" width="120" height="14" rx="7" fill="#0F1B17"/>
+  <rect x="120" y="660" width="120" height="14" rx="7" fill="#0B1033"/>
 </svg>
