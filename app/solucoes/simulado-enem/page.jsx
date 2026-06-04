@@ -4,6 +4,8 @@ import FeatureList from "@/components/FeatureList";
 import MockupFrame from "@/components/MockupFrame";
 import Pill from "@/components/Pill";
 import CTASection from "@/components/CTASection";
+import LeitorOmrSection from "@/components/sections/LeitorOmrSection";
+import RelatoriosConsolidadosSection from "@/components/sections/RelatoriosConsolidadosSection";
 import { Reveal, Stagger, StaggerItem } from "@/components/Motion";
 
 export const metadata = {
@@ -91,6 +93,10 @@ export default function SimuladoEnemPage() {
           ))}
         </Stagger>
       </SectionWrapper>
+
+      <LeitorOmrSection soft />
+
+      <RelatoriosConsolidadosSection />
 
       <CTASection
         title="Quero o Simulado ENEM na minha escola"

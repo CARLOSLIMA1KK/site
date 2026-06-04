@@ -7,7 +7,8 @@ import CTASection from "./CTASection";
 import { Reveal, Stagger, StaggerItem } from "./Motion";
 
 // Template de página de solução, dirigido por dados (lib/solutions.js).
-export default function SolutionPage({ data }) {
+// `children` é renderizado antes do CTA (seções extras reutilizáveis).
+export default function SolutionPage({ data, children }) {
   const { hero, features, split, benefits, cta } = data;
   return (
     <>
@@ -59,6 +60,8 @@ export default function SolutionPage({ data }) {
           </Stagger>
         </SectionWrapper>
       )}
+
+      {children}
 
       <CTASection title={cta?.title} subtitle={cta?.subtitle} />
     </>

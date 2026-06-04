@@ -1,9 +1,10 @@
 import PageHero from "@/components/PageHero";
 import SectionWrapper from "@/components/SectionWrapper";
 import FeatureList from "@/components/FeatureList";
-import MockupFrame from "@/components/MockupFrame";
 import CTASection from "@/components/CTASection";
-import { Reveal, Stagger, StaggerItem } from "@/components/Motion";
+import LeitorOmrSection from "@/components/sections/LeitorOmrSection";
+import RelatoriosConsolidadosSection from "@/components/sections/RelatoriosConsolidadosSection";
+import { Stagger, StaggerItem } from "@/components/Motion";
 
 export const metadata = {
   title: "Criação e Correção de Provas com IA, leitor OMR e câmera",
@@ -19,21 +20,6 @@ const RECURSOS = [
   { title: "Aplicação flexível", text: "No papel, online ou nos dois formatos.", icon: "book" },
   { title: "Correção automática", text: "Objetiva e discursiva, sem trabalho manual.", icon: "check" },
   { title: "Integração com o ERP", text: "As notas fluem direto para o sistema da escola.", icon: "chip" },
-];
-
-const LEITOR = [
-  { title: "Identificação automática do aluno", text: "A plataforma reconhece quem é, sem digitar nome.", icon: "users" },
-  { title: "Extração rápida das respostas", text: "Leitura óptica (OMR) das marcações em segundos.", icon: "bolt" },
-  { title: "Scanner por lote da turma", text: "Passe a pilha de folhas de uma vez só.", icon: "layers" },
-  { title: "App com a câmera do celular", text: "Fotografe a folha e corrija na hora, sem scanner.", icon: "camera" },
-  { title: "Correção no ato", text: "Notas e gabarito prontos assim que a folha é lida.", icon: "clock" },
-];
-
-const RELATORIOS = [
-  { title: "Consolidação automática", text: "Resultados reunidos assim que a turma é lida.", icon: "layers" },
-  { title: "Por aluno, turma e questão", text: "Veja onde a turma acerta e onde precisa reforçar.", icon: "chart" },
-  { title: "Exportação rápida", text: "Baixe em PDF ou planilha em um clique.", icon: "doc" },
-  { title: "Integração com o ERP", text: "Lançamento de notas sem retrabalho.", icon: "chip" },
 ];
 
 export default function ProvasPage() {
@@ -56,51 +42,9 @@ export default function ProvasPage() {
         <FeatureList items={RECURSOS} columns={3} />
       </SectionWrapper>
 
-      {/* Leitor / OMR / IA */}
-      <SectionWrapper soft eyebrow="Leitor, OMR e IA" title="Corrigir a turma inteira em minutos">
-        <div className="grid items-center gap-10 lg:grid-cols-2">
-          <Reveal>
-            <p className="text-lg leading-relaxed text-slate">
-              O aluno responde na folha de gabarito e a KodarEdu cuida do resto. A leitura óptica (OMR)
-              identifica o aluno automaticamente e extrai as respostas. Você escaneia a turma por lote
-              ou usa o aplicativo com a câmera do celular. A correção sai na hora.
-            </p>
-            <div className="mt-6">
-              <FeatureList columns={1} items={LEITOR} />
-            </div>
-          </Reveal>
-          <Reveal delay={0.1}>
-            <MockupFrame
-              src="/assets/prints/omr-leitor.svg"
-              alt="Leitor OMR identificando o aluno e extraindo as respostas, com leitura por lote e por câmera do celular"
-              label="Leitor OMR + câmera"
-            />
-          </Reveal>
-        </div>
-      </SectionWrapper>
+      <LeitorOmrSection soft />
 
-      {/* Relatórios consolidados */}
-      <SectionWrapper eyebrow="Relatórios" title="Resultados consolidados na hora">
-        <div className="grid items-center gap-10 lg:grid-cols-2">
-          <Reveal className="lg:order-2">
-            <p className="text-lg leading-relaxed text-slate">
-              Assim que a turma é lida, os dados se consolidam sozinhos. Em poucos segundos você tem o
-              desempenho por aluno, por turma e por questão, pronto para exportar e já integrado ao ERP
-              da escola.
-            </p>
-            <div className="mt-6">
-              <FeatureList columns={1} items={RELATORIOS} />
-            </div>
-          </Reveal>
-          <Reveal delay={0.1} className="lg:order-1">
-            <MockupFrame
-              src="/assets/prints/secao-relatorios.svg"
-              alt="Painel de relatórios consolidados por aluno, turma e questão"
-              label="Relatórios consolidados"
-            />
-          </Reveal>
-        </div>
-      </SectionWrapper>
+      <RelatoriosConsolidadosSection />
 
       {/* Impacto */}
       <SectionWrapper soft eyebrow="Impacto" title="O que isso muda no dia a dia" center>
