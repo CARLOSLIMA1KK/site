@@ -6,7 +6,7 @@ Construído a partir do `BRIEF.md`.
 
 ## Stack
 
-- **Next.js 14** (App Router)
+- **Next.js 16** (App Router, Turbopack)
 - **Tailwind CSS 3** (design tokens em `app/globals.css` + `tailwind.config.js`)
 - **Framer Motion** (scroll reveal, count-up, mega menu)
 - Fontes: **Sora** (display) + **Public Sans** (corpo), via `next/font`
