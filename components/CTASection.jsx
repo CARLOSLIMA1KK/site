@@ -4,7 +4,7 @@ import { Reveal } from "./Motion";
 
 // Bloco de CTA final reutilizável (presente ao fim de cada página).
 export default function CTASection({
-  title = "Quero a KodarEdu na minha escola",
+  title = "Quero a KodarEdu na minha instituição",
   subtitle = "Em poucos dias sua instituição tem uma plataforma completa de avaliação e ENEM, com a sua marca, sem precisar de TI.",
 }) {
   return (

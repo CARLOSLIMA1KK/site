@@ -64,7 +64,7 @@ export default function HomePage() {
         id="a-plataforma"
         eyebrow="A Plataforma"
         title="Um hub completo para o ciclo avaliativo"
-        subtitle="Robusta por dentro, simples por fora: tudo o que a escola precisa para avaliar, sem complexidade para quem usa."
+        subtitle="Robusta por dentro, simples por fora: tudo o que você precisa para avaliar, sem complexidade para quem usa."
       >
         <FeatureList items={PLATFORM_CAPABILITIES} columns={4} icon="check" />
         <Reveal className="mt-8 flex flex-wrap gap-3">
@@ -81,7 +81,7 @@ export default function HomePage() {
       <SectionWrapper
         soft
         eyebrow="Soluções"
-        title="Tudo o que sua escola precisa, reunido"
+        title="Tudo o que você precisa, reunido"
         subtitle="Simulados ENEM e SAEB, trilha adaptativa, Produção Textual, Banco de Itens, provas com IA e o Edu.IA. O melhor das melhores plataformas, em uma marca: a sua."
       >
         <Stagger className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
@@ -170,7 +170,7 @@ export default function HomePage() {
       <Testimonial />
 
       {/* FAQ */}
-      <SectionWrapper eyebrow="Dúvidas frequentes" title="Perguntas que toda escola faz" center>
+      <SectionWrapper eyebrow="Dúvidas frequentes" title="Perguntas que toda instituição faz" center>
         <FAQ items={FAQ_HOME} />
       </SectionWrapper>
 
@@ -346,13 +346,13 @@ function Hero() {
           <div className="relative animate-fade-up [animation-delay:160ms]">
             <MockupFrame
               src="/assets/prints/painel-escola.svg"
-              alt="Painel inicial da KodarEdu com a visão geral da escola"
+              alt="Painel inicial da KodarEdu com a visão geral da instituição"
               label="app.suaescola.edu.br"
             />
             <div className="absolute -bottom-6 -left-4 hidden w-44 sm:block">
               <MockupFrame
                 src="/assets/prints/app-mobile.svg"
-                alt="App da plataforma no celular, com a marca da escola"
+                alt="App da plataforma no celular, com a marca da instituição"
                 type="mobile"
                 className="!w-44"
               />

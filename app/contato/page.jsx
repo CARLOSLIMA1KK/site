@@ -6,9 +6,9 @@ import { SITE } from "@/lib/site";
 import { Reveal } from "@/components/Motion";
 
 export const metadata = {
-  title: "Quero a KodarEdu na minha escola",
+  title: "Quero a KodarEdu na minha instituição",
   description:
-    "Fale com um especialista da KodarEdu. Receba uma proposta sob medida de plataforma white label de avaliação e ENEM para a sua escola ou rede.",
+    "Fale com um especialista da KodarEdu. Receba uma proposta sob medida de plataforma white label de avaliação e ENEM para a sua instituição ou rede.",
   alternates: { canonical: "/contato" },
 };
 
@@ -19,7 +19,7 @@ export default function ContatoPage() {
         <Reveal>
           <span className="eyebrow">Contato</span>
           <h1 className="mt-4 font-display text-display font-extrabold leading-[1.05] text-ink">
-            Quero a KodarEdu <span className="text-verde-700">na minha escola</span>
+            Quero a KodarEdu <span className="text-verde-700">na minha instituição</span>
           </h1>
           <p className="mt-5 max-w-lg text-lg leading-relaxed text-slate">
             Conte um pouco sobre a sua instituição e um especialista entra em contato com uma proposta

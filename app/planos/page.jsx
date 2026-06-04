@@ -45,7 +45,7 @@ export default function PlanosPage() {
 
       <CTASection
         title="Pronto para escolher seu plano?"
-        subtitle="Fale com um especialista e receba uma proposta sob medida para a sua escola ou rede."
+        subtitle="Fale com um especialista e receba uma proposta sob medida para a sua instituição ou rede."
       />
     </>
   );

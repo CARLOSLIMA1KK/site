@@ -11,7 +11,7 @@ import { Reveal, Stagger, StaggerItem } from "@/components/Motion";
 export const metadata = {
   title: "Simulado ENEM com correção por TRI",
   description:
-    "Simulados no padrão ENEM com correção por TRI ajustada à régua oficial, ranking, gabarito comentado e relatório por área e habilidade. White label para a sua escola.",
+    "Simulados no padrão ENEM com correção por TRI ajustada à régua oficial, ranking, gabarito comentado e relatório por área e habilidade. White label para a sua instituição.",
   alternates: { canonical: "/solucoes/simulado-enem" },
 };
 
@@ -21,7 +21,7 @@ const RECURSOS = [
   { title: "Ranking e gabarito comentado", text: "Engajamento dos alunos e estudo guiado." },
   { title: "Relatório por área e habilidade", text: "A coordenação enxerge onde reforçar." },
   { title: "Simulado personalizado", text: "Conteúdos definidos pela sua equipe pedagógica." },
-  { title: "Online, impresso ou híbrido", text: "Aplique do jeito que sua escola precisa." },
+  { title: "Online, impresso ou híbrido", text: "Aplique do jeito que sua instituição precisa." },
 ];
 
 const BENEFITS = [
@@ -56,7 +56,7 @@ export default function SimuladoEnemPage() {
             <p className="text-lg leading-relaxed text-slate">
               O aluno faz o simulado online ou em papel; a correção por TRI processa as respostas
               considerando a dificuldade de cada item e devolve uma nota{" "}
-              <strong className="text-ink">comparável à do ENEM</strong>. A escola recebe relatórios
+              <strong className="text-ink">comparável à do ENEM</strong>. A instituição recebe relatórios
               prontos por área de conhecimento e habilidade.
             </p>
             <div className="mt-6">
@@ -99,7 +99,7 @@ export default function SimuladoEnemPage() {
       <RelatoriosConsolidadosSection />
 
       <CTASection
-        title="Quero o Simulado ENEM na minha escola"
+        title="Quero o Simulado ENEM na minha instituição"
         subtitle="Leve simulados por TRI no padrão ENEM para seus alunos, com a marca da sua instituição."
       />
     </>

@@ -22,7 +22,7 @@ const PERMISSIONS = [
   ["Criar e aplicar provas", [false, true, false, false]],
   ["Corrigir redações", [false, true, false, false]],
   ["Relatórios de turma", [false, true, true, true]],
-  ["Relatórios da escola", [false, false, true, true]],
+  ["Relatórios da instituição", [false, false, true, true]],
   ["Gestão de usuários", [false, false, true, true]],
   ["Visão multiunidade", [false, false, false, true]],
   ["Configurar white label", [false, false, true, true]],

@@ -23,7 +23,7 @@ const body = Public_Sans({
 export const metadata = {
   metadataBase: new URL("https://www.kodaredu.com.br"),
   title: {
-    default: "KodarEdu · Plataforma de avaliação e ENEM white label para escolas",
+    default: "KodarEdu · Plataforma educacional completa white label para instituições de ensino",
     template: "%s · KodarEdu",
   },
   description: SITE.description,

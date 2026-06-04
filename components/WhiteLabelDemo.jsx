@@ -39,7 +39,7 @@ export default function WhiteLabelDemo() {
         </div>
         <p className="mt-6 max-w-md text-[15px] leading-relaxed text-slate">
           Em segundos, a plataforma assume <strong className="text-ink">cores, logo e domínio</strong> da
-          instituição. Seus alunos veem a marca da escola, não a nossa.
+          instituição. Seus alunos veem a marca da instituição, não a nossa.
         </p>
       </div>
 

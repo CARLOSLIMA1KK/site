@@ -23,7 +23,7 @@ const PERSONALIZA = [
 ];
 
 const PERSONAS = [
-  { title: "Para a direção", text: "Fortalece a marca da escola e a percepção de inovação junto a pais e alunos.", icon: "shield" },
+  { title: "Para a direção", text: "Fortalece a marca da instituição e a percepção de inovação junto a pais e alunos.", icon: "shield" },
   { title: "Para o marketing", text: "Um produto digital próprio para captação e retenção, sem desenvolver do zero.", icon: "bolt" },
   { title: "Para a TI", text: "Zero infraestrutura: nuvem, segurança e atualizações por nossa conta.", icon: "chip" },
 ];

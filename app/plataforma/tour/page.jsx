@@ -23,7 +23,7 @@ const GALLERY = {
     { src: "/assets/prints/correcao-automatica.svg", title: "Correção automática", text: "Leitor de gabarito e correção sem trabalho manual." },
   ],
   "Coordenação / Gestor": [
-    { src: "/assets/prints/relatorio-gestor.svg", title: "Dashboard do gestor", text: "Indicadores-chave da escola em uma tela." },
+    { src: "/assets/prints/relatorio-gestor.svg", title: "Dashboard do gestor", text: "Indicadores-chave da instituição em uma tela." },
     { src: "/assets/prints/relatorio-turma.svg", title: "Relatório de turma", text: "Comparativos e ranking por turma." },
     { src: "/assets/prints/relatorio-habilidade.svg", title: "Evolução por habilidade", text: "Onde reforçar, com base em dados." },
   ],
@@ -68,7 +68,7 @@ export default function TourPage() {
 
       <CTASection
         title="Quero ver a KodarEdu com os meus dados"
-        subtitle="Agende uma demonstração e navegue pela plataforma com a marca da sua escola."
+        subtitle="Agende uma demonstração e navegue pela plataforma com a marca da sua instituição."
       />
     </>
   );

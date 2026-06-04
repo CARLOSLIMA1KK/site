@@ -50,7 +50,7 @@ export default function RelatoriosPage() {
             <p className="text-lg leading-relaxed text-slate">
               Nossa Teoria de Resposta ao Item é calibrada às réguas do ENEM e do SAEB. Isso significa
               que a nota do simulado <strong className="text-ink">antecipa o desempenho oficial</strong>{" "}
-              com alta precisão, e a escola planeja com confiança.
+              com alta precisão, e a instituição planeja com confiança.
             </p>
             <div className="mt-6">
               <FeatureList
@@ -85,7 +85,7 @@ export default function RelatoriosPage() {
       </SectionWrapper>
 
       <CTASection
-        title="Quero inteligência de dados na minha escola"
+        title="Quero inteligência de dados na minha instituição"
         subtitle="Veja os relatórios da KodarEdu com dados de exemplo e descubra o que sua equipe pedagógica pode decidir com eles."
       />
     </>

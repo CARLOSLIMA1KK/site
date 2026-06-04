@@ -8,7 +8,7 @@ import { Reveal, Stagger, StaggerItem } from "@/components/Motion";
 export const metadata = {
   title: "Quem Somos",
   description:
-    "A KodarEdu nasceu para resolver toda a jornada avaliativa das instituições com tecnologia, rigor pedagógico e a marca de cada escola. Conheça nossa missão.",
+    "A KodarEdu nasceu para resolver toda a jornada avaliativa das instituições com tecnologia, rigor pedagógico e a marca de cada instituição. Conheça nossa missão.",
   alternates: { canonical: "/quem-somos" },
 };
 
@@ -16,7 +16,7 @@ const SECURITY = [
   {
     icon: "shield",
     title: "Segurança",
-    text: "Proteção em todas as camadas para os dados da sua escola.",
+    text: "Proteção em todas as camadas para os dados da sua instituição.",
     items: [
       "Criptografia em trânsito e em repouso",
       "Controle de acesso por perfil",
@@ -52,7 +52,7 @@ const SECURITY = [
 const VALUES = [
   { title: "Pedagogia em primeiro lugar", text: "Tecnologia a serviço da aprendizagem, não o contrário." },
   { title: "Dados confiáveis", text: "Rigor metodológico e TRI ajustada às réguas oficiais." },
-  { title: "A marca é da escola", text: "White label de verdade, do login ao certificado." },
+  { title: "A marca é da instituição", text: "White label de verdade, do login ao certificado." },
   { title: "Próximos de quem usa", text: "Suporte humano e implantação sem fricção." },
 ];
 
@@ -73,11 +73,11 @@ export default function QuemSomosPage() {
             <p className="text-lg leading-relaxed text-slate">
               Acreditamos que avaliar bem é o primeiro passo para ensinar melhor. Por isso construímos
               uma plataforma que cuida de toda a jornada avaliativa, criar, aplicar, corrigir e
-              analisar, com inteligência de dados acionável e a identidade de cada escola.
+              analisar, com inteligência de dados acionável e a identidade de cada instituição.
             </p>
             <p className="mt-4 text-lg leading-relaxed text-slate">
               Reunimos o melhor das principais soluções do mercado em um único produto white label,
-              para que escolas, cursinhos, redes e editoras ofereçam excelência sob a sua marca.
+              para que instituições, cursinhos, redes e editoras ofereçam excelência sob a sua marca.
             </p>
           </Reveal>
           <Reveal delay={0.1}>

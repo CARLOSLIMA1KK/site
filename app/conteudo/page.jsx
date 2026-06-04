@@ -16,7 +16,7 @@ const POSTS = [
   { title: "Como dar feedback de redação que faz o aluno evoluir", cat: "Redação", read: "5 min" },
   { title: "Avaliação adaptativa (CAT): medir mais em menos tempo", cat: "Adaptativa", read: "7 min" },
   { title: "SAEB na prática: do diagnóstico à ação na rede", cat: "SAEB", read: "8 min" },
-  { title: "White label na educação: a marca é da escola", cat: "White Label", read: "4 min" },
+  { title: "White label na educação: a marca é da instituição", cat: "White Label", read: "4 min" },
   { title: "Gestão escolar orientada por dados: por onde começar", cat: "Gestão", read: "6 min" },
 ];
 
@@ -55,7 +55,7 @@ export default function ConteudoPage() {
 
       <CTASection
         title="Quer levar isso para a prática?"
-        subtitle="Veja como a KodarEdu aplica essas ideias na avaliação da sua escola."
+        subtitle="Veja como a KodarEdu aplica essas ideias na avaliação da sua instituição."
       />
     </>
   );

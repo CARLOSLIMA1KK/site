@@ -42,7 +42,7 @@ export default function SolucoesPage() {
     <>
       <PageHero
         eyebrow="Soluções"
-        title="Tudo o que sua escola precisa para avaliar,"
+        title="Tudo o que você precisa para avaliar,"
         highlight="reunido na sua marca."
         subtitle="Uma plataforma completa em três frentes: Avaliações & Ferramentas, Recursos Edu e Edu.IA, com tag de formato (digital, impresso ou híbrido) em cada solução."
         pills={["Avaliações", "Recursos Edu", "Edu.IA", "White Label"]}

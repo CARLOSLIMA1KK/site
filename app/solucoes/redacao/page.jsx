@@ -55,7 +55,7 @@ export default function RedacaoPage() {
         eyebrow="Avaliações & Ferramentas · Produção Textual"
         title="Produção Textual com IA,"
         highlight="do Fundamental ao ENEM."
-        subtitle="Muito além da redação do ENEM: desenvolva a escrita em diversos gêneros, do Ensino Fundamental ao Médio, com correção que une IA e corretor humano, OCR para textos manuscritos e temas definidos pela sua escola."
+        subtitle="Muito além da redação do ENEM: desenvolva a escrita em diversos gêneros, do Ensino Fundamental ao Médio, com correção que une IA e corretor humano, OCR para textos manuscritos e temas definidos pela sua instituição."
         pills={["Com IA", "OCR manuscrito", "5.000+ temas", "Diversos gêneros"]}
         mockup={{
           src: "/assets/prints/redacao-correcao.svg",
@@ -64,7 +64,7 @@ export default function RedacaoPage() {
         }}
       />
 
-      <StatBand stats={STATS} title="Escrita que evolui de verdade" subtitle="Tecnologia e especialistas a serviço do desenvolvimento da escrita, com a marca da sua escola." />
+      <StatBand stats={STATS} title="Escrita que evolui de verdade" subtitle="Tecnologia e especialistas a serviço do desenvolvimento da escrita, com a marca da sua instituição." />
 
       {/* Muito além do ENEM */}
       <SectionWrapper
@@ -80,7 +80,7 @@ export default function RedacaoPage() {
         <div className="grid items-center gap-10 lg:grid-cols-2">
           <Reveal>
             <p className="text-lg leading-relaxed text-slate">
-              A sua escola cria os próprios temas, do jeito que a equipe pedagógica quiser, ou escolhe
+              A sua instituição cria os próprios temas, do jeito que a equipe pedagógica quiser, ou escolhe
               no nosso <strong className="text-ink">banco com mais de 5.000 temas</strong> prontos, com
               coletâneas e textos de apoio, alinhados ao ENEM e à BNCC.
             </p>
@@ -183,7 +183,7 @@ export default function RedacaoPage() {
         <Stagger className="grid gap-6 md:grid-cols-3">
           {[
             ["IA + corretor humano", "A velocidade da IA com o olhar de um especialista, não só automático."],
-            ["Mais escrita por ciclo", "A escola produz e corrige mais sem sobrecarregar a equipe."],
+            ["Mais escrita por ciclo", "A instituição produz e corrige mais sem sobrecarregar a equipe."],
             ["Evolução visível", "Pais e alunos enxergam o progresso da nota ao longo do ano."],
           ].map(([t, d]) => (
             <StaggerItem key={t} className="h-full">
@@ -197,7 +197,7 @@ export default function RedacaoPage() {
       </SectionWrapper>
 
       <CTASection
-        title="Quero Produção Textual na minha escola"
+        title="Quero Produção Textual na minha instituição"
         subtitle="Ofereça desenvolvimento da escrita em diversos gêneros, com IA, OCR e devolutiva detalhada, e devolva horas aos seus professores."
       />
     </>

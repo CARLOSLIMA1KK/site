@@ -19,7 +19,7 @@ const RECURSOS = [
   { title: "Layout profissional", text: "Provas bem diagramadas para imprimir ou aplicar online.", icon: "doc" },
   { title: "Aplicação flexível", text: "No papel, online ou nos dois formatos.", icon: "book" },
   { title: "Correção automática", text: "Objetiva e discursiva, sem trabalho manual.", icon: "check" },
-  { title: "Integração com o ERP", text: "As notas fluem direto para o sistema da escola.", icon: "chip" },
+  { title: "Integração com o ERP", text: "As notas fluem direto para o sistema da instituição.", icon: "chip" },
 ];
 
 export default function ProvasPage() {
@@ -66,7 +66,7 @@ export default function ProvasPage() {
 
       <CTASection
         title="Quero criar e corrigir provas com IA"
-        subtitle="Fale com nosso time e leve criação por IA, leitor OMR e relatórios na hora para a sua escola."
+        subtitle="Fale com nosso time e leve criação por IA, leitor OMR e relatórios na hora para a sua instituição."
       />
     </>
   );
