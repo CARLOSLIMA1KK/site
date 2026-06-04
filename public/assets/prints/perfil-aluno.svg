@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 750" role="img" aria-label="Aluno">
+  <rect width="1200" height="750" fill="#F6F8FB"/>
+  <!-- sidebar -->
+  <rect x="0" y="0" width="200" height="750" fill="#0B1033"/>
+  <rect x="24" y="28" width="30" height="30" rx="8" fill="#FFC400"/>
+  <rect x="62" y="36" width="86" height="14" rx="7" fill="#FFFFFF" opacity=".92"/>
+  <rect x="14" y="92" width="172" height="40" rx="10" fill="#FFFFFF" opacity=".12"/>
+      <rect x="28" y="104" width="16" height="16" rx="4" fill="#FFFFFF" opacity=".95"/>
+      <rect x="54" y="106" width="104" height="12" rx="6" fill="#FFFFFF" opacity=".95"/>
+      <rect x="28" y="154" width="16" height="16" rx="4" fill="#FFFFFF" opacity=".45"/>
+      <rect x="54" y="156" width="84" height="12" rx="6" fill="#FFFFFF" opacity=".4"/>
+      <rect x="28" y="204" width="16" height="16" rx="4" fill="#FFFFFF" opacity=".45"/>
+      <rect x="54" y="206" width="84" height="12" rx="6" fill="#FFFFFF" opacity=".4"/>
+      <rect x="28" y="254" width="16" height="16" rx="4" fill="#FFFFFF" opacity=".45"/>
+      <rect x="54" y="256" width="84" height="12" rx="6" fill="#FFFFFF" opacity=".4"/>
+      <rect x="28" y="304" width="16" height="16" rx="4" fill="#FFFFFF" opacity=".45"/>
+      <rect x="54" y="306" width="84" height="12" rx="6" fill="#FFFFFF" opacity=".4"/>
+  <rect x="24" y="690" width="152" height="36" rx="10" fill="#FFFFFF" opacity=".10"/>
+  <!-- topbar -->
+  <rect x="200" y="0" width="1000" height="72" fill="#FFFFFF"/>
+  <line x1="200" y1="72" x2="1200" y2="72" stroke="#E4E7EC"/>
+  <text x="232" y="44" font-family="Verdana, sans-serif" font-size="20" font-weight="700" fill="#0B1033">Aluno</text>
+  <rect x="970" y="24" width="120" height="26" rx="13" fill="#1E50E0" opacity=".12"/>
+  <circle cx="1130" cy="36" r="16" fill="#1E50E0"/>
+  <text x="232" y="116" font-family="Verdana, sans-serif" font-size="24" font-weight="800" fill="#0B1033">Olá, Ana 👋</text><text x="232" y="140" font-family="Verdana, sans-serif" font-size="14" font-weight="400" fill="#475569">Veja seu próximo passo de estudo</text><rect x="224" y="160" width="600" height="120" rx="16" fill="#FFFFFF" stroke="#E4E7EC"/><rect x="244" y="184" width="70" height="24" rx="12" fill="#E6F6EC"/><text x="256" y="201" font-family="Verdana, sans-serif" font-size="12" font-weight="700" fill="#1BA559">ENEM</text><text x="244" y="240" font-family="Verdana, sans-serif" font-size="17" font-weight="700" fill="#0B1033">Próximo simulado: 2º Simulado ENEM</text><text x="244" y="264" font-family="Verdana, sans-serif" font-size="13" font-weight="400" fill="#475569">Quinta, 14h · 90 questões · TRI</text><rect x="624" y="196" width="180" height="48" rx="24" fill="#FFC400"/><text x="666" y="226" font-family="Verdana, sans-serif" font-size="15" font-weight="700" fill="#0B1033">Começar</text><rect x="224" y="300" width="600" height="200" rx="16" fill="#FFFFFF" stroke="#E4E7EC"/><text x="248" y="332" font-family="Verdana, sans-serif" font-size="15" font-weight="700" fill="#0B1033">Seu desempenho por área</text><g>
+    <circle cx="330" cy="410" r="34" fill="none" stroke="#E4E7EC" stroke-width="9"/>
+    <circle cx="330" cy="410" r="34" fill="none" stroke="#1E50E0" stroke-width="9" stroke-linecap="round"
+      stroke-dasharray="213.62830044410595" stroke-dashoffset="46.9982260977033" transform="rotate(-90 330 410)"/>
+    <text x="330" y="416" text-anchor="middle" font-family="Verdana, sans-serif" font-size="18" font-weight="800" fill="#0B1033">78%</text>
+    <text x="330" y="470" text-anchor="middle" font-family="Verdana, sans-serif" font-size="13" fill="#475569">Matemática</text>
+  </g><g>
+    <circle cx="490" cy="410" r="34" fill="none" stroke="#E4E7EC" stroke-width="9"/>
+    <circle cx="490" cy="410" r="34" fill="none" stroke="#1BA559" stroke-width="9" stroke-linecap="round"
+      stroke-dasharray="213.62830044410595" stroke-dashoffset="76.90618815987814" transform="rotate(-90 490 410)"/>
+    <text x="490" y="416" text-anchor="middle" font-family="Verdana, sans-serif" font-size="18" font-weight="800" fill="#0B1033">64%</text>
+    <text x="490" y="470" text-anchor="middle" font-family="Verdana, sans-serif" font-size="13" fill="#475569">Linguagens</text>
+  </g><g>
+    <circle cx="650" cy="410" r="34" fill="none" stroke="#E4E7EC" stroke-width="9"/>
+    <circle cx="650" cy="410" r="34" fill="none" stroke="#FFC400" stroke-width="9" stroke-linecap="round"
+      stroke-dasharray="213.62830044410595" stroke-dashoffset="17.090264035528467" transform="rotate(-90 650 410)"/>
+    <text x="650" y="416" text-anchor="middle" font-family="Verdana, sans-serif" font-size="18" font-weight="800" fill="#0B1033">92</text>
+    <text x="650" y="470" text-anchor="middle" font-family="Verdana, sans-serif" font-size="13" fill="#475569">Redação</text>
+  </g><rect x="848" y="160" width="328" height="340" rx="16" fill="#FFFFFF" stroke="#E4E7EC"/><text x="872" y="192" font-family="Verdana, sans-serif" font-size="15" font-weight="700" fill="#0B1033">Sua trilha de estudos</text><rect x="872" y="224" width="280" height="48" rx="12" fill="#FFFFFF" stroke="#E4E7EC"/><circle cx="900" cy="248" r="9" fill="#1BA559"/><text x="922" y="253" font-family="Verdana, sans-serif" font-size="13" font-weight="600" fill="#0B1033">Funções · concluído</text><rect x="872" y="288" width="280" height="48" rx="12" fill="#FFFFFF" stroke="#E4E7EC"/><circle cx="900" cy="312" r="9" fill="#1E50E0"/><text x="922" y="317" font-family="Verdana, sans-serif" font-size="13" font-weight="600" fill="#0B1033">Interpretação · em curso</text><rect x="872" y="352" width="280" height="48" rx="12" fill="#FFFFFF" stroke="#E4E7EC"/><circle cx="900" cy="376" r="9" fill="#9AA6B2"/><text x="922" y="381" font-family="Verdana, sans-serif" font-size="13" font-weight="600" fill="#0B1033">Geometria · próximo</text><rect x="872" y="416" width="280" height="48" rx="12" fill="#FFFFFF" stroke="#E4E7EC"/><circle cx="900" cy="440" r="9" fill="#9AA6B2"/><text x="922" y="445" font-family="Verdana, sans-serif" font-size="13" font-weight="600" fill="#0B1033">Redação · próximo</text>
+</svg>

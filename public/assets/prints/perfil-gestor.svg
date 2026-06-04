@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 750" role="img" aria-label="Gestor">
+  <rect width="1200" height="750" fill="#F6F8FB"/>
+  <!-- sidebar -->
+  <rect x="0" y="0" width="200" height="750" fill="#0B1033"/>
+  <rect x="24" y="28" width="30" height="30" rx="8" fill="#FFC400"/>
+  <rect x="62" y="36" width="86" height="14" rx="7" fill="#FFFFFF" opacity=".92"/>
+  
+      <rect x="28" y="104" width="16" height="16" rx="4" fill="#FFFFFF" opacity=".45"/>
+      <rect x="54" y="106" width="84" height="12" rx="6" fill="#FFFFFF" opacity=".4"/>
+      <rect x="28" y="154" width="16" height="16" rx="4" fill="#FFFFFF" opacity=".45"/>
+      <rect x="54" y="156" width="84" height="12" rx="6" fill="#FFFFFF" opacity=".4"/>
+      <rect x="28" y="204" width="16" height="16" rx="4" fill="#FFFFFF" opacity=".45"/>
+      <rect x="54" y="206" width="84" height="12" rx="6" fill="#FFFFFF" opacity=".4"/><rect x="14" y="242" width="172" height="40" rx="10" fill="#FFFFFF" opacity=".12"/>
+      <rect x="28" y="254" width="16" height="16" rx="4" fill="#FFFFFF" opacity=".95"/>
+      <rect x="54" y="256" width="104" height="12" rx="6" fill="#FFFFFF" opacity=".95"/>
+      <rect x="28" y="304" width="16" height="16" rx="4" fill="#FFFFFF" opacity=".45"/>
+      <rect x="54" y="306" width="84" height="12" rx="6" fill="#FFFFFF" opacity=".4"/>
+  <rect x="24" y="690" width="152" height="36" rx="10" fill="#FFFFFF" opacity=".10"/>
+  <!-- topbar -->
+  <rect x="200" y="0" width="1000" height="72" fill="#FFFFFF"/>
+  <line x1="200" y1="72" x2="1200" y2="72" stroke="#E4E7EC"/>
+  <text x="232" y="44" font-family="Verdana, sans-serif" font-size="20" font-weight="700" fill="#0B1033">Gestor</text>
+  <rect x="970" y="24" width="120" height="26" rx="13" fill="#1BA559" opacity=".12"/>
+  <circle cx="1130" cy="36" r="16" fill="#1BA559"/>
+  <text x="232" y="116" font-family="Verdana, sans-serif" font-size="22" font-weight="800" fill="#0B1033">Visão geral da escola</text><rect x="224" y="150" width="220" height="116" rx="16" fill="#FFFFFF" stroke="#E4E7EC"/><text x="246" y="184" font-family="Verdana, sans-serif" font-size="13" font-weight="400" fill="#475569">Alunos</text><text x="246" y="228" font-family="Verdana, sans-serif" font-size="30" font-weight="800" fill="#1E50E0">1.248</text><rect x="464" y="150" width="220" height="116" rx="16" fill="#FFFFFF" stroke="#E4E7EC"/><text x="486" y="184" font-family="Verdana, sans-serif" font-size="13" font-weight="400" fill="#475569">Avaliações</text><text x="486" y="228" font-family="Verdana, sans-serif" font-size="30" font-weight="800" fill="#1BA559">342</text><rect x="704" y="150" width="220" height="116" rx="16" fill="#FFFFFF" stroke="#E4E7EC"/><text x="726" y="184" font-family="Verdana, sans-serif" font-size="13" font-weight="400" fill="#475569">Nota TRI média</text><text x="726" y="228" font-family="Verdana, sans-serif" font-size="30" font-weight="800" fill="#FFC400">712</text><rect x="944" y="150" width="220" height="116" rx="16" fill="#FFFFFF" stroke="#E4E7EC"/><text x="966" y="184" font-family="Verdana, sans-serif" font-size="13" font-weight="400" fill="#475569">Aprovação</text><text x="966" y="228" font-family="Verdana, sans-serif" font-size="30" font-weight="800" fill="#1BA559">94%</text><rect x="224" y="290" width="620" height="280" rx="16" fill="#FFFFFF" stroke="#E4E7EC"/><text x="248" y="322" font-family="Verdana, sans-serif" font-size="14" font-weight="600" fill="#475569">Evolução da nota média</text><polyline points="280,410 356,352.89781181581577 432,311.6837259182013 508,295.4421543904591 584,302.56364240185127 660,321.4340777725291 736,335.40814971847567 812,329.9372950258757" fill="none" stroke="#1BA559" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/><circle cx="280" cy="410" r="6" fill="#1E50E0"/><circle cx="356" cy="352.89781181581577" r="6" fill="#1E50E0"/><circle cx="432" cy="311.6837259182013" r="6" fill="#1E50E0"/><circle cx="508" cy="295.4421543904591" r="6" fill="#1E50E0"/><circle cx="584" cy="302.56364240185127" r="6" fill="#1E50E0"/><circle cx="660" cy="321.4340777725291" r="6" fill="#1E50E0"/><circle cx="736" cy="335.40814971847567" r="6" fill="#1E50E0"/><circle cx="812" cy="329.9372950258757" r="6" fill="#1E50E0"/><rect x="868" y="290" width="308" height="280" rx="16" fill="#FFFFFF" stroke="#E4E7EC"/><text x="892" y="322" font-family="Verdana, sans-serif" font-size="14" font-weight="700" fill="#0B1033">Destaques</text><rect x="892" y="346" width="180" height="12" rx="6" fill="#E4E7EC"/><rect x="892" y="364" width="110" height="10" rx="5" fill="#E4E7EC"/><rect x="1092" y="346" width="60" height="24" rx="12" fill="#E6F6EC"/><rect x="892" y="398" width="180" height="12" rx="6" fill="#E4E7EC"/><rect x="892" y="416" width="110" height="10" rx="5" fill="#E4E7EC"/><rect x="1092" y="398" width="60" height="24" rx="12" fill="#E8EEFD"/><rect x="892" y="450" width="180" height="12" rx="6" fill="#E4E7EC"/><rect x="892" y="468" width="110" height="10" rx="5" fill="#E4E7EC"/><rect x="1092" y="450" width="60" height="24" rx="12" fill="#E6F6EC"/><rect x="892" y="502" width="180" height="12" rx="6" fill="#E4E7EC"/><rect x="892" y="520" width="110" height="10" rx="5" fill="#E4E7EC"/><rect x="1092" y="502" width="60" height="24" rx="12" fill="#E8EEFD"/>
+</svg>
