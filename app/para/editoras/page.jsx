@@ -53,6 +53,7 @@ export default function ParaEditorasPage() {
             <FeatureList
               columns={2}
               icon="check"
+              onDark
               items={["Recorrência por aluno ativo", "Conteúdo licenciável", "Personalização completa", "Suporte e evolução contínua"]}
             />
           </div>
