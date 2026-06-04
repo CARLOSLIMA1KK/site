@@ -2,6 +2,8 @@ import "./globals.css";
 import { Sora, Public_Sans } from "next/font/google";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import BackToTop from "@/components/BackToTop";
+import CookieConsent from "@/components/CookieConsent";
 import { SITE } from "@/lib/site";
 
 const display = Sora({
@@ -61,6 +63,8 @@ export default function RootLayout({ children }) {
         <Header />
         <main id="conteudo">{children}</main>
         <Footer />
+        <BackToTop />
+        <CookieConsent />
       </body>
     </html>
   );
