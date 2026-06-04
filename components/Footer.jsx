@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Logo from "./Logo";
 import Icon from "./Icon";
+import ManageCookiesButton from "./ManageCookiesButton";
 import { SITE } from "@/lib/site";
 
 const COLUMNS = [
@@ -97,6 +98,7 @@ export default function Footer() {
           <div className="flex flex-wrap items-center gap-4">
             <Link href="/privacidade" className="hover:text-white">Privacidade</Link>
             <Link href="/termos" className="hover:text-white">Termos</Link>
+            <ManageCookiesButton className="hover:text-white" />
             <a href={SITE.whatsapp} target="_blank" rel="noopener noreferrer" className="hover:text-white">WhatsApp</a>
             <a href={SITE.login} target="_blank" rel="noopener noreferrer" className="hover:text-white">Entrar</a>
           </div>

@@ -16,6 +16,9 @@ export default function CookieConsent() {
     } catch {
       /* localStorage indisponível */
     }
+    const reopen = () => setOpen(true);
+    window.addEventListener("kodaredu:open-cookies", reopen);
+    return () => window.removeEventListener("kodaredu:open-cookies", reopen);
   }, []);
 
   function decide(value) {
