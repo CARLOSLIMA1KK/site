@@ -321,10 +321,10 @@ function Hero() {
         <div className="grid items-center gap-12 lg:grid-cols-[1.05fr_1fr]">
           <div className="animate-fade-up">
             <Pill tone="verde">
-              <span className="h-1.5 w-1.5 rounded-full bg-verde-500" /> Plataforma completa de avaliação · White label
+              <span className="h-1.5 w-1.5 rounded-full bg-verde-500" /> Plataforma educacional completa · White label
             </Pill>
             <h1 className="mt-5 font-display text-display font-extrabold text-ink">
-              A plataforma <Highlight color="amarelo">completa</Highlight> de avaliação.{" "}
+              A plataforma educacional <Highlight color="amarelo">completa</Highlight>.{" "}
               <span className="text-verde-700">Com a sua marca.</span>
             </h1>
             <p className="mt-5 max-w-xl text-lg leading-relaxed text-slate">
