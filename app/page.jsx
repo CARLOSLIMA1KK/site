@@ -130,58 +130,8 @@ export default function HomePage() {
         </Reveal>
       </SectionWrapper>
 
-      {/* Relatórios & Acessos (resumo de /plataforma/relatorios e /plataforma/acessos) */}
-      <SectionWrapper soft eyebrow="Inteligência de dados & acessos">
-        <div className="grid gap-10 lg:grid-cols-2">
-          {/* Relatórios */}
-          <Reveal>
-            <h2 className="font-display text-h3 font-bold text-ink">Relatórios que viram decisão</h2>
-            <p className="mt-3 text-slate">
-              A mesma avaliação, lida em vários níveis — com réguas ENEM/SAEB por TRI e integração ao
-              ERP escolar.
-            </p>
-            <ul className="mt-5 flex flex-wrap gap-2">
-              {REPORT_VIEWS.map((v) => (
-                <li key={v.title}>
-                  <Pill tone="verde">{v.title}</Pill>
-                </li>
-              ))}
-            </ul>
-            <div className="mt-6">
-              <Button href="/plataforma/relatorios" variant="ghost">
-                Ver relatórios & inteligência de dados
-              </Button>
-            </div>
-          </Reveal>
-
-          {/* Acessos & Perfis */}
-          <Reveal delay={0.1}>
-            <h2 className="font-display text-h3 font-bold text-ink">Cada perfil vê só o que precisa</h2>
-            <p className="mt-3 text-slate">
-              Acessos por nível, do aluno ao gestor de rede — simples para quem usa, seguro para a
-              instituição.
-            </p>
-            <div className="mt-5 space-y-2.5">
-              {ACCESS_PROFILES.map((p) => (
-                <div key={p.name} className="flex items-center gap-3 rounded-md border border-line bg-white px-4 py-3">
-                  <span className="flex h-9 w-9 flex-none items-center justify-center rounded-md bg-azul-100 text-azul-600">
-                    <Icon name={p.icon} size={18} />
-                  </span>
-                  <span>
-                    <span className="text-[15px] font-semibold text-ink">{p.name}</span>{" "}
-                    <span className="text-[14px] text-slate">— {p.desc}</span>
-                  </span>
-                </div>
-              ))}
-            </div>
-            <div className="mt-6">
-              <Button href="/plataforma/acessos" variant="ghost">
-                Ver acessos & permissões
-              </Button>
-            </div>
-          </Reveal>
-        </div>
-      </SectionWrapper>
+      {/* Inteligência de dados & acessos — showcase visual */}
+      <DataAndAccess />
 
       {/* 3 pilares de autoridade */}
       <SectionWrapper
@@ -236,6 +186,133 @@ export default function HomePage() {
       {/* CTA final */}
       <CTASection />
     </>
+  );
+}
+
+function DataAndAccess() {
+  return (
+    <section className="relative overflow-hidden bg-bg-soft py-16 sm:py-20 lg:py-24">
+      <div className="absolute -right-24 top-24 h-80 w-80 rounded-full bg-azul-100/60 blur-3xl" aria-hidden="true" />
+      <div className="absolute -left-24 bottom-10 h-80 w-80 rounded-full bg-verde-100 blur-3xl" aria-hidden="true" />
+
+      <div className="container-page relative">
+        <Reveal className="mb-12 max-w-3xl">
+          <span className="eyebrow">Inteligência de dados & acessos</span>
+          <h2 className="mt-3 font-display text-h2 font-bold text-ink">
+            Dados que viram decisão. Acessos que organizam.
+          </h2>
+          <p className="mt-4 text-lg text-slate">
+            Cada avaliação gera inteligência acionável — e cada perfil enxerga exatamente o que precisa.
+          </p>
+        </Reveal>
+
+        {/* Relatórios — mockup com chips flutuantes */}
+        <div className="grid items-center gap-12 lg:grid-cols-[1fr_1.1fr]">
+          <Reveal>
+            <Pill tone="verde">Relatórios</Pill>
+            <h3 className="mt-3 font-display text-h3 font-bold text-ink">
+              Relatórios que viram decisão pedagógica
+            </h3>
+            <p className="mt-3 text-slate">
+              A mesma avaliação, lida em vários níveis — com réguas ENEM/SAEB por TRI e integração ao
+              ERP escolar.
+            </p>
+            <ul className="mt-5 flex flex-wrap gap-2">
+              {REPORT_VIEWS.map((v) => (
+                <li key={v.title}>
+                  <Pill tone="verde">{v.title}</Pill>
+                </li>
+              ))}
+            </ul>
+            <div className="mt-7">
+              <Button href="/plataforma/relatorios" variant="secondary" arrow>
+                Ver relatórios & inteligência de dados
+              </Button>
+            </div>
+          </Reveal>
+
+          <Reveal delay={0.1} className="relative">
+            <MockupFrame
+              src="/assets/prints/relatorio-gestor.svg"
+              alt="Painel de relatórios da KodarEdu com indicadores de desempenho"
+              label="app.suaescola.edu.br/relatorios"
+            />
+            {/* chip flutuante: nota TRI */}
+            <div className="absolute -left-4 top-10 hidden rounded-xl border border-line bg-white p-3.5 shadow-pop sm:block">
+              <p className="text-[11px] font-medium text-slate">Nota TRI média</p>
+              <div className="flex items-end gap-1.5">
+                <span className="font-display text-2xl font-extrabold text-ink">742</span>
+                <span className="mb-0.5 text-xs font-bold text-verde-700">▲ 18%</span>
+              </div>
+            </div>
+            {/* chip flutuante: aprovação */}
+            <div className="absolute -bottom-5 right-6 hidden items-center gap-2.5 rounded-xl border border-line bg-white p-3.5 shadow-pop sm:flex">
+              <span className="flex h-9 w-9 items-center justify-center rounded-lg bg-verde-100 text-verde-700">
+                <Icon name="chart" size={18} />
+              </span>
+              <span>
+                <span className="block font-display text-lg font-extrabold leading-none text-ink">+38%</span>
+                <span className="block text-[11px] text-slate">acima da média no ENEM</span>
+              </span>
+            </div>
+          </Reveal>
+        </div>
+
+        {/* Acessos & Perfis — cards com miniatura de tela */}
+        <div className="mt-20">
+          <Reveal className="mb-8 flex flex-wrap items-end justify-between gap-4">
+            <div className="max-w-2xl">
+              <Pill tone="azul">Acessos & perfis</Pill>
+              <h3 className="mt-3 font-display text-h3 font-bold text-ink">Cada perfil vê só o que precisa</h3>
+              <p className="mt-2 text-slate">
+                Acessos por nível, do aluno ao gestor de rede — simples para quem usa, seguro para a instituição.
+              </p>
+            </div>
+            <Button href="/plataforma/acessos" variant="secondary" arrow className="hidden sm:inline-flex">
+              Ver acessos & permissões
+            </Button>
+          </Reveal>
+
+          <Stagger className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+            {ACCESS_PROFILES.map((p) => (
+              <StaggerItem key={p.name} className="h-full">
+                <div className="group flex h-full flex-col overflow-hidden rounded-lg border border-line bg-white shadow-card transition duration-300 hover:-translate-y-1 hover:shadow-pop">
+                  <div className="relative overflow-hidden border-b border-line bg-bg-soft">
+                    {/* eslint-disable-next-line @next/next/no-img-element */}
+                    <img
+                      src={p.print}
+                      alt={`Tela do perfil ${p.name}`}
+                      loading="lazy"
+                      className="aspect-[16/9] w-full object-cover object-top transition-transform duration-500 group-hover:scale-[1.04]"
+                    />
+                    <span className="absolute left-3 top-3 flex h-10 w-10 items-center justify-center rounded-lg bg-white/95 text-azul-600 shadow-card backdrop-blur">
+                      <Icon name={p.icon} size={20} />
+                    </span>
+                  </div>
+                  <div className="flex flex-1 flex-col p-5">
+                    <h4 className="font-display text-lg font-bold text-ink">{p.name}</h4>
+                    <p className="mt-1 text-[14px] leading-relaxed text-slate">{p.desc}</p>
+                  </div>
+                </div>
+              </StaggerItem>
+            ))}
+            {/* card-CTA fechando a grade */}
+            <StaggerItem className="h-full">
+              <Link
+                href="/plataforma/acessos"
+                className="flex h-full flex-col items-center justify-center rounded-lg border-2 border-dashed border-azul-600/30 bg-azul-100/40 p-6 text-center transition hover:border-azul-600/60"
+              >
+                <span className="flex h-12 w-12 items-center justify-center rounded-xl bg-white text-azul-600 shadow-card">
+                  <Icon name="shield" size={24} />
+                </span>
+                <span className="mt-3 font-display text-lg font-bold text-ink">Permissões por nível</span>
+                <span className="mt-1 text-sm font-semibold text-azul-600">Ver tabela completa →</span>
+              </Link>
+            </StaggerItem>
+          </Stagger>
+        </div>
+      </div>
+    </section>
   );
 }
 
