@@ -67,17 +67,12 @@ export default function Header() {
           </nav>
 
           {/* Right actions */}
-          <div className="hidden items-center gap-2 lg:flex">
-            <a
-              href={SITE.login}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="rounded-full px-3.5 py-2 text-[15px] font-semibold text-ink transition hover:bg-bg-soft"
-            >
+          <div className="hidden items-center gap-2.5 lg:flex">
+            <Button href={SITE.login} external variant="secondary" size="sm">
               Entrar
-            </a>
-            <Button href={SITE.ctaPrimaryHref} variant="primary">
-              {SITE.ctaPrimary}
+            </Button>
+            <Button href={SITE.ctaPrimaryHref} variant="primary" size="sm">
+              Quero na minha escola
             </Button>
           </div>
 
