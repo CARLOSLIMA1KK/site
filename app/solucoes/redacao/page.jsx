@@ -23,12 +23,12 @@ const STATS = [
 ];
 
 const GENEROS = [
-  { title: "Dissertativo-argumentativo", text: "Padrão ENEM e vestibulares." },
-  { title: "Artigo de opinião", text: "Posicionamento e argumentação." },
-  { title: "Carta argumentativa", text: "Carta do leitor e carta aberta." },
-  { title: "Narrativa e crônica", text: "Criatividade e coesão narrativa." },
-  { title: "Relato e descrição", text: "Gêneros do Ensino Fundamental." },
-  { title: "Resenha e resumo", text: "Leitura crítica e síntese." },
+  { title: "Dissertativo-argumentativo", text: "Padrão ENEM e principais vestibulares.", icon: "target" },
+  { title: "Artigo de opinião", text: "Posicionamento e argumentação crítica.", icon: "doc" },
+  { title: "Carta argumentativa", text: "Carta do leitor, carta aberta e ofício.", icon: "pencil" },
+  { title: "Narrativa e crônica", text: "Enredo, criatividade e coesão.", icon: "book" },
+  { title: "Relato e descrição", text: "Gêneros do Ensino Fundamental.", icon: "users" },
+  { title: "Resenha e resumo", text: "Leitura crítica e capacidade de síntese.", icon: "list" },
 ];
 
 const COMPETENCIAS = [
@@ -55,7 +55,7 @@ export default function RedacaoPage() {
         eyebrow="Avaliações & Ferramentas · Produção Textual"
         title="Produção Textual com IA,"
         highlight="do Fundamental ao ENEM."
-        subtitle="Muito além da redação do ENEM: desenvolva a escrita em diversos gêneros, do Ensino Fundamental ao Médio — com correção que une IA e especialista, OCR para textos manuscritos e temas definidos por você."
+        subtitle="Muito além da redação do ENEM: desenvolva a escrita em diversos gêneros, do Ensino Fundamental ao Médio — com correção que une IA e corretor humano, OCR para textos manuscritos e temas definidos pela sua escola."
         pills={["Com IA", "OCR manuscrito", "5.000+ temas", "Diversos gêneros"]}
         mockup={{
           src: "/assets/prints/redacao-correcao.svg",
@@ -88,10 +88,10 @@ export default function RedacaoPage() {
               <FeatureList
                 columns={1}
                 items={[
-                  "Crie temas próprios da sua instituição",
-                  "Banco com 5.000+ temas prontos para usar",
-                  "Coletâneas e textos de apoio inclusos",
-                  "Temas por etapa, gênero e nível de dificuldade",
+                  { title: "Crie temas próprios da sua instituição", icon: "pencil" },
+                  { title: "Banco com 5.000+ temas prontos para usar", icon: "layers" },
+                  { title: "Coletâneas e textos de apoio inclusos", icon: "doc" },
+                  { title: "Temas por etapa, gênero e nível de dificuldade", icon: "search" },
                 ]}
               />
             </div>
@@ -107,19 +107,18 @@ export default function RedacaoPage() {
         <div className="grid items-center gap-10 lg:grid-cols-2">
           <Reveal>
             <p className="text-lg leading-relaxed text-slate">
-              O aluno escreve no papel e <strong className="text-ink">fotografa a redação</strong>: nosso
-              OCR extrai o texto manuscrito da imagem e a IA faz a correção. Nada de digitar tudo de
-              novo — o manuscrito entra direto no fluxo.
+              O aluno escreve no papel e <strong className="text-ink">fotografa a redação</strong>: o
+              OCR extrai o texto manuscrito da imagem e a IA faz a correção. Sem redigitar nada — o
+              manuscrito entra direto no fluxo de correção.
             </p>
             <div className="mt-6">
               <FeatureList
                 columns={1}
-                icon="chip"
                 items={[
-                  "OCR lê a redação manuscrita pela foto",
-                  "IA com PLN: feedback trecho a trecho",
-                  "Nota por competência com justificativa",
-                  "Sugestões de reescrita e próximos passos",
+                  { title: "OCR lê a redação manuscrita pela foto", icon: "camera" },
+                  { title: "IA com PLN: feedback trecho a trecho", icon: "sparkle" },
+                  { title: "Nota por competência com justificativa", icon: "chart" },
+                  { title: "Sugestões de reescrita e próximos passos", icon: "wand" },
                 ]}
               />
             </div>
