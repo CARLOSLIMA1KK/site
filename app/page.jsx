@@ -11,6 +11,7 @@ import WhiteLabelDemo from "@/components/WhiteLabelDemo";
 import FAQ from "@/components/FAQ";
 import CTASection from "@/components/CTASection";
 import FeatureList from "@/components/FeatureList";
+import Highlight from "@/components/Highlight";
 import { Reveal, Stagger, StaggerItem } from "@/components/Motion";
 import {
   SITE,
@@ -26,7 +27,7 @@ import {
   REPORT_VIEWS,
 } from "@/lib/site";
 
-const SEALS = ["White Label", "IA", "TRI", "LGPD", "Acessível"];
+const SEALS = ["Simulados por TRI", "Redação com IA", "Banco de questões", "Adaptativa", "Relatórios"];
 
 export default function HomePage() {
   return (
@@ -249,15 +250,16 @@ function Hero() {
         <div className="grid items-center gap-12 lg:grid-cols-[1.05fr_1fr]">
           <div className="animate-fade-up">
             <Pill tone="verde">
-              <span className="h-1.5 w-1.5 rounded-full bg-verde-500" /> Plataforma educacional white label
+              <span className="h-1.5 w-1.5 rounded-full bg-verde-500" /> Plataforma completa de avaliação · White label
             </Pill>
             <h1 className="mt-5 font-display text-display font-extrabold text-ink">
-              A plataforma de avaliação e ENEM da sua escola.{" "}
+              A plataforma <Highlight color="amarelo">completa</Highlight> de avaliação da sua escola.{" "}
               <span className="text-verde-700">Com a sua marca.</span>
             </h1>
             <p className="mt-5 max-w-xl text-lg leading-relaxed text-slate">
-              Simulados por TRI, redação com IA + especialista, banco de questões e relatórios de
-              inteligência de dados — tudo white label, sem precisar de equipe de TI.
+              Crie, aplique, corrija e analise avaliações com tecnologia inteligente — de provas e
+              simulados por TRI à redação com IA e relatórios. Tudo white label, sem precisar de equipe
+              de TI.
             </p>
             <div className="mt-8 flex flex-col gap-3 sm:flex-row">
               <Button href={SITE.ctaPrimaryHref} variant="primary" size="lg" arrow>
