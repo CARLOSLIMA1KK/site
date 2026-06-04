@@ -83,7 +83,7 @@ export default function QualifierForm() {
 
       <div className="mt-6">
         <Button type="submit" variant="primary" size="lg" arrow className="w-full sm:w-auto">
-          Quero a KodarEdu na minha escola
+          Quero uma demonstração
         </Button>
       </div>
     </form>

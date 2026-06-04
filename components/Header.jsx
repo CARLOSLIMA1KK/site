@@ -72,7 +72,7 @@ export default function Header() {
               Entrar
             </Button>
             <Button href={SITE.ctaPrimaryHref} variant="primary" size="sm">
-              Quero na minha escola
+              Quero uma demonstração
             </Button>
           </div>
 
