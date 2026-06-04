@@ -2,7 +2,7 @@ import Link from "next/link";
 
 const VARIANTS = {
   primary:
-    "bg-cta text-cta-ink shadow-card hover:brightness-105 hover:-translate-y-0.5 focus-visible:-translate-y-0.5",
+    "border-2 border-transparent bg-cta text-cta-ink shadow-card hover:brightness-105 hover:-translate-y-0.5 focus-visible:-translate-y-0.5",
   secondary:
     "border-2 border-verde-700 text-verde-900 hover:bg-verde-100 hover:-translate-y-0.5",
   ghost: "text-verde-700 hover:text-verde-900 px-1 gap-1.5",
