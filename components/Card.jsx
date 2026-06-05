@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Icon from "./Icon";
 import Pill from "./Pill";
+import EduText from "./EduText";
 
 // Card de solução/recurso reutilizável.
 export default function Card({ title, text, href, icon, tag, image, imageAlt, className = "" }) {
@@ -25,7 +26,7 @@ export default function Card({ title, text, href, icon, tag, image, imageAlt, cl
         </div>
       )}
       <div className="mb-2 flex items-center gap-2">
-        <h3 className="font-display text-xl font-semibold text-ink">{title}</h3>
+        <h3 className="font-display text-xl font-semibold text-ink"><EduText>{title}</EduText></h3>
         {tag && <Pill tone="azul">{tag}</Pill>}
       </div>
       <p className="text-[15px] leading-relaxed text-slate">{text}</p>

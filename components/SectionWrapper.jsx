@@ -1,4 +1,5 @@
 import { Reveal } from "./Motion";
+import EduText from "./EduText";
 
 // Seção com fundo alternado e cabeçalho opcional.
 export default function SectionWrapper({
@@ -20,11 +21,11 @@ export default function SectionWrapper({
         {(eyebrow || title || subtitle) && (
           <Reveal className={`mb-10 sm:mb-14 ${center ? "mx-auto max-w-3xl text-center" : "max-w-3xl"}`}>
             {eyebrow && (
-              <span className={`eyebrow ${dark ? "text-amarelo-300" : ""}`}>{eyebrow}</span>
+              <span className={`eyebrow ${dark ? "text-amarelo-300" : ""}`}><EduText>{eyebrow}</EduText></span>
             )}
             {title && (
               <h2 className={`mt-3 font-display text-h2 font-bold ${dark ? "text-white" : "text-ink"}`}>
-                {title}
+                <EduText>{title}</EduText>
               </h2>
             )}
             {subtitle && (

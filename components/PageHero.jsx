@@ -1,5 +1,6 @@
 import Button from "./Button";
 import MockupFrame from "./MockupFrame";
+import EduText from "./EduText";
 import { SITE } from "@/lib/site";
 
 // Hero padrão das páginas internas. Aceita mockup opcional à direita.
@@ -22,9 +23,9 @@ export default function PageHero({
       <div className="container-page relative py-14 sm:py-20">
         <div className={hasMedia ? "grid items-center gap-12 lg:grid-cols-[1.05fr_1fr]" : "max-w-3xl"}>
           <div className="animate-fade-up">
-            {eyebrow && <span className="eyebrow">{eyebrow}</span>}
+            {eyebrow && <span className="eyebrow"><EduText>{eyebrow}</EduText></span>}
             <h1 className="mt-4 font-display text-display font-extrabold leading-[1.05] text-ink">
-              {title} {highlight && <span className="text-verde-700">{highlight}</span>}
+              <EduText>{title}</EduText> {highlight && <span className="text-verde-700"><EduText>{highlight}</EduText></span>}
             </h1>
             {subtitle && <p className="mt-5 max-w-xl text-lg leading-relaxed text-slate">{subtitle}</p>}
             {(primary || secondary) && (

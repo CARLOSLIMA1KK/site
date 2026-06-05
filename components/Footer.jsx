@@ -2,6 +2,7 @@ import Link from "next/link";
 import Logo from "./Logo";
 import Icon from "./Icon";
 import ManageCookiesButton from "./ManageCookiesButton";
+import EduText from "./EduText";
 import { SITE } from "@/lib/site";
 
 const COLUMNS = [
@@ -82,7 +83,7 @@ export default function Footer() {
                 {col.links.map((l) => (
                   <li key={l.href}>
                     <Link href={l.href} className="text-sm text-white/75 transition hover:text-white">
-                      {l.label}
+                      <EduText>{l.label}</EduText>
                     </Link>
                   </li>
                 ))}

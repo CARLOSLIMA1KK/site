@@ -5,6 +5,7 @@ import { useEffect, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import Logo from "./Logo";
 import Button from "./Button";
+import EduText from "./EduText";
 import { NAV, SITE } from "@/lib/site";
 
 export default function Header() {
@@ -115,7 +116,7 @@ function MegaMenu({ item }) {
         {item.columns.map((col, ci) => (
           <div key={ci}>
             {col.title && (
-              <p className="mb-2 px-3 text-xs font-bold uppercase tracking-wider text-verde-700">{col.title}</p>
+              <p className="mb-2 px-3 text-xs font-bold uppercase tracking-wider text-verde-700"><EduText>{col.title}</EduText></p>
             )}
             <ul className="space-y-0.5">
               {col.items.map((sub) => (
@@ -124,7 +125,7 @@ function MegaMenu({ item }) {
                     href={sub.href}
                     className="block rounded-md px-3 py-2 transition hover:bg-bg-soft"
                   >
-                    <span className="block text-[15px] font-semibold text-ink">{sub.label}</span>
+                    <span className="block text-[15px] font-semibold text-ink"><EduText>{sub.label}</EduText></span>
                     {sub.desc && <span className="block text-[13px] text-slate">{sub.desc}</span>}
                   </Link>
                 </li>
@@ -180,7 +181,7 @@ function MobileDrawer({ onClose }) {
                 <div className="space-y-2 pb-2 pl-3">
                   {item.columns.map((col, ci) => (
                     <div key={ci}>
-                      {col.title && <p className="px-3 pt-2 text-xs font-bold uppercase tracking-wider text-verde-700">{col.title}</p>}
+                      {col.title && <p className="px-3 pt-2 text-xs font-bold uppercase tracking-wider text-verde-700"><EduText>{col.title}</EduText></p>}
                       {col.items.map((sub) => (
                         <Link
                           key={sub.href}
@@ -188,7 +189,7 @@ function MobileDrawer({ onClose }) {
                           onClick={onClose}
                           className="block rounded-md px-3 py-2 text-[15px] text-slate hover:bg-bg-soft"
                         >
-                          {sub.label}
+                          <EduText>{sub.label}</EduText>
                         </Link>
                       ))}
                     </div>
