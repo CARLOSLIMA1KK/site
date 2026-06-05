@@ -255,7 +255,7 @@ export default function EduShowcase() {
   useEffect(() => {
     if (paused) return;
     if (typeof window !== "undefined" && window.matchMedia?.("(prefers-reduced-motion: reduce)").matches) return;
-    const t = setInterval(() => setI((p) => (p + 1) % SLIDES.length), 2000);
+    const t = setInterval(() => setI((p) => (p + 1) % SLIDES.length), 4000);
     return () => clearInterval(t);
   }, [paused]);
 
