@@ -1,6 +1,5 @@
 const ROUTES = [
   "/",
-  "/plataforma/tour",
   "/white-label",
   "/plataforma/relatorios",
   "/plataforma/acessos",

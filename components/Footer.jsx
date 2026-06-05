@@ -8,10 +8,10 @@ const COLUMNS = [
   {
     title: "Plataforma",
     links: [
-      { label: "Tour", href: "/plataforma/tour" },
-      { label: "White Label", href: "/white-label" },
-      { label: "Relatórios", href: "/plataforma/relatorios" },
       { label: "Acessos & Perfis", href: "/plataforma/acessos" },
+      { label: "Relatórios", href: "/plataforma/relatorios" },
+      { label: "White Label", href: "/white-label" },
+      { label: "Quem Somos", href: "/quem-somos" },
     ],
   },
   {
@@ -39,8 +39,9 @@ const COLUMNS = [
   {
     title: "Empresa",
     links: [
-      { label: "Quem Somos", href: "/quem-somos" },
       { label: "Contato", href: "/contato" },
+      { label: "Privacidade", href: "/privacidade" },
+      { label: "Termos", href: "/termos" },
     ],
   },
 ];

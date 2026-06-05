@@ -68,8 +68,8 @@ export default function HomePage() {
       >
         <FeatureList items={PLATFORM_CAPABILITIES} columns={4} icon="check" />
         <Reveal className="mt-8 flex flex-wrap gap-3">
-          <Button href="/plataforma/tour" variant="secondary" arrow>
-            Fazer o tour pelas telas
+          <Button href="/plataforma/acessos" variant="secondary" arrow>
+            Ver acessos & perfis
           </Button>
           <Button href="/plataforma/relatorios" variant="ghost">
             Ver relatórios & dados
