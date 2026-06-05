@@ -413,8 +413,77 @@ function aplicacaoDigital() {
   return s;
 }
 
+// ---- ALUNO · TRILHA DE ESTUDOS ----
+function alunoTrilha() {
+  let s = txt(232, 116, "Olá, Ana 👋  ·  Minha trilha de estudos", 20, C.ink, 800);
+  // progresso geral
+  s += card(224, 150, 952, 92);
+  s += txt(248, 184, "Progresso da trilha", 13, C.slate);
+  s += bar(248, 202, 720, 16, C.bg, 8) + bar(248, 202, 720 * 0.55, 16, C.verde, 8);
+  s += `<text x="1152" y="204" text-anchor="end" font-family="Verdana,sans-serif" font-size="30" font-weight="800" fill="${C.verde}">55%</text>`;
+  // caminho
+  s += card(224, 262, 600, 308);
+  s += txt(248, 296, "Seu caminho", 14, C.ink, 700);
+  const steps = [["Funções", "Concluído", C.verde], ["Interpretação de texto", "Em curso", C.azul], ["Geometria", "Próximo", C.mute], ["Redação ENEM", "Próximo", C.mute]];
+  s += `<line x1="270" y1="344" x2="270" y2="512" stroke="${C.line}" stroke-width="3"/>`;
+  steps.forEach(([t, st, col], i) => {
+    const y = 344 + i * 56;
+    s += `<circle cx="270" cy="${y}" r="14" fill="${col}"/>`;
+    if (i === 0) s += `<path d="M264 ${y} l4 4 8 -8" stroke="#FFFFFF" stroke-width="2.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>`;
+    else if (i === 1) s += `<path d="M266 ${y - 5} v10 l8 -5 z" fill="#FFFFFF"/>`;
+    s += txt(300, y - 1, t, 14, C.ink, 700) + txt(300, y + 17, st, 12, C.slate);
+  });
+  // recomendado
+  s += card(848, 262, 328, 308);
+  s += bar(872, 292, 150, 26, C.verdeSoft, 13) + txt(888, 310, "Recomendado", 12, C.verde, 700);
+  s += txt(872, 348, "Próximo passo", 13, C.slate);
+  s += txt(872, 376, "Interpretação de texto", 16, C.ink, 700);
+  s += txt(872, 400, "8 atividades · 25 min", 12, C.slate);
+  s += bar(872, 430, 280, 48, C.amarelo, 24) + txt(936, 460, "Continuar trilha", 14, C.ink, 700);
+  s += txt(872, 524, "🔥 Ofensiva de 6 dias", 13, C.ink, 600);
+  return s;
+}
+
+// ---- ALUNO · RESULTADO POR TRI ----
+function alunoResultadoTri() {
+  let s = txt(232, 116, "Resultado · 2º Simulado ENEM", 20, C.ink, 800);
+  // nota TRI
+  s += card(224, 150, 380, 250);
+  s += txt(248, 186, "Sua nota TRI", 13, C.slate);
+  s += `<text x="248" y="250" font-family="Verdana,sans-serif" font-size="58" font-weight="800" fill="${C.ink}">742</text>`;
+  s += bar(248, 270, 168, 26, C.verdeSoft, 13) + txt(266, 288, "▲ acima da média", 12, C.verde, 700);
+  s += txt(248, 332, "0", 11, C.mute) + `<text x="566" y="332" text-anchor="end" font-family="Verdana,sans-serif" font-size="11" fill="${C.mute}">1000</text>`;
+  s += bar(248, 342, 318, 12, C.bg, 6) + bar(248, 342, 318 * 0.742, 12, C.verde, 6);
+  s += `<circle cx="${248 + 318 * 0.742}" cy="348" r="9" fill="#FFFFFF" stroke="${C.verde}" stroke-width="3"/>`;
+  // por área
+  s += card(624, 150, 552, 250);
+  s += txt(648, 186, "Por área de conhecimento", 14, C.ink, 700);
+  const areas = [["Linguagens", 720], ["Matemática", 760], ["C. Humanas", 700], ["C. da Natureza", 680], ["Redação", 920]];
+  areas.forEach(([a, v], i) => {
+    const y = 214 + i * 34;
+    s += txt(648, y + 12, a, 13, C.slate);
+    s += bar(800, y, 280, 16, C.bg, 8) + bar(800, y, 280 * (v / 1000), 16, i % 2 ? C.azul : C.verde, 8);
+    s += `<text x="1152" y="${y + 13}" text-anchor="end" font-family="Verdana,sans-serif" font-size="13" font-weight="700" fill="${C.ink}">${v}</text>`;
+  });
+  // ranking
+  s += card(224, 420, 460, 150);
+  s += txt(248, 454, "Sua posição", 13, C.slate);
+  s += `<text x="248" y="514" font-family="Verdana,sans-serif" font-size="44" font-weight="800" fill="${C.azul}">#12</text>`;
+  s += txt(330, 514, "na sua turma", 13, C.slate) + txt(330, 532, "de 38 alunos", 13, C.slate);
+  // evolução
+  s += card(704, 420, 472, 150);
+  s += txt(728, 454, "Evolução vs. simulado anterior", 13, C.slate);
+  let pts = [];
+  for (let i = 0; i <= 5; i++) pts.push(`${752 + i * 76},${544 - (18 + i * 13)}`);
+  s += `<polyline points="${pts.join(" ")}" fill="none" stroke="${C.verde}" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>`;
+  s += `<text x="1152" y="478" text-anchor="end" font-family="Verdana,sans-serif" font-size="22" font-weight="800" fill="${C.verde}">+38</text>`;
+  return s;
+}
+
 const screens = [
   ["secao-relatorios", relatorios(), { title: "Relatórios", accent: C.verde, nav: 3, avatar: C.azul }],
+  ["aluno-trilha", alunoTrilha(), { title: "Trilha de estudos", accent: C.verde, nav: 1, avatar: C.azul }],
+  ["aluno-resultado-tri", alunoResultadoTri(), { title: "Resultado · ENEM", accent: C.azul, nav: 0, avatar: C.azul }],
   ["aplicacao-digital", aplicacaoDigital(), { title: "Simulado online", accent: C.azul, nav: 0, avatar: C.azul }],
   ["painel-escola", painelEscola(), { title: "Início", accent: C.verde, nav: 0, avatar: C.verde }],
   ["relatorios-hero", relatoriosHero(), { title: "Relatórios", accent: C.azul, nav: 3, avatar: C.azul }],

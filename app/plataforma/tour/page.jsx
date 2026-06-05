@@ -15,8 +15,8 @@ const GALLERY = {
   Aluno: [
     { src: "/assets/prints/simulado-andamento.svg", title: "Simulado em andamento", text: "Interface limpa e focada para o aluno fazer a prova." },
     { src: "/assets/prints/aplicacao-digital.svg", title: "Prova online com cronômetro", text: "Controle de tempo e salvamento automático." },
-    { src: "/assets/prints/relatorio-tri.svg", title: "Resultado por TRI", text: "Nota no padrão ENEM e onde precisa melhorar." },
-    { src: "/assets/prints/adaptativa-trilha.svg", title: "Trilha de estudo", text: "Recomendações personalizadas a partir dos resultados." },
+    { src: "/assets/prints/aluno-resultado-tri.svg", title: "Resultado por TRI", text: "Nota por área, ranking e evolução, no padrão ENEM." },
+    { src: "/assets/prints/aluno-trilha.svg", title: "Trilha de estudo", text: "Caminho personalizado com o próximo passo recomendado." },
     { src: "/assets/prints/redacao-evolucao.svg", title: "Evolução da redação", text: "Acompanhe a nota de produção textual ao longo do ano." },
     { src: "/assets/prints/app-mobile.svg", title: "App no celular", text: "Estudar e acompanhar a evolução de onde estiver.", type: "mobile" },
   ],
