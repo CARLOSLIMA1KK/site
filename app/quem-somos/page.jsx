@@ -84,6 +84,15 @@ export default function QuemSomosPage() {
             <FeatureList columns={1} items={VALUES} />
           </Reveal>
         </div>
+        <Reveal delay={0.15} className="mt-12">
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src="/assets/photos/quem-somos-time.jpg"
+            alt="Time KodarEdu em conversa colaborativa em torno da mesa de trabalho"
+            loading="lazy"
+            className="aspect-[16/9] w-full rounded-lg border border-line object-cover shadow-pop"
+          />
+        </Reveal>
       </SectionWrapper>
 
       <SectionWrapper

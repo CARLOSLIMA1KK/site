@@ -349,12 +349,13 @@ function Hero() {
               alt="Painel inicial da KodarEdu com a visão geral da instituição"
               label="app.suaescola.edu.br"
             />
-            <div className="absolute -bottom-6 -left-4 hidden w-44 sm:block">
-              <MockupFrame
-                src="/assets/prints/app-mobile.svg"
-                alt="App da plataforma no celular, com a marca da instituição"
-                type="mobile"
-                className="!w-44"
+            <div className="absolute -bottom-8 -left-6 hidden w-44 sm:block">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src="/assets/photos/home-hero-mobile.jpg"
+                alt="Aluna sorrindo enquanto usa o app da plataforma no celular"
+                loading="eager"
+                className="aspect-square w-44 rounded-lg border border-line object-cover shadow-pop"
               />
             </div>
           </div>

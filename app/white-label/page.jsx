@@ -38,6 +38,10 @@ export default function WhiteLabelPage() {
         subtitle="A KodarEdu veste a identidade da sua instituição: cores, logo, links, domínio e até um app próprio. Seus alunos veem a sua marca, e a tecnologia roda nos bastidores."
         pills={["Domínio próprio", "App na sua marca", "Sem TI", "Implantação rápida"]}
         secondary={{ label: "Fazer o tour", href: "/plataforma/tour" }}
+        photo={{
+          src: "/assets/photos/white-label-devices.jpg",
+          alt: "Notebook, tablet e celular com a plataforma personalizada em cores de marcas diferentes",
+        }}
       />
 
       {/* Demo ao vivo */}

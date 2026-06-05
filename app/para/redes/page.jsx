@@ -32,6 +32,10 @@ export default function ParaRedesPage() {
         pills={["Multiunidade", "SAEB", "LGPD", "Benchmark nacional"]}
         primary={{ label: "Falar com o time", href: "/contato" }}
         secondary={{ label: "Ver relatórios", href: "/plataforma/relatorios" }}
+        photo={{
+          src: "/assets/photos/para-redes-hero.jpg",
+          alt: "Gestora pública liderando reunião institucional em secretaria de educação",
+        }}
       />
 
       <SectionWrapper

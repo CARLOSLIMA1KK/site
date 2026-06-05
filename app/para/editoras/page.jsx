@@ -31,6 +31,10 @@ export default function ParaEditorasPage() {
         pills={["White Label", "Licenciamento", "Banco de itens", "API/Integração"]}
         primary={{ label: "Quero ser parceiro", href: "/contato" }}
         secondary={{ label: "Como funciona o white label", href: "/white-label" }}
+        photo={{
+          src: "/assets/photos/para-editoras-hero.jpg",
+          alt: "Editora revisando material didático impresso ao lado de tablet",
+        }}
       />
 
       <SectionWrapper

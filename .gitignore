@@ -28,3 +28,6 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# PNGs originais das fotos (mantemos só os .jpg otimizados no repo)
+public/assets/photos/*.png

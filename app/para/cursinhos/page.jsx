@@ -34,6 +34,10 @@ export default function ParaCursinhosPage() {
         highlight="com a sua marca."
         subtitle="A KodarEdu dá ao seu cursinho simulados por TRI, redação com IA, ranking e trilhas adaptativas, tudo white label, do jeito que seus alunos esperam."
         pills={["TRI", "Redação", "Ranking", "White Label"]}
+        photo={{
+          src: "/assets/photos/para-cursinhos-hero.jpg",
+          alt: "Sala de cursinho com alunos em simulado ENEM, professora ao fundo",
+        }}
       />
 
       <SectionWrapper eyebrow="Foco" title="O que move um cursinho, resolvido">

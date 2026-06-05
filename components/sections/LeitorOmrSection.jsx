@@ -1,6 +1,5 @@
 import SectionWrapper from "../SectionWrapper";
 import FeatureList from "../FeatureList";
-import MockupFrame from "../MockupFrame";
 import { Reveal } from "../Motion";
 
 const LEITOR = [
@@ -27,10 +26,12 @@ export default function LeitorOmrSection({ soft = true }) {
           </div>
         </Reveal>
         <Reveal delay={0.1}>
-          <MockupFrame
-            src="/assets/prints/omr-leitor.svg"
-            alt="Leitor OMR identificando o aluno e extraindo as respostas, com leitura por lote e por câmera do celular"
-            label="Leitor OMR + câmera"
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src="/assets/photos/provas-omr-real.jpg"
+            alt="Mãos segurando folha de gabarito enquanto o celular escaneia as respostas pelo app"
+            loading="lazy"
+            className="aspect-square w-full rounded-lg border border-line object-cover shadow-pop"
           />
         </Reveal>
       </div>

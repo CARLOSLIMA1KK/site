@@ -12,8 +12,9 @@ export default function PageHero({
   primary = { label: SITE.ctaPrimary, href: SITE.ctaPrimaryHref },
   secondary,
   mockup,
+  photo,
 }) {
-  const hasMedia = !!mockup;
+  const hasMedia = !!mockup || !!photo;
   return (
     <section className="relative overflow-hidden bg-white">
       <div className="dot-grid absolute inset-0 opacity-50" aria-hidden="true" />
@@ -43,7 +44,17 @@ export default function PageHero({
           </div>
           {hasMedia && (
             <div className="animate-fade-up [animation-delay:140ms]">
-              <MockupFrame src={mockup.src} alt={mockup.alt} label={mockup.label} />
+              {mockup ? (
+                <MockupFrame src={mockup.src} alt={mockup.alt} label={mockup.label} />
+              ) : (
+                // eslint-disable-next-line @next/next/no-img-element
+                <img
+                  src={photo.src}
+                  alt={photo.alt}
+                  className="aspect-[4/3] w-full rounded-lg border border-line object-cover shadow-pop"
+                  loading="eager"
+                />
+              )}
             </div>
           )}
         </div>
