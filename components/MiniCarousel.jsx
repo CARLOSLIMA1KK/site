@@ -1,24 +1,47 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
-// Mini-carrossel de imagens para um card (ex.: 2 prints de um recurso).
-// Troque as imagens em `images` pelos prints reais da plataforma.
-export default function MiniCarousel({ images = [], alt = "" }) {
+// Mini-carrossel de imagens para um card (ex.: prints de um recurso).
+// - `fit`: "cover" (default) corta para preencher; "contain" mostra inteira
+//   com letterbox (ideal para screenshots de UI que não devem ser cortados).
+// - `autoplay`: avança automaticamente a cada `interval` ms, pausa no hover.
+export default function MiniCarousel({
+  images = [],
+  alt = "",
+  fit = "cover",
+  autoplay = false,
+  interval = 3500,
+}) {
   const [i, setI] = useState(0);
+  const [paused, setPaused] = useState(false);
   const n = images.length;
   const go = (k) => setI((k + n) % n);
 
+  useEffect(() => {
+    if (!autoplay || n < 2 || paused) return;
+    if (typeof window !== "undefined" && window.matchMedia?.("(prefers-reduced-motion: reduce)").matches) return;
+    const t = setInterval(() => setI((p) => (p + 1) % n), interval);
+    return () => clearInterval(t);
+  }, [autoplay, n, paused, interval]);
+
   if (n === 0) return null;
 
+  const fitClass = fit === "contain" ? "object-contain" : "object-cover";
+
   return (
-    <div className="group relative overflow-hidden rounded-md border border-line bg-bg-soft">
+    <div
+      className="group relative overflow-hidden rounded-md border border-line bg-bg-soft"
+      onMouseEnter={() => setPaused(true)}
+      onMouseLeave={() => setPaused(false)}
+    >
       {/* eslint-disable-next-line @next/next/no-img-element */}
       <img
+        key={i}
         src={images[i]}
         alt={`${alt} — exemplo ${i + 1}`}
         loading="lazy"
-        className="aspect-[4/3] w-full object-cover"
+        className={`aspect-[4/3] w-full ${fitClass}`}
       />
 
       {n > 1 && (

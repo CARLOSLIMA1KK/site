@@ -47,7 +47,16 @@ const ITEMS = [
     title: "Histórias ilustradas",
     desc: "Livro com várias páginas, imagens e narração em áudio.",
     accent: "amarelo",
-    images: ["/assets/printables/historias-1.svg", "/assets/printables/historias-2.svg"],
+    images: [
+      "/assets/printables/historias-1.jpg",
+      "/assets/printables/historias-2.jpg",
+      "/assets/printables/historias-3.jpg",
+      "/assets/printables/historias-4.jpg",
+      "/assets/printables/historias-5.jpg",
+      "/assets/printables/historias-6.jpg",
+    ],
+    carouselFit: "contain",
+    autoplay: true,
   },
 ];
 
@@ -69,7 +78,12 @@ export default function EduPrintables() {
         {ITEMS.map((item) => (
           <StaggerItem key={item.title} className="h-full">
             <div className="flex h-full flex-col rounded-lg border border-line bg-white p-4 shadow-card transition hover:-translate-y-1 hover:shadow-pop">
-              <MiniCarousel images={item.images} alt={item.title} />
+              <MiniCarousel
+                images={item.images}
+                alt={item.title}
+                fit={item.carouselFit}
+                autoplay={item.autoplay}
+              />
               <div className="mt-4 flex items-center gap-3">
                 <span className={`inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-md ${ACCENT[item.accent]}`}>
                   <Icon name={item.icon} size={20} />
