@@ -40,9 +40,15 @@ const ITEMS = [
       "Folha pequena, média ou grande · 2 a 10 linhas",
     ],
     images: [
-      "/assets/printables/caligrafia-1.svg",
-      "/assets/printables/caligrafia-2.svg",
+      "/assets/printables/caligrafia-1.jpg",
+      "/assets/printables/caligrafia-2.jpg",
+      "/assets/printables/caligrafia-3.jpg",
+      "/assets/printables/caligrafia-4.jpg",
     ],
+    carouselFit: "contain",
+    autoplay: true,
+    framed: true,
+    frameLabel: "Edu.IA · Caligrafia",
   },
   {
     icon: "list",
