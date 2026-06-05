@@ -20,9 +20,10 @@ const ITEMS = [
       "PNG sem fundo, pronto para A4 ou A5",
     ],
     images: [
-      "/assets/printables/colorir-1.svg",
-      "/assets/printables/colorir-2.svg",
+      "/assets/printables/colorir-1.jpg",
+      "/assets/printables/colorir-2.jpg",
     ],
+    carouselFit: "contain",
   },
   {
     icon: "pencil",
