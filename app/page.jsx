@@ -63,18 +63,10 @@ export default function HomePage() {
       <SectionWrapper
         id="a-plataforma"
         eyebrow="A Plataforma"
-        title="Um hub completo para o ciclo avaliativo"
-        subtitle="Robusta por dentro, simples por fora: tudo o que você precisa para avaliar, sem complexidade para quem usa."
+        title="Robusta por dentro, simples por fora"
+        subtitle="Nuvem, acessibilidade, acessos por nível e white label: a base que faz tudo funcionar, sem complexidade para quem usa."
       >
         <FeatureList items={PLATFORM_CAPABILITIES} columns={4} icon="check" />
-        <Reveal className="mt-8 flex flex-wrap gap-3">
-          <Button href="/plataforma/acessos" variant="secondary" arrow>
-            Ver acessos & perfis
-          </Button>
-          <Button href="/plataforma/relatorios" variant="ghost">
-            Ver relatórios & dados
-          </Button>
-        </Reveal>
       </SectionWrapper>
 
       {/* Soluções em destaque */}
@@ -82,7 +74,7 @@ export default function HomePage() {
         soft
         eyebrow="Soluções"
         title="Tudo o que você precisa, reunido"
-        subtitle="Simulados ENEM e SAEB, trilha adaptativa, Produção Textual, Banco de Itens, provas com IA e o Edu.IA. O melhor das melhores plataformas, em uma marca: a sua."
+        subtitle="Simulados ENEM e SAEB, trilha adaptativa, Produção Textual, Banco de Itens, provas com IA e o Edu.IA. Uma plataforma completa, com a sua marca."
       >
         <Stagger className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {FEATURED_SOLUTIONS.map((s) => (
@@ -123,6 +115,9 @@ export default function HomePage() {
 
       {/* Inteligência de dados & acessos, showcase visual */}
       <DataAndAccess />
+
+      {/* CTA de conversão no meio */}
+      <MidCTA />
 
       {/* 3 pilares de autoridade */}
       <SectionWrapper
@@ -170,7 +165,7 @@ export default function HomePage() {
       <Testimonial />
 
       {/* FAQ */}
-      <SectionWrapper eyebrow="Dúvidas frequentes" title="Perguntas que toda instituição faz" center>
+      <SectionWrapper soft eyebrow="Dúvidas frequentes" title="Perguntas que toda instituição faz" center>
         <FAQ items={FAQ_HOME} />
       </SectionWrapper>
 
@@ -307,6 +302,33 @@ function DataAndAccess() {
   );
 }
 
+function MidCTA() {
+  return (
+    <section className="bg-white py-10 sm:py-14">
+      <div className="container-page">
+        <Reveal className="flex flex-col items-center gap-5 rounded-lg border border-verde-500/30 bg-verde-100/50 p-6 text-center sm:flex-row sm:justify-between sm:p-8 sm:text-left">
+          <div>
+            <h2 className="font-display text-xl font-bold text-ink sm:text-2xl">
+              Pronto para ver com os seus dados?
+            </h2>
+            <p className="mt-1 text-slate">
+              Agende uma demonstração e navegue pela plataforma com a marca da sua instituição.
+            </p>
+          </div>
+          <div className="flex flex-none flex-col gap-3 sm:flex-row">
+            <Button href={SITE.ctaPrimaryHref} variant="primary" arrow>
+              {SITE.ctaPrimary}
+            </Button>
+            <Button href={SITE.whatsapp} external variant="secondary">
+              Falar no WhatsApp
+            </Button>
+          </div>
+        </Reveal>
+      </div>
+    </section>
+  );
+}
+
 function Hero() {
   return (
     <section className="relative overflow-hidden bg-white">
@@ -320,8 +342,8 @@ function Hero() {
             <TypingHeadline />
             <p className="mt-5 max-w-xl text-lg leading-relaxed text-slate">
               Crie, aplique, corrija e analise avaliações com tecnologia inteligente, de provas e
-              simulados por TRI à redação com IA e relatórios. Tudo white label, sem precisar de equipe
-              de TI.
+              simulados por TRI à Produção Textual com IA e relatórios. Tudo white label, sem precisar
+              de equipe de TI.
             </p>
             <div className="mt-8 flex flex-col gap-3 sm:flex-row">
               <Button href={SITE.ctaPrimaryHref} variant="primary" size="lg" arrow>
@@ -394,7 +416,7 @@ function Testimonial() {
               {[
                 { v: "+38%", k: "alunos acima da média no simulado ENEM" },
                 { v: "12h", k: "economizadas por professor a cada ciclo" },
-                { v: "100%", k: "das turmas com relatório por habilidade" },
+                { v: "−70%", k: "no tempo de correção das avaliações" },
                 { v: "30 dias", k: "para implantação completa, sem TI" },
               ].map((m) => (
                 <div key={m.k}>
@@ -411,6 +433,42 @@ function Testimonial() {
           </div>
         </Reveal>
       </div>
+
+      <Stagger className="mt-6 grid gap-6 sm:grid-cols-2">
+        {MORE_TESTIMONIALS.map((t) => (
+          <StaggerItem key={t.name} className="h-full">
+            <figure className="flex h-full flex-col rounded-lg border border-line bg-white p-6 shadow-card">
+              <blockquote className="flex-1 text-[15px] leading-relaxed text-ink">“{t.quote}”</blockquote>
+              <figcaption className="mt-5 flex items-center gap-3 border-t border-line pt-5">
+                <span className="flex h-10 w-10 flex-none items-center justify-center rounded-full bg-verde-100 font-display text-sm font-bold text-verde-700">
+                  {t.initials}
+                </span>
+                <span>
+                  <span className="block text-sm font-semibold text-ink">{t.name}</span>
+                  <span className="block text-xs text-slate">{t.role}</span>
+                </span>
+              </figcaption>
+            </figure>
+          </StaggerItem>
+        ))}
+      </Stagger>
     </SectionWrapper>
   );
 }
+
+const MORE_TESTIMONIALS = [
+  {
+    quote:
+      "A correção automática devolveu horas aos professores. O que era um gargalo virou rotina simples.",
+    name: "Ricardo Campos",
+    role: "Diretor",
+    initials: "RC",
+  },
+  {
+    quote:
+      "Conseguimos comparar o desempenho entre as unidades da rede pela primeira vez. Decisão por dados.",
+    name: "Helena Souza",
+    role: "Secretária de Educação",
+    initials: "HS",
+  },
+];
