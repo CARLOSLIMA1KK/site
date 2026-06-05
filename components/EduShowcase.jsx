@@ -255,7 +255,7 @@ export default function EduShowcase() {
   useEffect(() => {
     if (paused) return;
     if (typeof window !== "undefined" && window.matchMedia?.("(prefers-reduced-motion: reduce)").matches) return;
-    const t = setInterval(() => setI((p) => (p + 1) % SLIDES.length), 7000);
+    const t = setInterval(() => setI((p) => (p + 1) % SLIDES.length), 2000);
     return () => clearInterval(t);
   }, [paused]);
 
@@ -288,26 +288,29 @@ export default function EduShowcase() {
         ))}
       </div>
 
-      {/* Conteúdo do slide */}
-      <div key={i} className="grid animate-fade-up gap-6 p-5 sm:p-6 lg:grid-cols-2 lg:items-center">
-        {/* Conversa */}
-        <div className="space-y-3">
+      {/* Conteúdo do slide: tudo dentro da conversa */}
+      <div key={i} className="animate-fade-up p-5 sm:p-6">
+        <div className="mx-auto max-w-2xl space-y-3">
+          {/* Pergunta do professor */}
           <div className="flex justify-end">
             <p className="max-w-[88%] rounded-2xl rounded-br-sm bg-bg-soft px-4 py-2.5 text-[15px] text-ink">
               {slide.prompt}
             </p>
           </div>
-          <div className="flex items-end gap-2.5">
-            <EduAvatar size={36} glow={false} className="mb-0.5" />
-            <p className="max-w-[88%] rounded-2xl rounded-bl-sm bg-verde-100 px-4 py-2.5 text-[15px] leading-relaxed text-verde-900">
-              {slide.reply}
-            </p>
-          </div>
-        </div>
 
-        {/* Resultado visual */}
-        <div className="rounded-xl border border-line bg-white p-4 shadow-pop sm:p-5">
-          <Result />
+          {/* Resposta do Edu: texto + material gerado, na mesma fala */}
+          <div className="flex items-start gap-2.5">
+            <EduAvatar size={36} glow={false} className="mt-0.5" />
+            <div className="min-w-0 flex-1 space-y-2.5">
+              <p className="inline-block max-w-full rounded-2xl rounded-tl-sm bg-verde-100 px-4 py-2.5 text-[15px] leading-relaxed text-verde-900">
+                {slide.reply}
+              </p>
+              {/* Material gerado, como anexo dentro da conversa */}
+              <div className="rounded-2xl rounded-tl-sm border border-line bg-white p-4 shadow-sm sm:p-5">
+                <Result />
+              </div>
+            </div>
+          </div>
         </div>
       </div>
 
