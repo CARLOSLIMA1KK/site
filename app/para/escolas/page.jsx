@@ -8,7 +8,7 @@ import { Reveal, Stagger, StaggerItem } from "@/components/Motion";
 export const metadata = {
   title: "KodarEdu para Escolas",
   description:
-    "Menos burocracia, mais tempo ao professor e melhor desempenho no ENEM. Plataforma de avaliação white label para escolas de Ensino Fundamental e Médio.",
+    "Menos burocracia, mais tempo ao professor e melhor desempenho no ENEM. Plataforma educacional completa e white label para escolas de Ensino Fundamental e Médio.",
   alternates: { canonical: "/para/escolas" },
 };
 

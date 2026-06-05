@@ -8,7 +8,7 @@ import { Reveal } from "@/components/Motion";
 export const metadata = {
   title: "Quero a KodarEdu na minha instituição",
   description:
-    "Fale com um especialista da KodarEdu. Receba uma proposta sob medida de plataforma white label de avaliação e ENEM para a sua instituição ou rede.",
+    "Fale com um especialista da KodarEdu. Receba uma proposta sob medida de plataforma educacional completa e white label para a sua instituição ou rede.",
   alternates: { canonical: "/contato" },
 };
 

@@ -9,7 +9,7 @@ import { Reveal, Stagger, StaggerItem } from "@/components/Motion";
 export const metadata = {
   title: "White Label, a plataforma com a cara da sua marca",
   description:
-    "Personalize a KodarEdu com seu logo, cores, links e domínio próprio. Plataforma white label de avaliação e ENEM, implantada sem precisar de TI.",
+    "Personalize a KodarEdu com seu logo, cores, links e domínio próprio. Plataforma educacional completa e white label, implantada sem precisar de TI.",
   alternates: { canonical: "/white-label" },
 };
 
@@ -108,7 +108,7 @@ export default function WhiteLabelPage() {
 
       <CTASection
         title="Quero a plataforma com a minha marca"
-        subtitle="Fale com nosso time e veja, na prática, sua instituição rodando uma plataforma completa de avaliação e ENEM."
+        subtitle="Fale com nosso time e veja, na prática, sua instituição rodando uma plataforma educacional completa."
       />
     </>
   );

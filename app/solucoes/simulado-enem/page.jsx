@@ -10,7 +10,7 @@ import RelatoriosConsolidadosSection from "@/components/sections/RelatoriosConso
 import { Reveal, Stagger, StaggerItem } from "@/components/Motion";
 
 export const metadata = {
-  title: "Simulado ENEM com correção por TRI",
+  title: "Simulados ENEM com correção por TRI",
   description:
     "Simulados no padrão ENEM com correção por TRI ajustada à régua oficial, ranking, gabarito comentado e relatório por área e habilidade. White label para a sua instituição.",
   alternates: { canonical: "/solucoes/simulado-enem" },
