@@ -11,16 +11,18 @@ import { ACCESS_PROFILES as PROFILES } from "@/lib/site";
 export const metadata = {
   title: "Acessos & Perfis, o que cada usuário tem na plataforma",
   description:
-    "Veja tudo o que a KodarEdu oferece por perfil: aluno, professor, coordenação, gestor e rede. Acessos por nível, recursos por persona e a tabela completa de permissões.",
+    "Veja tudo o que a KodarEdu oferece por perfil: aluno, professor, gestor/coordenação e rede. Acessos por nível, recursos por persona e a tabela completa de permissões.",
   alternates: { canonical: "/plataforma/acessos" },
 };
 
 // matriz: cada permissão x perfis [aluno, professor, gestor/coordenação, rede]
 const PERMISSIONS = [
-  ["Realizar avaliações", [true, false, false, false]],
-  ["Ver evolução pessoal", [true, false, false, false]],
-  ["Criar e aplicar provas", [false, true, false, false]],
-  ["Corrigir redações", [false, true, false, false]],
+  ["Realizar avaliações e simulados", [true, false, false, false]],
+  ["Trilha e evolução pessoal", [true, false, false, false]],
+  ["Criar e aplicar provas (IA)", [false, true, false, false]],
+  ["Corrigir redações (IA + OCR)", [false, true, false, false]],
+  ["Leitor OMR e correção por câmera", [false, true, false, false]],
+  ["Edu.IA (assistente do professor)", [false, true, false, false]],
   ["Relatórios de turma", [false, true, true, true]],
   ["Relatórios da instituição", [false, false, true, true]],
   ["Gestão de usuários", [false, false, true, true]],

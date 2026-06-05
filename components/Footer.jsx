@@ -53,7 +53,7 @@ export default function Footer() {
         <div className="grid gap-10 lg:grid-cols-[1.4fr_repeat(4,1fr)]">
           <div>
             <Logo variant="light" />
-            <p className="mt-4 max-w-xs text-sm leading-relaxed text-white/70">{SITE.description}</p>
+            <p className="mt-4 max-w-xs text-sm leading-relaxed text-white/70">{SITE.descriptionShort}</p>
             <div className="mt-5 space-y-2 text-sm">
               <a href={`mailto:${SITE.email}`} className="flex items-center gap-2 text-white/80 transition hover:text-white">
                 <Icon name="mail" size={16} />
