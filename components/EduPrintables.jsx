@@ -24,6 +24,8 @@ const ITEMS = [
       "/assets/printables/colorir-2.jpg",
     ],
     carouselFit: "contain",
+    framed: true,
+    frameLabel: "Edu.IA · Imagem para colorir",
   },
   {
     icon: "pencil",
@@ -115,6 +117,8 @@ const ITEMS = [
     ],
     carouselFit: "contain",
     autoplay: true,
+    framed: true,
+    frameLabel: "Edu.IA · Histórias ilustradas",
   },
 ];
 
@@ -161,6 +165,8 @@ function PrintableRow({ item, reverse }) {
           alt={item.title}
           fit={item.carouselFit}
           autoplay={item.autoplay}
+          framed={item.framed}
+          frameLabel={item.frameLabel}
         />
       </Reveal>
     </div>
