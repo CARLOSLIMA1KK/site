@@ -2,6 +2,9 @@ import SolutionPage from "@/components/SolutionPage";
 import SectionWrapper from "@/components/SectionWrapper";
 import EduAvatar from "@/components/EduAvatar";
 import EduShowcase from "@/components/EduShowcase";
+import EduCatalog from "@/components/EduCatalog";
+import EduPrintables from "@/components/EduPrintables";
+import EduOrganization from "@/components/EduOrganization";
 import { Reveal } from "@/components/Motion";
 import { SOLUTIONS } from "@/lib/solutions";
 
@@ -30,6 +33,9 @@ export default function Page() {
   return (
     <SolutionPage data={data}>
       <ConhecaOEdu />
+      <EduCatalog />
+      <EduPrintables />
+      <EduOrganization />
     </SolutionPage>
   );
 }

@@ -1,0 +1,80 @@
+import SectionWrapper from "./SectionWrapper";
+import Icon from "./Icon";
+import Pill from "./Pill";
+import { Stagger, StaggerItem } from "./Motion";
+
+const ITEMS = [
+  {
+    icon: "brush",
+    title: "Imagem para colorir",
+    desc: "Line art gerado a partir da sua descrição.",
+    accent: "verde",
+  },
+  {
+    icon: "pencil",
+    title: "Caligrafia",
+    desc: "Cursiva, script ou bastão · com texto, imagens ou pré-alfabetização.",
+    accent: "azul",
+  },
+  {
+    icon: "list",
+    title: "Cruzadinha & caça-palavras",
+    desc: "Palavras sugeridas por IA, gabarito incluso.",
+    accent: "amarelo",
+  },
+  {
+    icon: "chart",
+    title: "Matemática básica",
+    desc: "9 formatos: operações, frações, relógio, comparação.",
+    accent: "verde",
+  },
+  {
+    icon: "users",
+    title: "Aprendendo Libras",
+    desc: "Palavra + alfabeto de sinais. Educação inclusiva por padrão.",
+    accent: "azul",
+  },
+  {
+    icon: "sparkle",
+    title: "Histórias ilustradas",
+    desc: "Livro com várias páginas, imagens e narração em áudio.",
+    accent: "amarelo",
+  },
+];
+
+const ACCENT = {
+  verde: "bg-verde-100 text-verde-700",
+  azul: "bg-[#eaf0ff] text-azul-600",
+  amarelo: "bg-[#fff5d6] text-[#8a6a00]",
+};
+
+export default function EduPrintables() {
+  return (
+    <SectionWrapper
+      soft
+      eyebrow="Materiais imprimíveis"
+      title="Folhinhas prontas em segundos, prontas para imprimir"
+      subtitle="Recursos visuais e lúdicos para Educação Infantil e Fundamental, com geração local quando possível (sem custo de IA e sem latência)."
+    >
+      <Stagger className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+        {ITEMS.map((item) => (
+          <StaggerItem key={item.title} className="h-full">
+            <div className="flex h-full flex-col rounded-lg border border-line bg-white p-6 shadow-card transition hover:-translate-y-1 hover:shadow-pop">
+              <span className={`inline-flex h-12 w-12 items-center justify-center rounded-md ${ACCENT[item.accent]}`}>
+                <Icon name={item.icon} size={24} />
+              </span>
+              <h3 className="mt-4 font-display text-lg font-bold text-ink">{item.title}</h3>
+              <p className="mt-2 text-[14px] leading-relaxed text-slate">{item.desc}</p>
+            </div>
+          </StaggerItem>
+        ))}
+      </Stagger>
+
+      <div className="mt-8 flex flex-wrap items-center justify-center gap-2 text-center">
+        <Pill tone="verde">Educação Infantil</Pill>
+        <Pill tone="azul">Fundamental I</Pill>
+        <Pill tone="outline">Fundamental II</Pill>
+      </div>
+    </SectionWrapper>
+  );
+}
