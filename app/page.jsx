@@ -269,7 +269,7 @@ function DataAndAccess() {
               <StaggerItem key={p.name} className="h-full">
                 <Link href="/plataforma/acessos" className="block h-full">
                   <div className="group flex h-full flex-col overflow-hidden rounded-lg border border-line bg-white shadow-card transition duration-300 hover:-translate-y-1 hover:shadow-pop">
-                    <div className="relative aspect-[4/3] overflow-hidden bg-gradient-to-br from-verde-100 to-azul-100">
+                    <div className="relative aspect-[16/9] overflow-hidden bg-gradient-to-br from-verde-100 to-azul-100">
                       {/* eslint-disable-next-line @next/next/no-img-element */}
                       <img
                         src={p.photo}
@@ -277,14 +277,11 @@ function DataAndAccess() {
                         loading="lazy"
                         className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.04]"
                       />
-                      <span className="absolute left-3 top-3 flex h-10 w-10 items-center justify-center rounded-lg bg-white/95 text-azul-600 shadow-card backdrop-blur">
-                        <Icon name={p.icon} size={20} />
-                      </span>
                     </div>
-                    <div className="flex flex-1 flex-col p-5">
-                      <h4 className="font-display text-lg font-bold text-ink">{p.name}</h4>
-                      <p className="mt-1 text-[14px] leading-relaxed text-slate">{p.desc}</p>
-                      <span className="mt-3 text-sm font-semibold text-verde-700">Ver mais →</span>
+                    <div className="flex flex-1 flex-col p-4">
+                      <h4 className="font-display text-base font-bold text-ink">{p.name}</h4>
+                      <p className="mt-1 text-[13px] leading-relaxed text-slate">{p.desc}</p>
+                      <span className="mt-2 text-[13px] font-semibold text-verde-700">Ver mais →</span>
                     </div>
                   </div>
                 </Link>
@@ -294,13 +291,13 @@ function DataAndAccess() {
             <StaggerItem className="h-full">
               <Link
                 href="/plataforma/acessos"
-                className="flex h-full flex-col items-center justify-center rounded-lg border-2 border-dashed border-azul-600/30 bg-azul-100/40 p-6 text-center transition hover:border-azul-600/60"
+                className="flex h-full flex-col items-center justify-center rounded-lg border-2 border-dashed border-azul-600/30 bg-azul-100/40 p-5 text-center transition hover:border-azul-600/60"
               >
-                <span className="flex h-12 w-12 items-center justify-center rounded-xl bg-white text-azul-600 shadow-card">
-                  <Icon name="shield" size={24} />
+                <span className="flex h-11 w-11 items-center justify-center rounded-xl bg-white text-azul-600 shadow-card">
+                  <Icon name="shield" size={22} />
                 </span>
-                <span className="mt-3 font-display text-lg font-bold text-ink">Permissões por nível</span>
-                <span className="mt-1 text-sm font-semibold text-azul-600">Ver tabela completa →</span>
+                <span className="mt-3 font-display text-base font-bold text-ink">Permissões por nível</span>
+                <span className="mt-1 text-[13px] font-semibold text-azul-600">Ver tabela completa →</span>
               </Link>
             </StaggerItem>
           </Stagger>
