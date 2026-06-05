@@ -1,4 +1,5 @@
 import SolutionPage from "@/components/SolutionPage";
+import AplicacaoSection from "@/components/sections/AplicacaoSection";
 import LeitorOmrSection from "@/components/sections/LeitorOmrSection";
 import RelatoriosConsolidadosSection from "@/components/sections/RelatoriosConsolidadosSection";
 import { SOLUTIONS } from "@/lib/solutions";
@@ -9,8 +10,9 @@ export const metadata = { ...data.meta, alternates: { canonical: "/solucoes/simu
 export default function Page() {
   return (
     <SolutionPage data={data}>
-      <LeitorOmrSection soft={false} />
-      <RelatoriosConsolidadosSection soft />
+      <AplicacaoSection soft={false} />
+      <LeitorOmrSection soft />
+      <RelatoriosConsolidadosSection soft={false} />
     </SolutionPage>
   );
 }

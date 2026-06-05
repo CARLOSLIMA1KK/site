@@ -374,8 +374,48 @@ function relatoriosConsolidado() {
   return s;
 }
 
+// ---- APLICAÇÃO DIGITAL (simulado online: cronômetro + ao vivo) ----
+function aplicacaoDigital() {
+  let s = txt(232, 116, "Simulado · em andamento", 20, C.ink, 800);
+  // cronômetro
+  s += card(224, 150, 300, 120);
+  s += txt(248, 184, "Tempo restante", 13, C.slate);
+  s += `<text x="248" y="234" font-family="Verdana,sans-serif" font-size="40" font-weight="800" fill="${C.azul}">01:32:45</text>`;
+  // progresso
+  s += card(540, 150, 400, 120);
+  s += txt(564, 184, "Progresso", 13, C.slate);
+  s += txt(564, 212, "Questão 27 de 90", 16, C.ink, 700);
+  s += bar(564, 230, 352, 14, C.bg, 7) + bar(564, 230, 352 * 0.3, 14, C.verde, 7);
+  // ação
+  s += card(956, 150, 220, 120);
+  s += bar(980, 182, 172, 48, C.amarelo, 24) + txt(1018, 212, "Finalizar", 14, C.ink, 700);
+  s += txt(980, 252, "Salvo automaticamente", 11, C.slate);
+  // questão
+  s += card(224, 290, 620, 280);
+  s += bar(248, 322, 560, 14, C.ink, 7);
+  s += bar(248, 346, 470, 12, C.line, 6);
+  for (let i = 0; i < 4; i++) {
+    const y = 384 + i * 44;
+    s += card(248, y, 572, 34, 10);
+    s += `<circle cx="270" cy="${y + 17}" r="9" fill="${i === 1 ? C.verde : "none"}" stroke="${i === 1 ? C.verde : C.line}" stroke-width="2"/>`;
+    s += bar(292, y + 11, 300, 12, C.line, 6);
+  }
+  // ao vivo
+  s += card(868, 290, 308, 280);
+  s += `<circle cx="892" cy="318" r="5" fill="${C.verde}"/>` + txt(908, 323, "Ao vivo", 13, C.ink, 700);
+  s += `<text x="1152" y="323" text-anchor="end" font-family="Verdana,sans-serif" font-size="12" fill="${C.slate}">312 online</text>`;
+  for (let i = 0; i < 5; i++) {
+    const y = 350 + i * 42;
+    s += `<circle cx="892" cy="${y + 8}" r="12" fill="${[C.verde, C.azul, C.amarelo][i % 3]}" opacity=".25"/>`;
+    s += bar(914, y, 150, 10, C.line, 5) + bar(914, y + 16, 92, 8, C.line, 4);
+    s += bar(1086, y - 2, 66, 18, [C.verdeSoft, C.azulSoft][i % 2], 9);
+  }
+  return s;
+}
+
 const screens = [
   ["secao-relatorios", relatorios(), { title: "Relatórios", accent: C.verde, nav: 3, avatar: C.azul }],
+  ["aplicacao-digital", aplicacaoDigital(), { title: "Simulado online", accent: C.azul, nav: 0, avatar: C.azul }],
   ["painel-escola", painelEscola(), { title: "Início", accent: C.verde, nav: 0, avatar: C.verde }],
   ["relatorios-hero", relatoriosHero(), { title: "Relatórios", accent: C.azul, nav: 3, avatar: C.azul }],
   ["relatorios-consolidado", relatoriosConsolidado(), { title: "Relatórios", accent: C.verde, nav: 3, avatar: C.verde }],
@@ -518,3 +558,53 @@ function omrLeitor() {
 
 writeFileSync(join(OUT, "omr-leitor.svg"), omrLeitor());
 console.log("✓", "omr-leitor.svg");
+
+// ---- APLICAÇÃO IMPRESSA (caderno + folha de respostas + malote/OMR) ----
+function aplicacaoImpressa() {
+  let s = `<rect width="1200" height="750" fill="${C.bg}"/>`;
+  // caderno de prova (pilha)
+  s += `<rect x="118" y="159" width="344" height="464" rx="12" fill="#FFFFFF" stroke="${C.line}"/>`;
+  s += `<rect x="108" y="150" width="350" height="480" rx="12" fill="#FFFFFF" stroke="${C.line}"/>`;
+  s += `<rect x="108" y="150" width="350" height="54" rx="12" fill="${C.verde}" opacity=".12"/>`;
+  s += `<text x="134" y="185" font-family="Verdana,sans-serif" font-size="15" font-weight="700" fill="${C.ink}">Prova · Caderno 1</text>`;
+  for (let i = 0; i < 5; i++) {
+    const y = 244 + i * 74;
+    s += `<text x="134" y="${y}" font-family="Verdana,sans-serif" font-size="13" font-weight="700" fill="${C.slate}">${i + 1}.</text>`;
+    s += bar(158, y - 11, 268, 11, C.line, 5) + bar(158, y + 4, 210, 11, C.line, 5);
+    for (let a = 0; a < 4; a++) s += `<circle cx="${168 + a * 60}" cy="${y + 30}" r="7" fill="none" stroke="${C.line}" stroke-width="2"/>`;
+  }
+  // folha de respostas (OMR)
+  s += `<rect x="494" y="150" width="300" height="480" rx="12" fill="#FFFFFF" stroke="${C.line}"/>`;
+  s += `<rect x="494" y="150" width="300" height="48" rx="12" fill="${C.azul}" opacity=".12"/>`;
+  s += `<text x="518" y="180" font-family="Verdana,sans-serif" font-size="14" font-weight="700" fill="${C.ink}">Folha de respostas</text>`;
+  for (let r = 0; r < 9; r++) {
+    const y = 232 + r * 42;
+    s += `<text x="518" y="${y + 5}" font-family="Verdana,sans-serif" font-size="12" fill="${C.slate}">${r + 1}</text>`;
+    for (let a = 0; a < 5; a++) {
+      const cx = 552 + a * 44;
+      const filled = a === (r * 2 + 1) % 5;
+      s += `<circle cx="${cx}" cy="${y}" r="10" fill="${filled ? C.navy : "#FFFFFF"}" stroke="${filled ? C.navy : C.line}" stroke-width="2"/>`;
+    }
+  }
+  // coluna direita: malote + leitor OMR
+  s += card(836, 150, 340, 224, 14);
+  s += `<rect x="864" y="182" width="60" height="48" rx="6" fill="${C.amarelo}" opacity=".25"/><path d="M864 198h60M894 182v48" stroke="${C.amarelo}" stroke-width="3"/>`;
+  s += txt(940, 196, "Malote para impressão", 14, C.ink, 700);
+  s += txt(940, 218, "Geração automática do lote", 12, C.slate);
+  s += txt(864, 270, "Logística de envio e retorno", 13, C.slate);
+  s += bar(864, 286, 284, 12, C.bg, 6) + bar(864, 286, 200, 12, C.verde, 6);
+  s += `<text x="864" y="338" font-family="Verdana,sans-serif" font-size="12" fill="${C.slate}">Envio</text><text x="1148" y="338" text-anchor="end" font-family="Verdana,sans-serif" font-size="12" fill="${C.slate}">Retorno</text>`;
+  s += card(836, 392, 340, 238, 14);
+  s += `<rect x="864" y="424" width="120" height="150" rx="8" fill="${C.bg}" stroke="${C.line}"/>`;
+  for (let i = 0; i < 4; i++) s += bar(878, 444 + i * 30, 92, 8, C.line, 4);
+  s += `<rect x="864" y="492" width="120" height="6" fill="${C.azul}" opacity=".6"/>`;
+  s += txt(1002, 452, "Leitor OMR", 15, C.ink, 700);
+  s += txt(1002, 474, "Coleta automatizada", 12, C.slate);
+  s += txt(1002, 492, "dos gabaritos", 12, C.slate);
+  s += `<circle cx="1014" cy="536" r="16" fill="${C.verde}"/><path d="M1007 536l5 5 9-9" stroke="#FFFFFF" stroke-width="2.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/>`;
+  s += txt(1040, 542, "Correção na hora", 12, C.ink, 600);
+  return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 750" role="img" aria-label="Aplicação impressa: caderno, folha de respostas, malote e leitor OMR">${s}</svg>`;
+}
+
+writeFileSync(join(OUT, "aplicacao-impressa.svg"), aplicacaoImpressa());
+console.log("✓", "aplicacao-impressa.svg");
