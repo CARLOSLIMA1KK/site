@@ -5,24 +5,24 @@ import CTASection from "@/components/CTASection";
 import { Stagger, StaggerItem } from "@/components/Motion";
 
 export const metadata = {
-  title: "Soluções, avaliações, recursos e Edu.IA",
+  title: "Soluções, avaliações, recursos e inteligência artificial",
   description:
-    "Simulados ENEM e SAEB, trilha adaptativa (CAT), Produção Textual com IA, Banco de Itens, criação e correção de provas, integração físico-digital e o assistente Edu.IA.",
+    "Simulados ENEM e SAEB, trilha adaptativa (CAT), Produção Textual com IA, Banco de Itens, provas online e impressas, integração físico-digital e o assistente de IA.",
   alternates: { canonical: "/solucoes" },
 };
 
 const CATEGORIES = [
   {
-    title: "Avaliações & Ferramentas",
+    title: "Avaliações",
     items: [
-      { title: "Criação e Correção de Provas", href: "/solucoes/provas", tag: "Com IA", text: "Gere questões com IA, aplique e corrija automaticamente.", icon: "chip" },
+      { title: "Provas Online e Impressas", href: "/solucoes/provas", tag: "Com IA", text: "Gere questões com IA, aplique e corrija automaticamente.", icon: "chip" },
       { title: "Simulados ENEM", href: "/solucoes/simulado-enem", tag: "TRI", text: "Padrão ENEM com correção por TRI na régua oficial.", icon: "target" },
       { title: "Simulados SAEB", href: "/solucoes/simulado-saeb", tag: "BNCC", text: "Diagnóstico alinhado ao SAEB com benchmark nacional.", icon: "chart" },
       { title: "Produção Textual", href: "/solucoes/redacao", tag: "Com IA", text: "Redação no padrão ENEM com IA + corretor humano.", icon: "brush" },
     ],
   },
   {
-    title: "Recursos Edu",
+    title: "Recursos Pedagógicos",
     items: [
       { title: "Banco de Itens", href: "/solucoes/banco-de-questoes", tag: "Autoral", text: "Milhares de itens inéditos com filtros e IA.", icon: "list" },
       { title: "Trilha adaptativa (CAT)", href: "/solucoes/adaptativa", tag: "CAT", text: "Teste adaptativo e trilhas personalizadas.", icon: "bolt" },
@@ -30,9 +30,9 @@ const CATEGORIES = [
     ],
   },
   {
-    title: "Edu.IA",
+    title: "Inteligência Artificial",
     items: [
-      { title: "Edu.IA para professores", href: "/solucoes/edu-ia", tag: "IA", text: "Assistente de IA com várias ferramentas para o professor.", icon: "bolt" },
+      { title: "Assistente IA do Professor", href: "/solucoes/edu-ia", tag: "IA", text: "Assistente de IA com várias ferramentas para o professor.", icon: "bolt" },
     ],
   },
 ];
@@ -44,8 +44,8 @@ export default function SolucoesPage() {
         eyebrow="Soluções"
         title="Tudo o que você precisa para avaliar,"
         highlight="reunido na sua marca."
-        subtitle="Uma plataforma completa em três frentes: Avaliações & Ferramentas, Recursos Edu e Edu.IA, com tag de formato (digital, impresso ou híbrido) em cada solução."
-        pills={["Avaliações", "Recursos Edu", "Edu.IA", "White Label"]}
+        subtitle="Uma plataforma completa em três frentes: Avaliações, Recursos Pedagógicos e Inteligência Artificial, com tag de formato (digital, impresso ou híbrido) em cada solução."
+        pills={["Avaliações", "Recursos Pedagógicos", "Inteligência Artificial", "White Label"]}
       />
 
       {CATEGORIES.map((cat, idx) => (

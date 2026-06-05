@@ -45,17 +45,48 @@ export default function HomePage() {
         title="Da criação à decisão pedagógica, em uma só plataforma"
         subtitle="A KodarEdu cuida de toda a jornada avaliativa, com IA onde acelera e especialista humano onde importa."
       >
-        <Stagger className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
-          {JOURNEY.map((j) => (
-            <StaggerItem key={j.step}>
-              <div className="h-full rounded-lg border border-line bg-white p-6 shadow-card">
-                <span className="font-display text-3xl font-extrabold text-verde-100">{j.step}</span>
-                <h3 className="-mt-2 font-display text-xl font-bold text-ink">{j.title}</h3>
-                <p className="mt-2 text-[15px] leading-relaxed text-slate">{j.text}</p>
-              </div>
-            </StaggerItem>
-          ))}
-        </Stagger>
+        <div className="relative">
+          {/* Linha conectora tracejada (apenas desktop, alinhada com o centro dos círculos) */}
+          <div 
+            className="absolute left-[8%] right-[8%] top-0 h-[2px] border-t-2 border-dashed border-verde-500/20 hidden lg:block" 
+            aria-hidden="true" 
+          />
+          
+          <Stagger className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
+            {JOURNEY.map((j) => {
+              const getIconName = (step) => {
+                switch (step) {
+                  case "01": return "pencil";
+                  case "02": return "doc";
+                  case "03": return "check";
+                  case "04": return "chart";
+                  default: return "check";
+                }
+              };
+              return (
+                <StaggerItem key={j.step} className="h-full">
+                  <div className="group relative h-full rounded-2xl border border-line bg-white p-6 pt-10 shadow-card transition-all duration-300 hover:-translate-y-1.5 hover:border-verde-500/40 hover:shadow-pop">
+                    {/* Badge do Passo com Degradê */}
+                    <div className="absolute -top-6 left-6 flex h-12 w-12 items-center justify-center rounded-full bg-gradient-to-br from-verde-500 to-azul-600 text-white font-display text-base font-extrabold shadow-md ring-4 ring-white transition-transform duration-300 group-hover:scale-110">
+                      {j.step}
+                    </div>
+                    
+                    {/* Cabeçalho do Card */}
+                    <div className="flex items-center justify-between">
+                      <h3 className="font-display text-lg font-bold text-ink">{j.title}</h3>
+                      <span className="text-slate/30 transition-colors duration-300 group-hover:text-verde-500">
+                        <Icon name={getIconName(j.step)} size={22} />
+                      </span>
+                    </div>
+                    
+                    {/* Descrição */}
+                    <p className="mt-3 text-[14px] leading-relaxed text-slate">{j.text}</p>
+                  </div>
+                </StaggerItem>
+              );
+            })}
+          </Stagger>
+        </div>
       </SectionWrapper>
 
       {/* A Plataforma, capacidades (resumo de /plataforma) */}
@@ -119,24 +150,54 @@ export default function HomePage() {
       <MidCTA />
 
       {/* 3 pilares de autoridade */}
-      <SectionWrapper
-        eyebrow="Por que confiar"
-        title="Três pilares que sustentam cada avaliação"
-        center
-      >
-        <Stagger className="grid gap-6 md:grid-cols-3">
-          {PILLARS.map((p) => (
-            <StaggerItem key={p.title} className="h-full">
-              <div className="h-full rounded-lg border border-line bg-white p-7 text-center shadow-card">
-                <div className="mx-auto mb-4 flex h-14 w-14 items-center justify-center rounded-lg bg-verde-100 text-verde-700">
-                  <Icon name={p.icon} size={28} />
-                </div>
-                <h3 className="font-display text-xl font-bold text-ink">{p.title}</h3>
-                <p className="mt-2 text-[15px] leading-relaxed text-slate">{p.text}</p>
+      <SectionWrapper dark id="por-que-confiar">
+        <div className="grid gap-12 lg:grid-cols-[1fr_1.3fr] items-center">
+          {/* Coluna Esquerda: Texto de Introdução */}
+          <Reveal className="max-w-xl">
+            <span className="eyebrow text-amarelo-300">Por que confiar</span>
+            <h2 className="mt-3 font-display text-h2 font-extrabold leading-[1.15] text-white">
+              Três pilares que sustentam cada avaliação
+            </h2>
+            <p className="mt-5 text-lg leading-relaxed text-white/85">
+              Mais do que entregar tecnologia, garantimos o rigor pedagógico, conformidade e o suporte que sua instituição precisa para crescer com segurança e qualidade.
+            </p>
+            <div className="mt-8 flex flex-wrap gap-4">
+              <div className="flex items-center gap-2 text-sm font-semibold text-amarelo-300">
+                <span className="flex h-5 w-5 items-center justify-center rounded-full bg-amarelo-500/20 text-amarelo-500">
+                  <Icon name="check" size={14} />
+                </span>
+                Alinhamento BNCC
               </div>
-            </StaggerItem>
-          ))}
-        </Stagger>
+              <div className="flex items-center gap-2 text-sm font-semibold text-amarelo-300">
+                <span className="flex h-5 w-5 items-center justify-center rounded-full bg-amarelo-500/20 text-amarelo-500">
+                  <Icon name="check" size={14} />
+                </span>
+                Conformidade LGPD
+              </div>
+            </div>
+          </Reveal>
+
+          {/* Coluna Direita: Os Pilares de Autoridade */}
+          <Stagger className="grid gap-6">
+            {PILLARS.map((p) => (
+              <StaggerItem key={p.title} className="h-full">
+                <div className="group flex gap-5 rounded-2xl border border-white/10 bg-white/5 p-6 backdrop-blur-sm transition-all duration-300 hover:border-white/20 hover:bg-white/10">
+                  <div className="flex h-12 w-12 flex-none items-center justify-center rounded-xl bg-gradient-to-br from-amarelo-500 to-amarelo-300 text-ink shadow-lg transition-transform duration-300 group-hover:scale-110">
+                    <Icon name={p.icon} size={24} />
+                  </div>
+                  <div>
+                    <h3 className="font-display text-lg font-bold text-white group-hover:text-amarelo-300 transition-colors">
+                      {p.title}
+                    </h3>
+                    <p className="mt-1.5 text-sm leading-relaxed text-white/75">
+                      {p.text}
+                    </p>
+                  </div>
+                </div>
+              </StaggerItem>
+            ))}
+          </Stagger>
+        </div>
       </SectionWrapper>
 
       {/* Para quem */}

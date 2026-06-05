@@ -34,7 +34,7 @@ export const metadata = {
     "correção de redação com OCR",
     "leitor de gabarito OMR",
     "banco de questões",
-    "Edu.IA para professores",
+    "Assistente IA do Professor",
     "gestão de provas",
   ],
   openGraph: {

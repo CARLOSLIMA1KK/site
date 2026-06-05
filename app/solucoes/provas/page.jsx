@@ -7,7 +7,7 @@ import RelatoriosConsolidadosSection from "@/components/sections/RelatoriosConso
 import { Stagger, StaggerItem } from "@/components/Motion";
 
 export const metadata = {
-  title: "Criação e Correção de Provas com IA, leitor OMR e câmera",
+  title: "Provas Online e Impressas com IA, leitor OMR e câmera",
   description:
     "Gere questões com IA, monte provas com layout profissional e corrija automaticamente. Leitor de gabarito OMR com identificação automática do aluno, leitura por lote ou pela câmera do celular, e relatórios consolidados na hora.",
   alternates: { canonical: "/solucoes/provas" },
@@ -26,7 +26,7 @@ export default function ProvasPage() {
   return (
     <>
       <PageHero
-        eyebrow="Recursos Edu · Criação e Correção de Provas"
+        eyebrow="Recursos Pedagógicos · Provas Online e Impressas"
         title="Crie, aplique e corrija provas"
         highlight="com IA do início ao fim."
         subtitle="Gere questões com IA, monte a prova com layout profissional e corrija automaticamente. No papel ou online, com leitor de gabarito OMR e até pela câmera do celular."
@@ -65,7 +65,7 @@ export default function ProvasPage() {
       </SectionWrapper>
 
       <CTASection
-        title="Quero criar e corrigir provas com IA"
+        title="Quero provas online e impressas com IA"
         subtitle="Fale com nosso time e leve criação por IA, leitor OMR e relatórios na hora para a sua instituição."
       />
     </>
