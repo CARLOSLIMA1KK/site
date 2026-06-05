@@ -10,7 +10,7 @@ import { PLANS, PLANS_FAQ, SITE } from "@/lib/site";
 export const metadata = {
   title: "Planos & Preços",
   description:
-    "Três planos white label, Essencial, Profissional e Redes/Enterprise. IA, simulados TRI, redação e relatórios, com garantia de 30 dias e implantação sem TI.",
+    "Três planos white label: Essencial, Profissional e Redes/Enterprise. Edu.IA, simulados por TRI, Produção Textual, provas com OMR e relatórios, com garantia de 30 dias e implantação sem TI.",
   alternates: { canonical: "/planos" },
 };
 
