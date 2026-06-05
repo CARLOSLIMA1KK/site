@@ -80,9 +80,14 @@ const ITEMS = [
       "Dificuldade ajustada (1–10, 1–50, 1–100)",
     ],
     images: [
-      "/assets/printables/matematica-1.svg",
-      "/assets/printables/matematica-2.svg",
+      "/assets/printables/matematica-1.jpg",
+      "/assets/printables/matematica-2.jpg",
+      "/assets/printables/matematica-3.jpg",
     ],
+    carouselFit: "contain",
+    autoplay: true,
+    framed: true,
+    frameLabel: "Edu.IA · Matemática básica",
   },
   {
     icon: "users",
