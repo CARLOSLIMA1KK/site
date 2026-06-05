@@ -384,7 +384,7 @@ function Testimonial() {
               </span>
               <span>
                 <span className="block font-semibold text-ink">Marina Alves</span>
-                <span className="block text-sm text-slate">Coordenadora pedagógica · Colégio Aurora</span>
+                <span className="block text-sm text-slate">Coordenadora pedagógica</span>
               </span>
             </figcaption>
           </figure>
