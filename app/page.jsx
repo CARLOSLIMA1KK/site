@@ -11,6 +11,8 @@ import FAQ from "@/components/FAQ";
 import CTASection from "@/components/CTASection";
 import FeatureList from "@/components/FeatureList";
 import TypingHeadline from "@/components/TypingHeadline";
+import EduAvatar from "@/components/EduAvatar";
+import EduText from "@/components/EduText";
 import { Reveal, Stagger, StaggerItem } from "@/components/Motion";
 import {
   SITE,
@@ -130,6 +132,9 @@ export default function HomePage() {
           </StaggerItem>
         </Stagger>
       </SectionWrapper>
+
+      {/* Conheça o Edu (assistente de IA) */}
+      <MeetEdu />
 
       {/* White Label em destaque */}
       <SectionWrapper eyebrow="White Label" title="A cara da sua marca, de verdade">
@@ -369,6 +374,42 @@ function MidCTA() {
               Falar no WhatsApp
             </Button>
           </div>
+        </Reveal>
+      </div>
+    </section>
+  );
+}
+
+function MeetEdu() {
+  const chips = ["Planos de aula", "Questões inéditas", "Correção e feedback"];
+  return (
+    <section className="bg-white py-10 sm:py-14">
+      <div className="container-page">
+        <Reveal className="flex flex-col items-center gap-6 rounded-lg surface-dark p-7 text-center sm:flex-row sm:p-9 sm:text-left">
+          <EduAvatar size={120} />
+          <div className="flex-1">
+            <span className="eyebrow text-amarelo-300">Assistente de IA</span>
+            <h2 className="mt-2 font-display text-2xl font-bold text-white">
+              Conheça o <EduText>Edu</EduText>, a IA que ajuda seus professores
+            </h2>
+            <p className="mt-2 max-w-2xl text-white/80">
+              Planeja aulas, cria questões e acelera a correção em minutos, em linguagem natural e
+              alinhado à BNCC. Tudo com a marca da sua instituição.
+            </p>
+            <div className="mt-4 flex flex-wrap justify-center gap-2 sm:justify-start">
+              {chips.map((c) => (
+                <span
+                  key={c}
+                  className="rounded-full border border-white/20 bg-white/10 px-3 py-1 text-sm font-medium text-white"
+                >
+                  {c}
+                </span>
+              ))}
+            </div>
+          </div>
+          <Button href="/solucoes/edu-ia" variant="primary" arrow className="flex-none">
+            Conhecer o Edu
+          </Button>
         </Reveal>
       </div>
     </section>

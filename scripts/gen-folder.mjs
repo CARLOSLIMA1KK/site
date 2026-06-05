@@ -103,6 +103,7 @@ const SOLUTION_CARDS = [
     title: "Edu.IA para professores",
     tag: "IA",
     print: "/assets/prints/edu-ia-professor.svg",
+    mascot: "/assets/mascots/edu-ia.png",
     text: SOLUTIONS["edu-ia"].hero.subtitle,
     bullets: ["Planos de aula e atividades", "Elaboração de questões", "Feedback e rubricas"],
   },
@@ -134,7 +135,7 @@ const WHITE_LABEL = [
 
 const card = (s) => `
   <div class="sol-card">
-    <div class="sol-thumb">${img(s.print)}</div>
+    <div class="sol-thumb">${img(s.print)}${s.mascot ? `<img class="sol-mascot" src="${asset(s.mascot)}" alt="" />` : ""}</div>
     <div class="sol-body">
       <div class="sol-head">
         <h3>${edu(s.title)}</h3>
@@ -194,9 +195,11 @@ h1,h2,h3,.display{font-family:var(--display);}
 .brand{font-family:var(--display);font-weight:800;font-size:24pt;letter-spacing:-.01em;}
 .cover h1{font-size:34pt;line-height:1.06;font-weight:800;margin-top:6mm;max-width:170mm;}
 .cover .sub{font-size:12.5pt;line-height:1.55;color:#dfe4ff;margin-top:7mm;max-width:150mm;}
-.cover-hero{margin-top:8mm;border:1px solid rgba(255,255,255,.18);border-radius:10px;
+.cover-hero{position:relative;margin-top:8mm;border:1px solid rgba(255,255,255,.18);border-radius:10px;
   overflow:hidden;background:#fff;box-shadow:0 18px 50px rgba(0,0,0,.35);}
-.cover-hero img{width:100%;display:block;}
+.cover-hero img:not(.cover-mascot){width:100%;display:block;}
+.cover-mascot{position:absolute;top:5mm;right:5mm;width:26mm;height:26mm;object-fit:contain;
+  border-radius:50%;background:#fff;border:3px solid #fff;box-shadow:0 8px 22px rgba(11,16,51,.28);}
 .cover-foot{display:flex;gap:8mm;flex-wrap:wrap;font-size:10.5pt;color:#cfd6ff;
   border-top:1px solid rgba(255,255,255,.16);padding-top:6mm;}
 .cover-foot b{color:#fff;font-weight:600;}
@@ -245,8 +248,10 @@ h1,h2,h3,.display{font-family:var(--display);}
 .sol-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:5mm;margin-top:7mm;}
 .sol-card{border:1px solid var(--line);border-radius:10px;overflow:hidden;background:#fff;
   display:flex;flex-direction:column;}
-.sol-thumb{background:var(--soft);border-bottom:1px solid var(--line);padding:3mm;}
-.sol-thumb img{width:100%;height:38mm;object-fit:cover;object-position:top;border-radius:6px;}
+.sol-thumb{position:relative;background:var(--soft);border-bottom:1px solid var(--line);padding:3mm;}
+.sol-thumb > img{width:100%;height:38mm;object-fit:cover;object-position:top;border-radius:6px;}
+.sol-mascot{position:absolute;right:5mm;bottom:5mm;width:18mm;height:18mm;object-fit:contain;
+  border-radius:50%;background:#fff;border:2px solid var(--line);box-shadow:0 6px 16px rgba(11,16,51,.18);}
 .sol-body{padding:4mm 5mm 5mm;}
 .sol-head{display:flex;align-items:center;justify-content:space-between;gap:3mm;}
 .sol-head h3{font-size:12.5pt;}
@@ -328,7 +333,7 @@ h1,h2,h3,.display{font-family:var(--display);}
     <h1>A plataforma completa de avaliação.<br/>Com a sua marca.</h1>
     <p class="sub">${SITE.description}</p>
   </div>
-  <div class="cover-hero">${img("/assets/prints/home-dashboard.svg")}</div>
+  <div class="cover-hero">${img("/assets/prints/home-dashboard.svg")}<img class="cover-mascot" src="${asset("/assets/mascots/edu-ia.png")}" alt="" /></div>
   <div class="cover-foot">
     <span><b>Site</b> &nbsp;kodaredu.com.br</span>
     <span><b>E-mail</b> &nbsp;${SITE.email}</span>
