@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" role="img" aria-label="Histórias ilustradas — exemplo 2">
+  <rect width="800" height="600" fill="#f6f7fb"/>
+  <rect x="24" y="24" width="752" height="552" rx="18" fill="#fff" stroke="#e6e8f0" stroke-width="2"/>
+  <!-- header -->
+  <rect x="24" y="24" width="752" height="92" rx="18" fill="#ffc400"/>
+  <rect x="24" y="92" width="752" height="24" fill="#ffc400"/>
+  <circle cx="72" cy="70" r="22" fill="#ffffff" opacity="0.9"/>
+  <text x="112" y="78" font-family="Sora, system-ui, sans-serif" font-size="30" font-weight="800" fill="#ffffff">Histórias ilustradas</text>
+  <!-- badge exemplo -->
+  <rect x="650" y="50" width="100" height="40" rx="20" fill="#ffffff" opacity="0.92"/>
+  <text x="700" y="76" text-anchor="middle" font-family="Sora, system-ui, sans-serif" font-size="20" font-weight="700" fill="#0b1033">Ex. 2</text>
+  
+      <rect x="60" y="150" width="320" height="170" rx="14" fill="#fff" stroke="#e6e8f0" stroke-width="2"/>
+      <rect x="420" y="150" width="320" height="170" rx="14" fill="#fff" stroke="#e6e8f0" stroke-width="2"/>
+      <rect x="60" y="350" width="680" height="24" rx="8" fill="#e6e8f0"/>
+      <rect x="60" y="392" width="600" height="24" rx="8" fill="#e6e8f0"/>
+      <rect x="60" y="434" width="480" height="24" rx="8" fill="#e6e8f0"/>
+  <!-- footer note -->
+  <text x="400" y="545" text-anchor="middle" font-family="Public Sans, system-ui, sans-serif" font-size="20" fill="#9aa1bd">Substitua por um print da plataforma</text>
+</svg>
