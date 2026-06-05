@@ -94,7 +94,7 @@ export default function Footer() {
 
       <div className="border-t border-white/10">
         <div className="container-page flex flex-col items-center justify-between gap-4 py-6 text-sm text-white/60 sm:flex-row">
-          <p>© {new Date().getFullYear()} KodarEdu · Plataforma white label de avaliação e ENEM.</p>
+          <p>© {new Date().getFullYear()} KodarEdu · Plataforma Educacional completa e white label.</p>
           <div className="flex flex-wrap items-center gap-4">
             <Link href="/privacidade" className="hover:text-white">Privacidade</Link>
             <Link href="/termos" className="hover:text-white">Termos</Link>
