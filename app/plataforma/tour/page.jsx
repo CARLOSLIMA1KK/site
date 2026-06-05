@@ -14,18 +14,32 @@ export const metadata = {
 const GALLERY = {
   Aluno: [
     { src: "/assets/prints/simulado-andamento.svg", title: "Simulado em andamento", text: "Interface limpa e focada para o aluno fazer a prova." },
+    { src: "/assets/prints/aplicacao-digital.svg", title: "Prova online com cronômetro", text: "Controle de tempo e salvamento automático." },
+    { src: "/assets/prints/relatorio-tri.svg", title: "Resultado por TRI", text: "Nota no padrão ENEM e onde precisa melhorar." },
     { src: "/assets/prints/adaptativa-trilha.svg", title: "Trilha de estudo", text: "Recomendações personalizadas a partir dos resultados." },
+    { src: "/assets/prints/redacao-evolucao.svg", title: "Evolução da redação", text: "Acompanhe a nota de produção textual ao longo do ano." },
     { src: "/assets/prints/app-mobile.svg", title: "App no celular", text: "Estudar e acompanhar a evolução de onde estiver.", type: "mobile" },
   ],
   "Professor / Corretor": [
-    { src: "/assets/prints/editor-prova.svg", title: "Editor de prova", text: "Monte provas com banco de questões e IA." },
+    { src: "/assets/prints/provas-editor.svg", title: "Criar prova com IA", text: "Monte provas gerando questões com inteligência artificial." },
+    { src: "/assets/prints/banco-questoes.svg", title: "Banco de Itens", text: "Milhares de itens autorais com filtros por habilidade." },
     { src: "/assets/prints/redacao-correcao.svg", title: "Correção de redação", text: "Marcações no texto e nota por competência." },
-    { src: "/assets/prints/correcao-automatica.svg", title: "Correção automática", text: "Leitor de gabarito e correção sem trabalho manual." },
+    { src: "/assets/prints/redacao-ocr.svg", title: "OCR de manuscritos", text: "A foto da redação no papel vira correção." },
+    { src: "/assets/prints/omr-leitor.svg", title: "Leitor OMR", text: "Identifica o aluno e extrai as respostas automaticamente." },
+    { src: "/assets/prints/edu-ia-professor.svg", title: "Edu.IA", text: "Assistente de IA com várias ferramentas para o professor." },
   ],
   "Coordenação / Gestor": [
     { src: "/assets/prints/relatorio-gestor.svg", title: "Dashboard do gestor", text: "Indicadores-chave da instituição em uma tela." },
     { src: "/assets/prints/relatorio-turma.svg", title: "Relatório de turma", text: "Comparativos e ranking por turma." },
     { src: "/assets/prints/relatorio-habilidade.svg", title: "Evolução por habilidade", text: "Onde reforçar, com base em dados." },
+    { src: "/assets/prints/relatorios-consolidado.svg", title: "Relatórios consolidados", text: "Resultados por aluno, turma e questão, na hora." },
+    { src: "/assets/prints/acessos-perfis.svg", title: "Acessos por perfil", text: "Cada perfil vê só o que precisa." },
+  ],
+  "Rede / Secretaria": [
+    { src: "/assets/prints/perfil-rede.svg", title: "Painel da rede", text: "Visão consolidada de todas as unidades." },
+    { src: "/assets/prints/relatorios-hero.svg", title: "Inteligência de dados", text: "Evolução por competência e benchmark." },
+    { src: "/assets/prints/relatorio-tri.svg", title: "Réguas ENEM/SAEB", text: "Previsibilidade por TRI em toda a rede." },
+    { src: "/assets/prints/whitelabel-personalizacao.svg", title: "White label", text: "Cores, logo e domínio com a marca da rede." },
   ],
 };
 
