@@ -63,9 +63,13 @@ const ITEMS = [
       "PDF com grade + folha de respostas",
     ],
     images: [
-      "/assets/printables/cruzadinha-1.svg",
-      "/assets/printables/cruzadinha-2.svg",
+      "/assets/printables/cruzadinha-1.jpg",
+      "/assets/printables/cruzadinha-2.jpg",
     ],
+    carouselFit: "contain",
+    autoplay: true,
+    framed: true,
+    frameLabel: "Edu.IA · Cruzadinha & caça-palavras",
   },
   {
     icon: "chart",
