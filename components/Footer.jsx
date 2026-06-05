@@ -40,7 +40,6 @@ const COLUMNS = [
     title: "Empresa",
     links: [
       { label: "Quem Somos", href: "/quem-somos" },
-      { label: "Conteúdo", href: "/conteudo" },
       { label: "Contato", href: "/contato" },
     ],
   },

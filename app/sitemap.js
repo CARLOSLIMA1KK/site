@@ -20,7 +20,6 @@ const ROUTES = [
   "/para/editoras",
   "/por-que-kodaredu",
   "/quem-somos",
-  "/conteudo",
   "/contato",
   "/privacidade",
   "/termos",
