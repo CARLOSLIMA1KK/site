@@ -22,7 +22,6 @@ import {
   FAQ_HOME,
   PLATFORM_CAPABILITIES,
   ACCESS_PROFILES,
-  REPORT_VIEWS,
 } from "@/lib/site";
 
 const SEALS = ["Simulados ENEM/SAEB", "Trilha adaptativa", "Produção Textual", "Banco de Itens", "Edu.IA"];
@@ -195,7 +194,6 @@ function DataAndAccess() {
         {/* Relatórios, mockup com chips flutuantes */}
         <div className="grid items-center gap-12 lg:grid-cols-[1fr_1.1fr]">
           <Reveal>
-            <Pill tone="verde">Relatórios</Pill>
             <h3 className="mt-3 font-display text-h3 font-bold text-ink">
               Relatórios que viram decisão pedagógica
             </h3>
@@ -203,13 +201,6 @@ function DataAndAccess() {
               A mesma avaliação, lida em vários níveis, com réguas ENEM/SAEB por TRI e integração ao
               ERP escolar.
             </p>
-            <ul className="mt-5 flex flex-wrap gap-2">
-              {REPORT_VIEWS.map((v) => (
-                <li key={v.title}>
-                  <Pill tone="verde">{v.title}</Pill>
-                </li>
-              ))}
-            </ul>
             <div className="mt-7">
               <Button href="/plataforma/relatorios" variant="secondary" arrow>
                 Ver relatórios & inteligência de dados
@@ -246,17 +237,11 @@ function DataAndAccess() {
 
         {/* Acessos & Perfis, cards com miniatura de tela */}
         <div className="mt-20">
-          <Reveal className="mb-8 flex flex-wrap items-end justify-between gap-4">
-            <div className="max-w-2xl">
-              <Pill tone="azul">Acessos & perfis</Pill>
-              <h3 className="mt-3 font-display text-h3 font-bold text-ink">Cada perfil vê só o que precisa</h3>
-              <p className="mt-2 text-slate">
-                Acessos por nível, do aluno ao gestor de rede, simples para quem usa, seguro para a instituição.
-              </p>
-            </div>
-            <Button href="/plataforma/acessos" variant="secondary" arrow className="hidden sm:inline-flex">
-              Ver acessos & permissões
-            </Button>
+          <Reveal className="mb-8 max-w-2xl">
+            <h3 className="mt-3 font-display text-h3 font-bold text-ink">Cada perfil vê só o que precisa</h3>
+            <p className="mt-2 text-slate">
+              Acessos por nível, do aluno ao gestor de rede, simples para quem usa, seguro para a instituição.
+            </p>
           </Reveal>
 
           <Stagger className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
