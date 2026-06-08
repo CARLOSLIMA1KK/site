@@ -28,6 +28,7 @@ export default function Header() {
   }, [drawer]);
 
   return (
+    <>
     <header
       className={`sticky top-0 z-50 transition-shadow ${
         scrolled ? "shadow-card" : ""
@@ -89,12 +90,14 @@ export default function Header() {
           </button>
         </div>
       </div>
+    </header>
 
-      {/* Mobile drawer */}
+      {/* Drawer mobile fora do <header>: o backdrop-blur do header cria
+          containing block/stacking context e jogava o menu para trás. */}
       <AnimatePresence>
         {drawer && <MobileDrawer onClose={() => setDrawer(false)} />}
       </AnimatePresence>
-    </header>
+    </>
   );
 }
 
@@ -142,14 +145,14 @@ function MobileDrawer({ onClose }) {
   return (
     <>
       <motion.div
-        className="fixed inset-0 z-40 bg-ink/40 lg:hidden"
+        className="fixed inset-0 z-[55] bg-ink/40 lg:hidden"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         exit={{ opacity: 0 }}
         onClick={onClose}
       />
       <motion.aside
-        className="fixed right-0 top-0 z-50 h-full w-[88%] max-w-sm overflow-y-auto bg-white p-5 lg:hidden"
+        className="fixed right-0 top-0 z-[60] h-full w-[88%] max-w-sm overflow-y-auto bg-white p-5 lg:hidden"
         initial={{ x: "100%" }}
         animate={{ x: 0 }}
         exit={{ x: "100%" }}
