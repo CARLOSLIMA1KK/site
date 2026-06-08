@@ -21,6 +21,17 @@ export default function PricingTable({ plans = [] }) {
             )}
             <h3 className="font-display text-2xl font-bold text-ink">{plan.name}</h3>
             <p className="mt-1 text-[15px] text-slate">{plan.tagline}</p>
+            {plan.audience && (
+              <p className="mt-3 text-[13px] text-slate">
+                Para <span className="font-semibold text-ink">{plan.audience}</span>
+              </p>
+            )}
+            {plan.users && (
+              <div className="mt-2 inline-flex items-center gap-1.5 rounded-full bg-bg-soft px-3 py-1 text-[13px] font-semibold text-verde-700">
+                <Icon name="users" size={14} />
+                {plan.users}
+              </div>
+            )}
             <div className="mt-5">
               {plan.price ? (
                 <>

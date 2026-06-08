@@ -71,13 +71,20 @@ export default function QuemSomosPage() {
         <div className="grid gap-10 lg:grid-cols-2">
           <Reveal>
             <p className="text-lg leading-relaxed text-slate">
-              Acreditamos que avaliar bem é o primeiro passo para ensinar melhor. Por isso construímos
-              uma plataforma que cuida de toda a jornada avaliativa, criar, aplicar, corrigir e
-              analisar, com inteligência de dados acionável e a identidade de cada instituição.
+              A KodarEdu nasceu de uma constatação simples: instituições de ensino no Brasil dedicam
+              tempo demais gerenciando ferramentas fragmentadas de avaliação, e de menos
+              interpretando os dados que essas avaliações produzem.
             </p>
             <p className="mt-4 text-lg leading-relaxed text-slate">
-              Reunimos o melhor das principais soluções do mercado em um único produto white label,
-              para que instituições, cursinhos, redes e editoras ofereçam excelência sob a sua marca.
+              Por isso reunimos em um único ambiente tudo o que uma operação avaliativa séria exige:
+              da criação da prova à leitura pedagógica dos resultados, passando por aplicação,
+              correção e devolutiva, com inteligência de dados acionável e a identidade de cada
+              instituição.
+            </p>
+            <p className="mt-4 text-lg leading-relaxed text-slate">
+              Tudo entregue em modelo white label: a instituição opera a plataforma com a própria
+              marca, e a KodarEdu funciona nos bastidores, como a espinha dorsal tecnológica que
+              sustenta a operação avaliativa.
             </p>
           </Reveal>
           <Reveal delay={0.1}>
