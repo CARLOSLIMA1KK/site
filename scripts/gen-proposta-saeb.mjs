@@ -16,7 +16,7 @@ const ROOT = join(__dirname, "..");
 const PUBLIC = join(ROOT, "public");
 
 // Cliente desta proposta (edite aqui).
-const CLIENT = "a sua rede de ensino";
+const CLIENT = "a sua editora";
 const VALIDADE = "30 dias";
 
 // ---- helpers -------------------------------------------------------------
@@ -111,7 +111,7 @@ const SOLUTION_CARDS = [
 const SAEB_FEATURES = [
   ["Alinhado ao SAEB e à BNCC", "Itens e escala fiéis à avaliação nacional."],
   ["Correção por TRI calibrada", "Nota comparável ao padrão oficial do SAEB."],
-  ["Benchmark nacional", "Compare sua rede com referências do país."],
+  ["Benchmark nacional", "Compare cada rede atendida com referências do país."],
   ["Visão por escola e rede", "Indicadores consolidados e por unidade."],
   ["Por habilidade", "Granularidade que orienta a intervenção pedagógica."],
   ["Online ou impresso", "Aplicação flexível conforme a infraestrutura."],
@@ -127,10 +127,10 @@ const REPORT_VIEWS = [
 ];
 
 const WHITE_LABEL = [
-  ["Logo e identidade", "Sua marca em todas as telas, e-mails e relatórios."],
-  ["Paleta de cores", "A interface assume as cores da sua rede."],
+  ["Marca da editora", "Seu logo e identidade em todas as telas, e-mails e relatórios."],
+  ["Paleta de cores", "A interface assume as cores da sua editora."],
   ["Domínio próprio", "Acesso no seu endereço, não no da KodarEdu."],
-  ["App na sua marca", "Aplicativo do aluno publicado com a sua identidade."],
+  ["Sub-marca por rede", "Opcional: cada rede atendida com a própria identidade."],
 ];
 
 const INCLUSO = [
@@ -139,9 +139,18 @@ const INCLUSO = [
   ["Suporte 24/7", "Atendimento humano todos os dias, inclusive fins de semana."],
   ["SLA com tempo de resposta", "Prioridades e prazos definidos em contrato."],
   ["Auxílio no embarque", "Onboarding guiado, migração de dados e configuração da marca."],
-  ["Atendimento aos professores", "Equipe técnica da Kodar apoia o corpo docente no uso."],
-  ["Segurança e LGPD", "Conformidade desde a arquitetura; dados da rede protegidos."],
-  ["White label completo", "A plataforma inteira com a marca da sua rede."],
+  ["Atendimento aos professores", "Equipe técnica da Kodar apoia os professores das redes atendidas."],
+  ["Segurança e LGPD", "Conformidade desde a arquitetura; dados das redes protegidos."],
+  ["White label completo", "A plataforma inteira com a marca da sua editora."],
+];
+
+const IMPLANT = [
+  ["Embarque de avaliações", "Configuração e migração das avaliações no padrão da sua operação."],
+  ["Embarque de usuários", "Carga de alunos, professores e gestores das redes atendidas."],
+  ["Embarque de conteúdos", "Itens, provas, cursos e materiais da sua editora."],
+  ["Infraestrutura dedicada", "Ambiente dedicado e isolado para a sua editora."],
+  ["Personalização do branding", "Identidade white label da editora (e sub-marca por rede)."],
+  ["Onboarding e treinamento", "Capacitação das equipes da editora e das redes."],
 ];
 
 const SLA = [
@@ -319,14 +328,14 @@ h1,h2,h3,.display{font-family:var(--display);}
   <div>
     <div class="brand">Kodar${edu("Edu")}</div>
     <span class="tagprop">Proposta comercial</span>
-    <h1>Avaliação no padrão SAEB, com a marca da sua rede.</h1>
-    <p class="sub">Preparada para ${CLIENT}. Uma plataforma completa e white label para diagnosticar, acompanhar e elevar os resultados da sua rede no SAEB, alinhada à BNCC.</p>
+    <h1>Avaliação no padrão SAEB, embarcada na solução da sua editora.</h1>
+    <p class="sub">Preparada para ${CLIENT}. Embarque a KodarEdu como a camada de avaliação do seu produto, com a sua marca, e ofereça diagnóstico no padrão SAEB às redes e escolas que você atende, sem desenvolver do zero e sem competir com a sua marca.</p>
     <div class="pills">
+      <span class="pill">Para editoras</span>
       <span class="pill">Avaliação SAEB</span>
-      <span class="pill">TRI calibrado</span>
-      <span class="pill">Produção Textual com IA</span>
+      <span class="pill">White label da editora</span>
+      <span class="pill">Embarque completo</span>
       <span class="pill">${edu("Edu.IA")}</span>
-      <span class="pill">White Label</span>
     </div>
   </div>
   <div class="cover-hero">${img("/assets/prints/relatorio-gestor.svg")}</div>
@@ -340,9 +349,9 @@ h1,h2,h3,.display{font-family:var(--display);}
 <!-- 2. QUEM SOMOS + NUMEROS -->
 <section class="page">
   <span class="eyebrow">Quem somos</span>
-  <h2 class="h2">A infraestrutura que move a avaliação da sua rede</h2>
+  <h2 class="h2">A camada de avaliação que fortalece a sua editora</h2>
   <div class="kicker-line"></div>
-  <p class="lead">A KodarEdu reúne, em um só ambiente e com a marca da sua rede, tudo o que uma operação avaliativa séria exige: avaliação no padrão SAEB por TRI, Produção Textual com IA, provas com leitor OMR, banco de itens para atividades, Cursos EAD, ${edu("Edu.IA")} para professores e relatórios acionáveis. Da criação à decisão pedagógica, sem depender de equipe de TI.</p>
+  <p class="lead">A KodarEdu é a infraestrutura de avaliação que a sua editora embarca no próprio produto, com a sua marca. Em um só ambiente: avaliação no padrão SAEB por TRI, Produção Textual com IA, provas com leitor OMR, banco de itens para atividades, Cursos EAD, ${edu("Edu.IA")} e relatórios, para você entregar às redes e escolas clientes, sem desenvolver do zero e sem competir com a sua marca.</p>
   <div class="stats">
     ${STATS.map((s) => `<div class="stat"><div class="num">${s.value}${s.suffix}</div>${s.stars ? `<div class="st">${stars}</div>` : ""}<div class="lbl">${s.label}</div></div>`).join("")}
   </div>
@@ -356,15 +365,15 @@ h1,h2,h3,.display{font-family:var(--display);}
 <section class="page">
   <span class="eyebrow">Foco da proposta</span>
   <h2 class="h2">Diagnóstico no padrão SAEB, alinhado à BNCC</h2>
-  <p class="lead">Antecipe os resultados oficiais: aplique simulados no padrão SAEB, corrija por TRI calibrada e compare sua rede com o benchmark nacional, orientando políticas pedagógicas com dados confiáveis.</p>
+  <p class="lead">Ofereça às redes e escolas atendidas pela sua editora um diagnóstico no padrão SAEB: simulados, correção por TRI calibrada e comparação com o benchmark nacional, fortalecendo o seu produto pedagógico com dados confiáveis.</p>
   <div class="saeb-hero">${img("/assets/prints/relatorio-tri.svg")}</div>
   <div class="caps">
     ${SAEB_FEATURES.map(([b, d]) => `<div class="cap"><span class="ck">✓</span><div><b>${b}.</b> <span>${d}</span></div></div>`).join("")}
   </div>
   <div class="duo">
     <div class="duo-card">
-      <div class="duo-h">Itens autorais ou os seus itens</div>
-      <p>Desenvolvemos as provas com <b>itens autorais</b> da KodarEdu ou <b>cadastramos as provas do cliente</b>, conforme os itens e a metodologia já aplicada na sua rede. Você escolhe o caminho.</p>
+      <div class="duo-h">Itens autorais ou os itens da sua editora</div>
+      <p>Desenvolvemos as provas com <b>itens autorais</b> da KodarEdu ou <b>cadastramos as provas e os itens da sua editora</b>, respeitando a metodologia aplicada por você e pelas redes que atende. Você escolhe o caminho.</p>
     </div>
     <div class="duo-card">
       <div class="duo-h">Leitor de gabarito em lote (scanner)</div>
@@ -392,8 +401,8 @@ h1,h2,h3,.display{font-family:var(--display);}
 <!-- 6. RELATORIOS -->
 <section class="page">
   <span class="eyebrow">Relatórios & Inteligência de Dados</span>
-  <h2 class="h2">Decisões de rede guiadas por dados precisos</h2>
-  <p class="lead">Cada avaliação vira inteligência acionável: visão por rede, escola, turma e habilidade, com régua do SAEB por TRI e dados prontos para a gestão.</p>
+  <h2 class="h2">Inteligência de dados para a editora e para cada rede</h2>
+  <p class="lead">Cada avaliação vira inteligência acionável para a sua editora e para cada rede atendida: visão por rede, escola, turma e habilidade, com régua do SAEB por TRI e dados prontos para a gestão.</p>
   <div class="report-hero">${img("/assets/prints/relatorios-consolidado.svg")}</div>
   <div class="views">
     ${REPORT_VIEWS.map(([h, d]) => `<div class="view"><h3>${h}</h3><p>${d}</p></div>`).join("")}
@@ -403,8 +412,8 @@ h1,h2,h3,.display{font-family:var(--display);}
 <!-- 7. WHITE LABEL -->
 <section class="page">
   <span class="eyebrow">White Label / Personalização</span>
-  <h2 class="h2">A plataforma com a cara da sua rede</h2>
-  <p class="lead">Os alunos, professores e gestores veem a sua rede, não a KodarEdu: cores, logo, domínio e até um app na sua marca. Personalização real, sem custo de desenvolvimento.</p>
+  <h2 class="h2">A plataforma com a marca da sua editora</h2>
+  <p class="lead">Os usuários veem a marca da sua editora (e, opcionalmente, a marca de cada rede atendida), não a KodarEdu: cores, logo, domínio e até um app próprio. Você fortalece o seu produto, sem custo de desenvolvimento.</p>
   <div class="wl-hero">${img("/assets/photos/white-label-devices.jpg")}</div>
   <div class="wl-grid">
     ${WHITE_LABEL.map(([b, d]) => `<div class="wl"><span class="ck">◆</span><div><b>${b}.</b> <span>${d}</span></div></div>`).join("")}
@@ -415,7 +424,7 @@ h1,h2,h3,.display{font-family:var(--display);}
 <section class="page">
   <span class="eyebrow">Tudo incluso</span>
   <h2 class="h2">Mais que uma plataforma: um parceiro de operação</h2>
-  <p class="lead">Nesta proposta, o valor por estudante já inclui tudo o que mantém a operação no ar e evoluindo, sem custos ocultos nem surpresas.</p>
+  <p class="lead">Nesta proposta, o valor por estudante já inclui tudo o que mantém a operação da sua editora no ar e evoluindo, sem custos ocultos nem surpresas.</p>
   <div class="incluso">
     ${INCLUSO.map(([b, d]) => `<div class="inc"><span class="ck">✓</span><div><b>${t(b)}.</b> <span>${t(d)}</span></div></div>`).join("")}
   </div>
@@ -425,38 +434,51 @@ h1,h2,h3,.display{font-family:var(--display);}
   </div>
 </section>
 
-<!-- 9. INVESTIMENTO / CONDICAO ESPECIAL -->
+<!-- 9. IMPLANTACAO & EMBARQUE -->
+<section class="page">
+  <span class="eyebrow">Implantação & Embarque</span>
+  <h2 class="h2">Entrada em operação completa, com infraestrutura dedicada</h2>
+  <p class="lead">Cuidamos de toda a entrada em operação da sua editora. O <b>prazo e o valor da implantação são a negociar conforme o plano escolhido</b>, e a implantação já contempla todo o escopo abaixo:</p>
+  <div class="incluso">
+    ${IMPLANT.map(([b, d]) => `<div class="inc"><span class="ck">✓</span><div><b>${b}.</b> <span>${d}</span></div></div>`).join("")}
+  </div>
+  <div class="recap" style="margin-top:9mm">
+    <p><b>Prazo e valor de implantação:</b> definidos conforme o plano escolhido. Embarque de avaliações, usuários e conteúdos, infraestrutura dedicada e personalização do branding white label já fazem parte do escopo de implantação.</p>
+  </div>
+</section>
+
+<!-- 10. INVESTIMENTO / CONDICAO ESPECIAL -->
 <section class="page">
   <span class="eyebrow">Investimento</span>
   <h2 class="h2">Condição especial para ${CLIENT}</h2>
   <div><span class="special">★ Condição comercial especial</span></div>
-  <p class="lead">Valores exclusivos desta proposta. Quanto maior a rede, menor o valor por estudante, e tudo já está incluso.</p>
+  <p class="lead">Valores exclusivos desta proposta para a sua editora. Quanto maior a base de estudantes atendida, menor o valor por estudante, e tudo já está incluso.</p>
   <table class="ptable">
-    <thead><tr><th>Faixa de estudantes</th><th>De</th><th>Por (especial)</th></tr></thead>
+    <thead><tr><th>Faixa de estudantes atendidos</th><th>De</th><th>Por (especial)</th></tr></thead>
     <tbody>
       ${PRICING.map((p) => `<tr><td class="faixa">${p.faixa}</td><td class="de">${p.de}</td><td><span class="por">${p.por}<small>por estudante / mês</small></span></td></tr>`).join("")}
     </tbody>
   </table>
   <div class="recap">
-    <p><b>Tudo incluso, sem custos extras:</b> sustentação, evolução contínua, suporte 24/7, SLA com tempo de resposta, auxílio no embarque e atendimento técnico da equipe Kodar aos professores. White label completo.</p>
+    <p><b>Tudo incluso na mensalidade:</b> sustentação, evolução contínua, suporte 24/7, SLA com tempo de resposta e atendimento técnico da equipe Kodar aos professores das redes. White label completo. <b>Implantação (embarque de avaliações, usuários e conteúdos, infraestrutura dedicada e branding): prazo e valor a negociar conforme o plano.</b></p>
   </div>
   <div class="valid">
     <span><b>Proposta válida por ${VALIDADE}.</b></span>
     <span><b>Garantia de 30 dias</b> sem risco.</span>
-    <span><b>Implantação</b> em poucos dias.</span>
+    <span><b>Implantação:</b> prazo conforme o plano.</span>
   </div>
-  <p class="note">Valores mensais por estudante ativo, em condição comercial especial e exclusiva para esta proposta. A faixa é definida pelo total de estudantes da rede. Cobrança recorrente com nota fiscal.</p>
+  <p class="note">Valores mensais por estudante ativo atendido pela sua editora, em condição comercial especial e exclusiva para esta proposta. A faixa é definida pelo total de estudantes atendidos. Cobrança recorrente com nota fiscal. Implantação (embarque e infraestrutura dedicada) com prazo e valor a negociar conforme o plano escolhido.</p>
 </section>
 
-<!-- 10. CTA / PROXIMOS PASSOS -->
+<!-- 11. CTA / PROXIMOS PASSOS -->
 <section class="page surface-dark cta">
   <span class="eyebrow">Próximos passos</span>
-  <h1>Vamos levar o SAEB da sua rede para o próximo nível.</h1>
-  <p class="sub">Aprovada a condição especial, cuidamos de toda a implantação com a marca da sua rede, em poucos dias e com suporte dedicado.</p>
+  <h1>Vamos embarcar o SAEB no produto da sua editora.</h1>
+  <p class="sub">Aprovada a condição especial, cuidamos de toda a implantação com a marca da sua editora e damos suporte às redes que você atende.</p>
   <div class="steps">
-    <div class="step"><div class="n">01</div><div class="tt">Aprovação</div><div class="ds">Você valida a proposta e a faixa de estudantes.</div></div>
-    <div class="step"><div class="n">02</div><div class="tt">Embarque</div><div class="ds">Configuração da marca, migração e onboarding guiado.</div></div>
-    <div class="step"><div class="n">03</div><div class="tt">Operação</div><div class="ds">Plataforma no ar, com suporte 24/7 e atendimento aos professores.</div></div>
+    <div class="step"><div class="n">01</div><div class="tt">Aprovação</div><div class="ds">Você valida a proposta, o plano e a faixa de estudantes.</div></div>
+    <div class="step"><div class="n">02</div><div class="tt">Embarque</div><div class="ds">Avaliações, usuários e conteúdos, infra dedicada e branding.</div></div>
+    <div class="step"><div class="n">03</div><div class="tt">Operação</div><div class="ds">No ar, com suporte 24/7 e atendimento aos professores.</div></div>
   </div>
   <div class="contact">
     <div class="ci"><div class="k">E-mail</div><div class="v">${SITE.email}</div></div>
