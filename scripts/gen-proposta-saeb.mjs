@@ -159,10 +159,14 @@ const SLA = [
   ["Padrão (P3)", "≤ 24h úteis", "Dúvidas e ajustes"],
 ];
 
+// Oferta especial: 30% de desconto em todas as assinaturas (por = de x 0,70).
+// Escala contínua por total de estudantes atendidos, terminando em R$ 1,00.
 const PRICING = [
-  { faixa: "0 a 2.000 estudantes", de: "R$ 3,30", por: "R$ 2,10" },
-  { faixa: "3.000 a 6.000 estudantes", de: "R$ 2,90", por: "R$ 1,60" },
-  { faixa: "7.000 a 20.000 estudantes", de: "R$ 2,10", por: "R$ 1,00" },
+  { faixa: "Até 2.000 estudantes", de: "R$ 3,00", por: "R$ 2,10" },
+  { faixa: "2.001 a 6.000 estudantes", de: "R$ 2,29", por: "R$ 1,60" },
+  { faixa: "6.001 a 12.000 estudantes", de: "R$ 1,86", por: "R$ 1,30" },
+  { faixa: "12.001 a 20.000 estudantes", de: "R$ 1,43", por: "R$ 1,00" },
+  { faixa: "Acima de 20.000 estudantes", consulta: true },
 ];
 
 const card = (s) => `
@@ -330,13 +334,6 @@ h1,h2,h3,.display{font-family:var(--display);}
     <span class="tagprop">Proposta comercial</span>
     <h1>Avaliação no padrão SAEB, embarcada na solução da sua editora.</h1>
     <p class="sub">Preparada para ${CLIENT}. Embarque a KodarEdu como a camada de avaliação do seu produto, com a sua marca, e ofereça diagnóstico no padrão SAEB às redes e escolas que você atende, sem desenvolver do zero e sem competir com a sua marca.</p>
-    <div class="pills">
-      <span class="pill">Para editoras</span>
-      <span class="pill">Avaliação SAEB</span>
-      <span class="pill">White label da editora</span>
-      <span class="pill">Embarque completo</span>
-      <span class="pill">${edu("Edu.IA")}</span>
-    </div>
   </div>
   <div class="cover-hero">${img("/assets/prints/relatorio-gestor.svg")}</div>
   <div class="cover-foot">
@@ -451,12 +448,16 @@ h1,h2,h3,.display{font-family:var(--display);}
 <section class="page">
   <span class="eyebrow">Investimento</span>
   <h2 class="h2">Condição especial para ${CLIENT}</h2>
-  <div><span class="special">★ Condição comercial especial</span></div>
-  <p class="lead">Valores exclusivos desta proposta para a sua editora. Quanto maior a base de estudantes atendida, menor o valor por estudante, e tudo já está incluso.</p>
+  <div><span class="special">★ Oferta especial · 30% de desconto em todas as assinaturas</span></div>
+  <p class="lead">Condição exclusiva desta proposta para a sua editora: <b>30% de desconto</b> em todas as faixas. Quanto maior a base de estudantes atendida, menor o valor por estudante, chegando a <b>R$ 1,00</b>.</p>
   <table class="ptable">
-    <thead><tr><th>Faixa de estudantes atendidos</th><th>De</th><th>Por (especial)</th></tr></thead>
+    <thead><tr><th>Faixa de estudantes atendidos</th><th>De</th><th>Por (−30%)</th></tr></thead>
     <tbody>
-      ${PRICING.map((p) => `<tr><td class="faixa">${p.faixa}</td><td class="de">${p.de}</td><td><span class="por">${p.por}<small>por estudante / mês</small></span></td></tr>`).join("")}
+      ${PRICING.map((p) =>
+        p.consulta
+          ? `<tr><td class="faixa">${p.faixa}</td><td class="de">—</td><td><span class="por" style="font-size:13pt">Sob consulta</span></td></tr>`
+          : `<tr><td class="faixa">${p.faixa}</td><td class="de">${p.de}</td><td><span class="por">${p.por}<small>por estudante / mês</small></span></td></tr>`
+      ).join("")}
     </tbody>
   </table>
   <div class="recap">
@@ -467,7 +468,7 @@ h1,h2,h3,.display{font-family:var(--display);}
     <span><b>Garantia de 30 dias</b> sem risco.</span>
     <span><b>Implantação:</b> prazo conforme o plano.</span>
   </div>
-  <p class="note">Valores mensais por estudante ativo atendido pela sua editora, em condição comercial especial e exclusiva para esta proposta. A faixa é definida pelo total de estudantes atendidos. Cobrança recorrente com nota fiscal. Implantação (embarque e infraestrutura dedicada) com prazo e valor a negociar conforme o plano escolhido.</p>
+  <p class="note">Valores mensais por estudante ativo atendido pela sua editora, já com 30% de desconto da oferta especial, exclusiva para esta proposta. A faixa é definida pelo total de estudantes atendidos; acima de 20.000, valores sob consulta. Cobrança recorrente com nota fiscal. Implantação (embarque e infraestrutura dedicada) com prazo e valor a negociar conforme o plano escolhido.</p>
 </section>
 
 <!-- 11. CTA / PROXIMOS PASSOS -->
