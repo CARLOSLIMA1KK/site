@@ -8,7 +8,7 @@ import { readFileSync, existsSync } from "node:fs";
 import { fileURLToPath } from "node:url";
 import { dirname, join } from "node:path";
 import puppeteer from "puppeteer";
-import { SITE, STATS, PILLARS, PLATFORM_CAPABILITIES } from "../lib/site.js";
+import { SITE, STATS, PILLARS, PLATFORM_CAPABILITIES, ACCESS_PROFILES } from "../lib/site.js";
 import { SOLUTIONS } from "../lib/solutions.js";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
@@ -159,6 +159,26 @@ const SLA = [
   ["Padrão (P3)", "≤ 24h úteis", "Dúvidas e ajustes"],
 ];
 
+// Perfis de acesso (puxados de /plataforma/acessos) + cor da inicial.
+const PERFIL_COLORS = { aluno: "var(--verde)", professor: "var(--azul)", gestao: "var(--ink)", rede: "var(--verde-700)" };
+const PERFIS = ACCESS_PROFILES.map((p) => ({ name: p.name, desc: p.desc, color: PERFIL_COLORS[p.slug] || "var(--verde)" }));
+
+// Matriz de permissoes: [Aluno, Professor, Gestor/Coordenacao, Rede]
+const PERFIL_HEADERS = ["Aluno", "Professor", "Gestor/Coord.", "Rede"];
+const PERMISSIONS = [
+  ["Realizar avaliações e simulados", [1, 0, 0, 0]],
+  ["Trilha e evolução pessoal", [1, 0, 0, 0]],
+  ["Criar e aplicar provas (IA)", [0, 1, 0, 0]],
+  ["Corrigir redações (IA + OCR)", [0, 1, 0, 0]],
+  ["Leitor OMR e correção por câmera", [0, 1, 0, 0]],
+  ["Edu.IA (assistente do professor)", [0, 1, 0, 0]],
+  ["Relatórios de turma", [0, 1, 1, 1]],
+  ["Relatórios da instituição/rede", [0, 0, 1, 1]],
+  ["Gestão de usuários", [0, 0, 1, 1]],
+  ["Visão multiunidade", [0, 0, 0, 1]],
+  ["Configurar white label", [0, 0, 1, 1]],
+];
+
 // Oferta especial: 30% de desconto em todas as assinaturas (por = de x 0,70).
 // Escala contínua por total de estudantes atendidos, terminando em R$ 1,00.
 const PRICING = [
@@ -261,6 +281,21 @@ h1,h2,h3,.display{font-family:var(--display);}
 .sol-body ul{list-style:none;margin-top:3mm;}
 .sol-body li{font-size:9.5pt;padding:1mm 0 1mm 6mm;position:relative;color:var(--ink);}
 .sol-body li::before{content:"✓";position:absolute;left:0;color:var(--verde);font-weight:800;}
+
+/* Acessos & Perfis */
+.perfis{display:grid;grid-template-columns:repeat(4,1fr);gap:4mm;margin-top:7mm;}
+.perfil{border:1px solid var(--line);border-radius:10px;padding:5mm 4mm;background:#fff;}
+.perfil .pb{width:10mm;height:10mm;border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:var(--display);font-weight:800;font-size:13pt;color:#fff;margin-bottom:3mm;}
+.perfil h3{font-size:11pt;}
+.perfil p{font-size:8.8pt;color:var(--slate);line-height:1.4;margin-top:1.5mm;}
+.matrix{width:100%;border-collapse:separate;border-spacing:0;margin-top:7mm;border:1px solid var(--line);border-radius:12px;overflow:hidden;font-size:9.2pt;}
+.matrix th{background:var(--ink);color:#fff;font-family:var(--display);font-weight:700;padding:3.5mm 2mm;text-align:center;font-size:9pt;}
+.matrix th:first-child{text-align:left;padding-left:5mm;}
+.matrix td{padding:2.8mm 2mm;border-top:1px solid var(--line);text-align:center;}
+.matrix td:first-child{text-align:left;padding-left:5mm;color:var(--ink);font-weight:500;}
+.matrix tr:nth-child(even) td{background:var(--soft);}
+.matrix .yes{color:var(--verde);font-weight:800;font-size:11pt;}
+.matrix .no{color:#c7ccdd;}
 
 /* Relatorios */
 .report-hero{margin-top:7mm;border:1px solid var(--line);border-radius:10px;overflow:hidden;background:var(--soft);}
@@ -395,7 +430,24 @@ h1,h2,h3,.display{font-family:var(--display);}
   <div class="sol-grid">${SOLUTION_CARDS.slice(4).map(card).join("")}</div>
 </section>
 
-<!-- 6. RELATORIOS -->
+<!-- 6. ACESSOS & PERFIS -->
+<section class="page">
+  <span class="eyebrow">Acessos & Perfis</span>
+  <h2 class="h2">Para quem é, e o que cada um acessa</h2>
+  <p class="lead">A plataforma controla acessos por nível para todos os usuários das redes atendidas pela sua editora: cada perfil vê só o que precisa, simples para quem usa e seguro para a operação.</p>
+  <div class="perfis">
+    ${PERFIS.map((p) => `<div class="perfil"><div class="pb" style="background:${p.color}">${p.name[0]}</div><h3>${p.name}</h3><p>${p.desc}</p></div>`).join("")}
+  </div>
+  <div style="margin-top:9mm"><span class="eyebrow" style="margin-bottom:0">O que cada perfil acessa</span></div>
+  <table class="matrix">
+    <thead><tr><th>Permissão</th>${PERFIL_HEADERS.map((h) => `<th>${h}</th>`).join("")}</tr></thead>
+    <tbody>
+      ${PERMISSIONS.map(([label, flags]) => `<tr><td>${t(label)}</td>${flags.map((on) => `<td>${on ? '<span class="yes">✓</span>' : '<span class="no">—</span>'}</td>`).join("")}</tr>`).join("")}
+    </tbody>
+  </table>
+</section>
+
+<!-- 7. RELATORIOS -->
 <section class="page">
   <span class="eyebrow">Relatórios & Inteligência de Dados</span>
   <h2 class="h2">Inteligência de dados para a editora e para cada rede</h2>
