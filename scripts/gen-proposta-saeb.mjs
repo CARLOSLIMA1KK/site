@@ -179,13 +179,13 @@ const PERMISSIONS = [
   ["Configurar white label", [0, 0, 1, 1]],
 ];
 
-// Oferta especial: 30% de desconto em todas as assinaturas (por = de x 0,70).
-// Escala contínua por total de estudantes atendidos, terminando em R$ 1,00.
+// Oferta especial: 44% de desconto em todas as assinaturas (por = de x 0,56).
+// Escala contínua por total de estudantes atendidos, terminando em R$ 0,80.
 const PRICING = [
-  { faixa: "Até 2.000 estudantes", de: "R$ 3,00", por: "R$ 2,10" },
-  { faixa: "2.001 a 6.000 estudantes", de: "R$ 2,29", por: "R$ 1,60" },
-  { faixa: "6.001 a 12.000 estudantes", de: "R$ 1,86", por: "R$ 1,30" },
-  { faixa: "12.001 a 20.000 estudantes", de: "R$ 1,43", por: "R$ 1,00" },
+  { faixa: "Até 2.000 estudantes", de: "R$ 3,00", por: "R$ 1,68" },
+  { faixa: "2.001 a 6.000 estudantes", de: "R$ 2,29", por: "R$ 1,28" },
+  { faixa: "6.001 a 12.000 estudantes", de: "R$ 1,86", por: "R$ 1,04" },
+  { faixa: "12.001 a 20.000 estudantes", de: "R$ 1,43", por: "R$ 0,80" },
   { faixa: "Acima de 20.000 estudantes", consulta: true },
 ];
 
@@ -504,10 +504,10 @@ h1,h2,h3,.display{font-family:var(--display);}
 <section class="page">
   <span class="eyebrow">Investimento</span>
   <h2 class="h2">Condição especial para ${CLIENT}</h2>
-  <div><span class="special">★ Oferta especial · 30% de desconto em todas as assinaturas</span></div>
-  <p class="lead">Condição exclusiva desta proposta para a sua editora: <b>30% de desconto</b> em todas as faixas. Quanto maior a base de estudantes atendida, menor o valor por estudante, chegando a <b>R$ 1,00</b>.</p>
+  <div><span class="special">★ Oferta especial · 44% de desconto em todas as assinaturas</span></div>
+  <p class="lead">Condição exclusiva desta proposta para a sua editora: <b>44% de desconto</b> em todas as faixas. Quanto maior a base de estudantes atendida, menor o valor por estudante, chegando a <b>R$ 0,80</b>.</p>
   <table class="ptable">
-    <thead><tr><th>Faixa de estudantes atendidos</th><th>De</th><th>Por (−30%)</th></tr></thead>
+    <thead><tr><th>Faixa de estudantes atendidos</th><th>De</th><th>Por (−44%)</th></tr></thead>
     <tbody>
       ${PRICING.map((p) =>
         p.consulta
@@ -524,7 +524,7 @@ h1,h2,h3,.display{font-family:var(--display);}
     <span><b>Garantia de 30 dias</b> sem risco.</span>
     <span><b>Implantação:</b> prazo conforme o plano.</span>
   </div>
-  <p class="note">Valores mensais por estudante ativo atendido pela sua editora, já com 30% de desconto da oferta especial, exclusiva para esta proposta. A faixa é definida pelo total de estudantes atendidos; acima de 20.000, valores sob consulta. Cobrança recorrente com nota fiscal. Implantação (embarque e infraestrutura dedicada) com prazo e valor a negociar conforme o plano escolhido.</p>
+  <p class="note">Valores mensais por estudante ativo atendido pela sua editora, já com 44% de desconto da oferta especial, exclusiva para esta proposta. A faixa é definida pelo total de estudantes atendidos; acima de 20.000, valores sob consulta. Cobrança recorrente com nota fiscal. Implantação (embarque e infraestrutura dedicada) com prazo e valor a negociar conforme o plano escolhido.</p>
 </section>
 
 <!-- 11. CTA / PROXIMOS PASSOS -->
