@@ -67,8 +67,8 @@ const SOLUTION_CARDS = [
     title: "Criação e Correção de Provas",
     tag: "IA · OMR",
     print: "/assets/prints/editor-prova.svg",
-    text: "Gere questões com IA, monte provas com layout profissional e corrija por leitor OMR ou câmera, online ou impresso.",
-    bullets: ["Banco de Itens integrado", "Correção automática (OMR/câmera)", "Integração com o ERP"],
+    text: "Monte provas com layout profissional e corrija por leitor OMR ou câmera, online ou impresso. Inclui banco de itens para montar atividades.",
+    bullets: ["Banco de itens para atividades", "Itens autorais ou cadastro dos seus itens", "Correção automática (OMR/câmera)"],
   },
   {
     title: "Produção Textual",
@@ -78,11 +78,11 @@ const SOLUTION_CARDS = [
     bullets: ["Vários gêneros textuais", "OCR de manuscritos", "IA + especialista humano"],
   },
   {
-    title: "Banco de Itens",
-    tag: "Autoral · IA",
-    print: "/assets/prints/banco-questoes.svg",
-    text: SOLUTIONS["banco-de-questoes"].hero.subtitle,
-    bullets: ["Itens inéditos e autorais", "Alinhados à BNCC", "Criação/edição com IA"],
+    title: "Cursos EAD",
+    tag: "Formação continuada",
+    print: "/assets/prints/cursos-ead.svg",
+    text: "O cliente cria seus próprios cursos, com a sua marca, para professores e estudantes: vídeos, videoaulas, questões, quiz, podcasts e certificados, com acompanhamento de progresso. Ideal para a formação continuada dos professores.",
+    bullets: ["Vídeos, videoaulas, quiz e podcasts", "Certificados e progresso por curso", "Para professores e estudantes"],
   },
   {
     title: "Trilha adaptativa (CAT)",
@@ -221,8 +221,13 @@ h1,h2,h3,.display{font-family:var(--display);}
 .pillar p{font-size:10pt;color:var(--slate);line-height:1.5;}
 
 /* SAEB destaque */
-.saeb-hero{margin-top:7mm;border:1px solid var(--line);border-radius:10px;overflow:hidden;background:var(--soft);}
-.saeb-hero img{width:100%;display:block;}
+.saeb-hero{margin-top:6mm;border:1px solid var(--line);border-radius:10px;overflow:hidden;background:var(--soft);}
+.saeb-hero img{width:100%;height:74mm;object-fit:cover;object-position:top;display:block;}
+.duo{display:grid;grid-template-columns:1fr 1fr;gap:5mm;margin-top:7mm;}
+.duo-card{border:1px solid var(--line);border-left:3px solid var(--verde);border-radius:10px;padding:5mm;background:var(--soft);}
+.duo-h{font-family:var(--display);font-weight:800;font-size:11pt;color:var(--ink);margin-bottom:2mm;}
+.duo-card p{font-size:9.6pt;line-height:1.5;color:var(--slate);}
+.duo-card b{color:var(--ink);}
 .caps{display:grid;grid-template-columns:repeat(2,1fr);gap:3.5mm 6mm;margin-top:7mm;}
 .cap{display:flex;gap:3mm;align-items:flex-start;}
 .cap .ck{color:var(--verde);font-weight:800;font-size:12pt;line-height:1.2;}
@@ -337,7 +342,7 @@ h1,h2,h3,.display{font-family:var(--display);}
   <span class="eyebrow">Quem somos</span>
   <h2 class="h2">A infraestrutura que move a avaliação da sua rede</h2>
   <div class="kicker-line"></div>
-  <p class="lead">A KodarEdu reúne, em um só ambiente e com a marca da sua rede, tudo o que uma operação avaliativa séria exige: avaliação no padrão SAEB por TRI, Produção Textual com IA, provas com leitor OMR, Banco de Itens autoral, ${edu("Edu.IA")} para professores e relatórios acionáveis. Da criação à decisão pedagógica, sem depender de equipe de TI.</p>
+  <p class="lead">A KodarEdu reúne, em um só ambiente e com a marca da sua rede, tudo o que uma operação avaliativa séria exige: avaliação no padrão SAEB por TRI, Produção Textual com IA, provas com leitor OMR, banco de itens para atividades, Cursos EAD, ${edu("Edu.IA")} para professores e relatórios acionáveis. Da criação à decisão pedagógica, sem depender de equipe de TI.</p>
   <div class="stats">
     ${STATS.map((s) => `<div class="stat"><div class="num">${s.value}${s.suffix}</div>${s.stars ? `<div class="st">${stars}</div>` : ""}<div class="lbl">${s.label}</div></div>`).join("")}
   </div>
@@ -355,6 +360,16 @@ h1,h2,h3,.display{font-family:var(--display);}
   <div class="saeb-hero">${img("/assets/prints/relatorio-tri.svg")}</div>
   <div class="caps">
     ${SAEB_FEATURES.map(([b, d]) => `<div class="cap"><span class="ck">✓</span><div><b>${b}.</b> <span>${d}</span></div></div>`).join("")}
+  </div>
+  <div class="duo">
+    <div class="duo-card">
+      <div class="duo-h">Itens autorais ou os seus itens</div>
+      <p>Desenvolvemos as provas com <b>itens autorais</b> da KodarEdu ou <b>cadastramos as provas do cliente</b>, conforme os itens e a metodologia já aplicada na sua rede. Você escolhe o caminho.</p>
+    </div>
+    <div class="duo-card">
+      <div class="duo-h">Leitor de gabarito em lote (scanner)</div>
+      <p>Correção em lote: digitalize as folhas de resposta no <b>scanner</b> e o leitor faz a leitura automática dos gabaritos, reduzindo o trabalho de inserção da sua equipe em <b>até 80%</b>.</p>
+    </div>
   </div>
 </section>
 
