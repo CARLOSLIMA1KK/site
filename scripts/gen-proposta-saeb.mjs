@@ -168,10 +168,10 @@ const PERFIL_HEADERS = ["Aluno", "Professor", "Gestor/Coord.", "Rede"];
 const PERMISSIONS = [
   ["Realizar avaliações e simulados", [1, 0, 0, 0]],
   ["Trilha e evolução pessoal", [1, 0, 0, 0]],
-  ["Criar e aplicar provas (IA)", [0, 1, 0, 0]],
-  ["Corrigir redações (IA + OCR)", [0, 1, 0, 0]],
-  ["Leitor OMR e correção por câmera", [0, 1, 0, 0]],
-  ["Edu.IA (assistente do professor)", [0, 1, 0, 0]],
+  ["Criar e aplicar provas (IA)", [0, 1, 1, 0]],
+  ["Corrigir redações (IA + OCR)", [0, 1, 1, 0]],
+  ["Leitor OMR e correção por câmera", [0, 1, 1, 0]],
+  ["Edu.IA (assistente do professor)", [0, 1, 1, 0]],
   ["Relatórios de turma", [0, 1, 1, 1]],
   ["Relatórios da instituição/rede", [0, 0, 1, 1]],
   ["Gestão de usuários", [0, 0, 1, 1]],
@@ -359,6 +359,11 @@ h1,h2,h3,.display{font-family:var(--display);}
 .contact .ci .v{font-size:12.5pt;font-weight:600;margin-top:2mm;color:#fff;font-family:var(--display);}
 .footer-brand{margin-top:auto;padding-top:8mm;border-top:1px solid rgba(255,255,255,.16);display:flex;justify-content:space-between;align-items:center;font-size:10pt;color:#cfd6ff;}
 .footer-brand .brand{font-size:15pt;}
+.cover-foot a{color:#cfd6ff;text-decoration:none;}
+.cover-foot a b{color:#fff;}
+.contact .ci a{color:#fff;text-decoration:none;}
+.btn-wpp{display:inline-flex;align-items:center;gap:3mm;margin-top:9mm;background:var(--amarelo);color:var(--ink);font-family:var(--display);font-weight:800;font-size:13pt;padding:4.5mm 9mm;border-radius:999px;text-decoration:none;box-shadow:0 10px 26px rgba(255,196,0,.3);}
+.btn-wpp svg{width:18px;height:18px;}
 </style></head>
 <body>
 
@@ -372,9 +377,8 @@ h1,h2,h3,.display{font-family:var(--display);}
   </div>
   <div class="cover-hero">${img("/assets/prints/relatorio-gestor.svg")}</div>
   <div class="cover-foot">
-    <span><b>Site</b> &nbsp;kodaredu.com.br</span>
-    <span><b>E-mail</b> &nbsp;${SITE.email}</span>
-    <span><b>WhatsApp</b> &nbsp;${SITE.whatsappNumber}</span>
+    <a href="https://kodaredu.com.br"><b>Site</b> &nbsp;kodaredu.com.br</a>
+    <a href="mailto:${SITE.email}"><b>E-mail</b> &nbsp;${SITE.email}</a>
   </div>
 </section>
 
@@ -533,9 +537,13 @@ h1,h2,h3,.display{font-family:var(--display);}
     <div class="step"><div class="n">02</div><div class="tt">Embarque</div><div class="ds">Avaliações, usuários e conteúdos, infra dedicada e branding.</div></div>
     <div class="step"><div class="n">03</div><div class="tt">Operação</div><div class="ds">No ar, com suporte 24/7 e atendimento aos professores.</div></div>
   </div>
+  <a class="btn-wpp" href="${SITE.whatsapp}">
+    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 00-8.5 15.3L2 22l4.8-1.5A10 10 0 1012 2zm0 1.8a8.2 8.2 0 11-4.2 15.2l-.3-.2-2.8.9.9-2.7-.2-.3A8.2 8.2 0 0112 3.8zm4.7 10.3c-.3-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 01-2-1.2 7.5 7.5 0 01-1.4-1.7c-.1-.3 0-.4.1-.5l.4-.5.3-.4v-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 00-.7.3 3 3 0 00-.9 2.2c0 1.3.9 2.5 1.1 2.7s1.9 2.9 4.6 4c1.6.7 2.2.7 3 .6.5 0 1.5-.6 1.7-1.2s.2-1.1.1-1.2l-.4-.2z"/></svg>
+    Fale com um especialista
+  </a>
   <div class="contact">
-    <div class="ci"><div class="k">E-mail</div><div class="v">${SITE.email}</div></div>
-    <div class="ci"><div class="k">WhatsApp / Telefone</div><div class="v">${SITE.whatsappNumber}</div></div>
+    <div class="ci"><div class="k">E-mail</div><div class="v"><a href="mailto:${SITE.email}">${SITE.email}</a></div></div>
+    <div class="ci"><div class="k">Site</div><div class="v"><a href="https://kodaredu.com.br">kodaredu.com.br</a></div></div>
   </div>
   <div class="footer-brand">
     <div class="brand">Kodar${edu("Edu")}</div>
