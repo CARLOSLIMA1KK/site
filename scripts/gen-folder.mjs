@@ -54,8 +54,8 @@ const SOLUTION_CARDS = [
     title: "Criação e Correção de Provas",
     tag: "IA · OMR",
     print: "/assets/prints/editor-prova.svg",
-    text: "Gere questões com IA, monte provas com layout profissional e corrija por leitor OMR ou câmera, online ou impresso.",
-    bullets: ["Banco de Itens integrado", "Correção automática (OMR/câmera)", "Integração com o ERP"],
+    text: "Gere questões com IA, monte provas com layout profissional e corrija por leitor OMR, scanner ou câmera, online ou impresso.",
+    bullets: ["Banco de itens + criação com IA", "Itens autorais ou os seus itens", "Correção em lote por scanner (OMR)"],
   },
   {
     title: "Simulados ENEM",
@@ -79,11 +79,11 @@ const SOLUTION_CARDS = [
     bullets: ["Vários gêneros textuais", "OCR de manuscritos", "IA + especialista humano"],
   },
   {
-    title: "Banco de Itens",
-    tag: "Autoral · IA",
-    print: "/assets/prints/banco-questoes.svg",
-    text: SOLUTIONS["banco-de-questoes"].hero.subtitle,
-    bullets: ["Itens inéditos e autorais", "Filtros por habilidade", "Criação/edição com IA"],
+    title: "Cursos EAD",
+    tag: "Formação continuada",
+    print: "/assets/prints/cursos-ead.svg",
+    text: "Crie cursos com a sua marca, para professores e estudantes: vídeos, videoaulas, questões, quiz, podcasts e certificados, com acompanhamento de progresso.",
+    bullets: ["Vídeos, videoaulas, quiz e podcasts", "Certificados e progresso por curso", "Ideal para formação de professores"],
   },
   {
     title: "Trilha adaptativa (CAT)",
@@ -116,7 +116,7 @@ const PLATFORM_GROUPS = [
   },
   {
     title: "Recursos Edu",
-    items: ["Banco de Itens", "Trilha adaptativa (CAT)", "Integração físico-digital"],
+    items: ["Cursos EAD", "Trilha adaptativa (CAT)", "Integração físico-digital"],
   },
   {
     title: "Edu.IA",
@@ -346,7 +346,7 @@ h1,h2,h3,.display{font-family:var(--display);}
   <span class="eyebrow">Quem somos</span>
   <h2 class="h2">Uma plataforma ${edu("educacional")} completa e white label</h2>
   <div class="kicker-line"></div>
-  <p class="lead">A KodarEdu reúne, em um só lugar e com a marca da sua instituição, tudo o que uma avaliação de qualidade precisa: simulados ENEM e SAEB por TRI, Produção Textual com IA, provas com leitor OMR, Banco de Itens autoral, ${edu("Edu.IA")} para professores e relatórios acionáveis. Da criação à análise, sem depender de equipe de TI.</p>
+  <p class="lead">A KodarEdu reúne, em um só lugar e com a marca da sua instituição, tudo o que uma avaliação de qualidade precisa: simulados ENEM e SAEB por TRI, Produção Textual com IA, provas com leitor OMR, banco de itens, Cursos EAD, ${edu("Edu.IA")} para professores e relatórios acionáveis. Da criação à análise, sem depender de equipe de TI.</p>
   <div class="stats">
     ${STATS.map((s) => `<div class="stat"><div class="num">${s.value}${s.suffix}</div>${s.stars ? `<div class="st">${stars}</div>` : ""}<div class="lbl">${s.label}</div></div>`).join("")}
   </div>
@@ -382,7 +382,7 @@ h1,h2,h3,.display{font-family:var(--display);}
 <section class="page">
   <span class="eyebrow">Soluções</span>
   <h2 class="h2">${edu("Recursos Edu")} e ${edu("Edu.IA")}</h2>
-  <p class="lead">Banco autoral, trilhas adaptativas, integração físico-digital e um assistente de IA que devolve horas ao professor.</p>
+  <p class="lead">Cursos EAD, trilhas adaptativas, integração físico-digital e um assistente de IA que devolve horas ao professor.</p>
   <div class="sol-grid">${SOLUTION_CARDS.slice(4).map(card).join("")}</div>
 </section>
 
