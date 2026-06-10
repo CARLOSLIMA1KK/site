@@ -133,6 +133,25 @@ const WHITE_LABEL = [
   { title: "App na sua marca", text: "Aplicativo do aluno publicado com a sua identidade." },
 ];
 
+// Perfis de acesso (de /plataforma/acessos) + cor da inicial.
+const PERFIL_COLORS = { aluno: "var(--verde)", professor: "var(--azul)", gestao: "var(--ink)", rede: "var(--verde-700)" };
+const PERFIS = ACCESS_PROFILES.map((p) => ({ name: p.name, desc: p.desc, color: PERFIL_COLORS[p.slug] || "var(--verde)" }));
+const PERFIL_HEADERS = ["Aluno", "Professor", "Gestor/Coord.", "Rede"];
+const PERMISSIONS = [
+  ["Realizar avaliações e simulados", [1, 0, 0, 0]],
+  ["Trilha e evolução pessoal", [1, 0, 0, 0]],
+  ["Criar e aplicar provas (IA)", [0, 1, 1, 0]],
+  ["Corrigir redações (IA + OCR)", [0, 1, 1, 0]],
+  ["Leitor OMR e correção por câmera", [0, 1, 1, 0]],
+  ["Criar Cursos EAD", [0, 1, 1, 0]],
+  ["Edu.IA (assistente do professor)", [0, 1, 1, 0]],
+  ["Relatórios de turma", [0, 1, 1, 1]],
+  ["Relatórios da instituição/rede", [0, 0, 1, 1]],
+  ["Gestão de usuários", [0, 0, 1, 1]],
+  ["Visão multiunidade", [0, 0, 0, 1]],
+  ["Configurar white label", [0, 0, 1, 1]],
+];
+
 const card = (s) => `
   <div class="sol-card">
     <div class="sol-thumb">${img(s.print)}${s.mascot ? `<img class="sol-mascot" src="${asset(s.mascot)}" alt="" />` : ""}</div>
@@ -271,7 +290,22 @@ h1,h2,h3,.display{font-family:var(--display);}
 .view h3{font-size:11.5pt;margin-bottom:1.5mm;}
 .view p{font-size:9.5pt;color:var(--slate);line-height:1.45;}
 
-/* ---- Perfis ---- */
+/* ---- Acessos & Perfis ---- */
+.perfis{display:grid;grid-template-columns:repeat(4,1fr);gap:4mm;margin-top:7mm;}
+.perfil{border:1px solid var(--line);border-radius:10px;padding:5mm 4mm;background:#fff;}
+.perfil .pb{width:10mm;height:10mm;border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:var(--display);font-weight:800;font-size:13pt;color:#fff;margin-bottom:3mm;}
+.perfil h3{font-size:11pt;}
+.perfil p{font-size:8.8pt;color:var(--slate);line-height:1.4;margin-top:1.5mm;}
+.matrix{width:100%;border-collapse:separate;border-spacing:0;margin-top:7mm;border:1px solid var(--line);border-radius:12px;overflow:hidden;font-size:9.2pt;}
+.matrix th{background:var(--ink);color:#fff;font-family:var(--display);font-weight:700;padding:3.5mm 2mm;text-align:center;font-size:9pt;}
+.matrix th:first-child{text-align:left;padding-left:5mm;}
+.matrix td{padding:2.6mm 2mm;border-top:1px solid var(--line);text-align:center;}
+.matrix td:first-child{text-align:left;padding-left:5mm;color:var(--ink);font-weight:500;}
+.matrix tr:nth-child(even) td{background:var(--soft);}
+.matrix .yes{color:var(--verde);font-weight:800;font-size:11pt;}
+.matrix .no{color:#c7ccdd;}
+
+/* ---- Perfis (legado) ---- */
 .profiles{display:flex;flex-direction:column;gap:5mm;margin-top:7mm;}
 .profile{display:grid;grid-template-columns:62mm 1fr;gap:6mm;border:1px solid var(--line);
   border-radius:10px;overflow:hidden;background:#fff;}
@@ -326,11 +360,11 @@ h1,h2,h3,.display{font-family:var(--display);}
     <div class="pills">
       <span class="pill">Simulados TRI</span>
       <span class="pill">Produção Textual com IA</span>
-      <span class="pill">Leitor OMR</span>
+      <span class="pill">Cursos EAD</span>
       <span class="pill">${edu("Edu.IA")}</span>
       <span class="pill">White Label</span>
     </div>
-    <h1>A plataforma completa de avaliação.<br/>Com a sua marca.</h1>
+    <h1>A plataforma educacional completa.<br/>Com a sua marca.</h1>
     <p class="sub">${SITE.description}</p>
   </div>
   <div class="cover-hero">${img("/assets/prints/home-dashboard.svg")}<img class="cover-mascot" src="${asset("/assets/mascots/edu-ia.png")}" alt="" /></div>
@@ -381,7 +415,7 @@ h1,h2,h3,.display{font-family:var(--display);}
 <!-- 5. SOLUCOES II -->
 <section class="page">
   <span class="eyebrow">Soluções</span>
-  <h2 class="h2">${edu("Recursos Edu")} e ${edu("Edu.IA")}</h2>
+  <h2 class="h2">${edu("Recursos Edu")}</h2>
   <p class="lead">Cursos EAD, trilhas adaptativas, integração físico-digital e um assistente de IA que devolve horas ao professor.</p>
   <div class="sol-grid">${SOLUTION_CARDS.slice(4).map(card).join("")}</div>
 </section>
@@ -400,8 +434,18 @@ h1,h2,h3,.display{font-family:var(--display);}
 <!-- 7. ACESSOS E PERFIS -->
 <section class="page">
   <span class="eyebrow">Acessos & Perfis</span>
-  <h2 class="h2">Cada perfil vê só o que precisa, do aluno ao gestor</h2>
-  <div class="profiles">${ACCESS_PROFILES.map(profile).join("")}</div>
+  <h2 class="h2">Para quem é, e o que cada um acessa</h2>
+  <p class="lead">A plataforma controla acessos por nível: cada perfil vê só o que precisa, simples para quem usa e seguro para a instituição.</p>
+  <div class="perfis">
+    ${PERFIS.map((p) => `<div class="perfil"><div class="pb" style="background:${p.color}">${p.name[0]}</div><h3>${p.name}</h3><p>${p.desc}</p></div>`).join("")}
+  </div>
+  <div style="margin-top:9mm"><span class="eyebrow" style="margin-bottom:0">O que cada perfil acessa</span></div>
+  <table class="matrix">
+    <thead><tr><th>Permissão</th>${PERFIL_HEADERS.map((h) => `<th>${h}</th>`).join("")}</tr></thead>
+    <tbody>
+      ${PERMISSIONS.map(([label, flags]) => `<tr><td>${edu(label)}</td>${flags.map((on) => `<td>${on ? '<span class="yes">✓</span>' : '<span class="no">—</span>'}</td>`).join("")}</tr>`).join("")}
+    </tbody>
+  </table>
 </section>
 
 <!-- 8. WHITE LABEL -->
@@ -434,7 +478,7 @@ h1,h2,h3,.display{font-family:var(--display);}
 <!-- 10. CTA / CONTATO -->
 <section class="page surface-dark cta">
   <span class="eyebrow">Vamos conversar</span>
-  <h1>Leve a plataforma completa de avaliação para a sua instituição.</h1>
+  <h1>Leve a plataforma educacional completa para a sua instituição.</h1>
   <p class="sub">Agende uma demonstração e veja a KodarEdu funcionando com a marca da sua instituição. Implantação em poucos dias, sem equipe de TI, com suporte humano por WhatsApp.</p>
   <div class="contact">
     <div class="ci"><div class="k">E-mail</div><div class="v">${SITE.email}</div></div>
