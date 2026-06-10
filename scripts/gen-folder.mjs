@@ -155,6 +155,15 @@ const DUO = [
   ["Leitor de gabarito em lote (scanner)", "Correção em lote: digitalize as folhas de resposta no <b>scanner</b> e o leitor faz a leitura automática dos gabaritos, reduzindo o trabalho de inserção da sua equipe em <b>até 80%</b>."],
 ];
 
+// Tabela de preços (versão com valores: 30% de desconto, por = de x 0,70).
+const PRICING30 = [
+  { faixa: "Até 2.000 estudantes", de: "R$ 3,00", por: "R$ 2,10" },
+  { faixa: "2.001 a 6.000 estudantes", de: "R$ 2,29", por: "R$ 1,60" },
+  { faixa: "6.001 a 12.000 estudantes", de: "R$ 1,86", por: "R$ 1,30" },
+  { faixa: "12.001 a 20.000 estudantes", de: "R$ 1,43", por: "R$ 1,00" },
+  { faixa: "Acima de 20.000 estudantes", consulta: true },
+];
+
 // Perfis de acesso (de /plataforma/acessos) + cor da inicial.
 const PERFIL_COLORS = { aluno: "var(--verde)", professor: "var(--azul)", gestao: "var(--ink)", rede: "var(--verde-700)" };
 const PERFIS = ACCESS_PROFILES.map((p) => ({ name: p.name, desc: p.desc, color: PERFIL_COLORS[p.slug] || "var(--verde)" }));
@@ -399,6 +408,22 @@ h1,h2,h3,.display{font-family:var(--display);}
 .step .ds{color:#cfd6ff;font-size:9pt;margin-top:1mm;}
 .btn-wpp{display:inline-flex;align-items:center;gap:3mm;margin-top:9mm;background:var(--amarelo);color:var(--ink);font-family:var(--display);font-weight:800;font-size:13pt;padding:4.5mm 9mm;border-radius:999px;text-decoration:none;box-shadow:0 10px 26px rgba(255,196,0,.3);}
 .btn-wpp svg{width:18px;height:18px;}
+/* ---- Investimento / precos ---- */
+.special{display:inline-flex;align-items:center;gap:2mm;background:var(--amarelo);color:var(--ink);font-family:var(--display);font-weight:800;font-size:11pt;padding:2.5mm 5mm;border-radius:999px;margin-top:2mm;}
+.ptable{width:100%;border-collapse:separate;border-spacing:0;margin-top:8mm;border:1px solid var(--line);border-radius:12px;overflow:hidden;}
+.ptable th{background:var(--ink);color:#fff;font-family:var(--display);font-size:10pt;text-align:left;padding:4.5mm 6mm;letter-spacing:.04em;}
+.ptable td{padding:6mm;border-top:1px solid var(--line);vertical-align:middle;}
+.ptable .faixa{font-family:var(--display);font-weight:700;font-size:12pt;color:var(--ink);}
+.ptable .de{color:var(--slate);text-decoration:line-through;font-size:12pt;}
+.ptable .por{font-family:var(--display);font-weight:800;font-size:18pt;color:var(--verde-700);}
+.ptable .por small{display:block;font-size:8.5pt;color:var(--slate);font-weight:600;letter-spacing:.02em;}
+.ptable tr:nth-child(even) td{background:var(--soft);}
+.recap{margin-top:8mm;border:1px dashed var(--verde);background:var(--verde-100);border-radius:10px;padding:5mm 6mm;}
+.recap b{color:var(--verde-700);}
+.recap p{font-size:10pt;color:var(--ink);line-height:1.5;}
+.valid{display:flex;gap:8mm;margin-top:7mm;flex-wrap:wrap;font-size:10pt;color:var(--slate);}
+.valid b{color:var(--ink);}
+.note{margin-top:5mm;font-size:8.5pt;color:var(--slate);line-height:1.5;}
 </style></head>
 <body>
 
@@ -540,6 +565,7 @@ h1,h2,h3,.display{font-family:var(--display);}
   </div>
 </section>
 
+<!--PRICING_PAGE-->
 <!-- 10. CTA / PROXIMOS PASSOS -->
 <section class="page surface-dark cta">
   <span class="eyebrow">Próximos passos</span>
@@ -566,30 +592,59 @@ h1,h2,h3,.display{font-family:var(--display);}
 
 </body></html>`;
 
-// ---- render --------------------------------------------------------------
-const OUT = join(PUBLIC, "kodaredu-folder-comercial.pdf");
+// ---- página de preço (30%) ----------------------------------------------
+const pricingPage = `
+<!-- PRECOS (30%) -->
+<section class="page">
+  <span class="eyebrow">Investimento</span>
+  <h2 class="h2">Condição especial para a sua instituição</h2>
+  <div><span class="special">★ Oferta especial · 30% de desconto em todas as assinaturas</span></div>
+  <p class="lead">Condição exclusiva desta proposta: <b>30% de desconto</b> em todas as faixas. Quanto maior a base de estudantes, menor o valor por estudante, chegando a <b>R$ 1,00</b>.</p>
+  <table class="ptable">
+    <thead><tr><th>Faixa de estudantes</th><th>De</th><th>Por (−30%)</th></tr></thead>
+    <tbody>
+      ${PRICING30.map((p) =>
+        p.consulta
+          ? `<tr><td class="faixa">${p.faixa}</td><td class="de">—</td><td><span class="por" style="font-size:13pt">Sob consulta</span></td></tr>`
+          : `<tr><td class="faixa">${p.faixa}</td><td class="de">${p.de}</td><td><span class="por">${p.por}<small>por estudante / mês</small></span></td></tr>`
+      ).join("")}
+    </tbody>
+  </table>
+  <div class="recap">
+    <p><b>Tudo incluso na mensalidade:</b> sustentação, evolução contínua, suporte 24/7, SLA com tempo de resposta e atendimento técnico aos professores. White label completo. <b>Implantação (embarque de avaliações, usuários e conteúdos, infraestrutura dedicada e branding): prazo e valor a negociar conforme o plano.</b></p>
+  </div>
+  <div class="valid">
+    <span><b>Proposta válida por 30 dias.</b></span>
+    <span><b>Garantia de 30 dias</b> sem risco.</span>
+    <span><b>Implantação:</b> prazo conforme o plano.</span>
+  </div>
+  <p class="note">Valores mensais por estudante ativo, já com 30% de desconto da oferta especial. A faixa é definida pelo total de estudantes; acima de 20.000, valores sob consulta. Cobrança recorrente com nota fiscal.</p>
+</section>`;
+
+// ---- render (dois PDFs: sem preços e com preços 30%) ---------------------
+const VARIANTS = [
+  { out: "kodaredu-folder-comercial.pdf", html: html.replace("<!--PRICING_PAGE-->", ""), prev: "folder" },
+  { out: "kodaredu-plataforma-completa-precos.pdf", html: html.replace("<!--PRICING_PAGE-->", pricingPage), prev: "precos" },
+];
+
 const browser = await puppeteer.launch({
   headless: "new",
   args: ["--no-sandbox", "--disable-setuid-sandbox"],
 });
-const page = await browser.newPage();
-await page.setContent(html, { waitUntil: "networkidle0" });
-await page.evaluateHandle("document.fonts.ready");
-await page.pdf({
-  path: OUT,
-  format: "A4",
-  printBackground: true,
-  preferCSSPageSize: true,
-});
-
-// Previews PNG (apenas quando PREVIEW=1) para conferencia visual.
-if (process.env.PREVIEW === "1") {
-  await page.setViewport({ width: 794, height: 1123, deviceScaleFactor: 1.4 });
-  const secs = await page.$$("section.page");
-  for (let i = 0; i < secs.length; i++) {
-    await secs[i].screenshot({ path: `/tmp/folder-preview/p${i + 1}.png` });
+for (const v of VARIANTS) {
+  const page = await browser.newPage();
+  await page.setContent(v.html, { waitUntil: "networkidle0" });
+  await page.evaluateHandle("document.fonts.ready");
+  await page.pdf({ path: join(PUBLIC, v.out), format: "A4", printBackground: true, preferCSSPageSize: true });
+  if (process.env.PREVIEW === "1") {
+    await page.setViewport({ width: 794, height: 1123, deviceScaleFactor: 1.4 });
+    const secs = await page.$$("section.page");
+    for (let i = 0; i < secs.length; i++) {
+      await secs[i].screenshot({ path: `/tmp/folder-preview/${v.prev}-p${i + 1}.png` });
+    }
+    console.log(`Previews ${v.prev}:`, secs.length);
   }
-  console.log("Previews:", secs.length);
+  await page.close();
+  console.log("Gerado:", v.out);
 }
 await browser.close();
-console.log("Folder gerado:", OUT);
