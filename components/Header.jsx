@@ -70,9 +70,11 @@ export default function Header() {
 
           {/* Right actions */}
           <div className="hidden items-center gap-2.5 lg:flex">
+            {/* Botão "Entrar" temporariamente desativado
             <Button href={SITE.login} external variant="secondary" size="sm">
               Entrar
             </Button>
+            */}
             <Button href={SITE.ctaPrimaryHref} variant="primary" size="sm">
               Quero uma demonstração
             </Button>
@@ -216,9 +218,11 @@ function MobileDrawer({ onClose }) {
           <Button href={SITE.ctaPrimaryHref} variant="primary" className="w-full" onClick={onClose}>
             {SITE.ctaPrimary}
           </Button>
+          {/* Botão "Entrar" temporariamente desativado
           <Button href={SITE.login} external variant="secondary" className="w-full">
             Entrar na plataforma
           </Button>
+          */}
         </div>
       </motion.aside>
     </>
