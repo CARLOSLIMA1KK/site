@@ -133,6 +133,28 @@ const WHITE_LABEL = [
   { title: "App na sua marca", text: "Aplicativo do aluno publicado com a sua identidade." },
 ];
 
+const INCLUSO = [
+  ["Sustentação completa", "Infra em nuvem, atualizações e manutenção por nossa conta."],
+  ["Evolução contínua", "Novas funcionalidades e melhorias, sem cobrança extra."],
+  ["Suporte 24/7", "Atendimento humano todos os dias, inclusive fins de semana."],
+  ["SLA com tempo de resposta", "Prioridades e prazos definidos em contrato."],
+  ["Auxílio no embarque", "Onboarding guiado, migração de dados e configuração da marca."],
+  ["Atendimento aos professores", "Equipe técnica da Kodar apoia os professores no uso."],
+  ["Segurança e LGPD", "Conformidade desde a arquitetura; dados protegidos."],
+  ["White label completo", "A plataforma inteira com a marca da sua instituição."],
+];
+
+const SLA = [
+  ["Crítico (P1)", "≤ 4 horas", "Plataforma indisponível"],
+  ["Alto (P2)", "≤ 8 horas", "Função essencial afetada"],
+  ["Padrão (P3)", "≤ 24h úteis", "Dúvidas e ajustes"],
+];
+
+const DUO = [
+  ["Itens autorais ou os seus itens", "Desenvolvemos as provas com <b>itens autorais</b> da KodarEdu ou <b>cadastramos as provas e os itens da sua instituição</b>, respeitando a metodologia aplicada. Você escolhe o caminho."],
+  ["Leitor de gabarito em lote (scanner)", "Correção em lote: digitalize as folhas de resposta no <b>scanner</b> e o leitor faz a leitura automática dos gabaritos, reduzindo o trabalho de inserção da sua equipe em <b>até 80%</b>."],
+];
+
 // Perfis de acesso (de /plataforma/acessos) + cor da inicial.
 const PERFIL_COLORS = { aluno: "var(--verde)", professor: "var(--azul)", gestao: "var(--ink)", rede: "var(--verde-700)" };
 const PERFIS = ACCESS_PROFILES.map((p) => ({ name: p.name, desc: p.desc, color: PERFIL_COLORS[p.slug] || "var(--verde)" }));
@@ -350,6 +372,33 @@ h1,h2,h3,.display{font-family:var(--display);}
 .footer-brand{margin-top:auto;padding-top:8mm;border-top:1px solid rgba(255,255,255,.16);
   display:flex;justify-content:space-between;align-items:center;font-size:10pt;color:#cfd6ff;}
 .footer-brand .brand{font-size:15pt;}
+.cover-foot a{color:#cfd6ff;text-decoration:none;}
+.cover-foot a b{color:#fff;}
+.contact .ci a{color:#fff;text-decoration:none;}
+/* ---- Tudo incluso ---- */
+.incluso{display:grid;grid-template-columns:1fr 1fr;gap:3.5mm 6mm;margin-top:7mm;}
+.inc{display:flex;gap:3mm;align-items:flex-start;}
+.inc .ck{flex:none;width:7mm;height:7mm;border-radius:50%;background:var(--verde-100);color:var(--verde-700);display:flex;align-items:center;justify-content:center;font-weight:800;font-size:10pt;}
+.inc b{font-size:10.5pt;}
+.inc span{font-size:9.5pt;color:var(--slate);}
+.sla{display:grid;grid-template-columns:repeat(3,1fr);gap:4mm;margin-top:8mm;}
+.sla .s{border:1px solid var(--line);border-radius:9px;padding:5mm;background:var(--soft);}
+.sla .lvl{font-family:var(--display);font-weight:800;font-size:11pt;color:var(--ink);}
+.sla .tm{color:var(--verde-700);font-weight:800;font-size:14pt;margin-top:1mm;}
+.sla .ds{font-size:8.5pt;color:var(--slate);margin-top:1mm;}
+.duo{display:grid;grid-template-columns:1fr 1fr;gap:5mm;margin-top:7mm;}
+.duo-card{border:1px solid var(--line);border-left:3px solid var(--verde);border-radius:10px;padding:5mm;background:var(--soft);}
+.duo-h{font-family:var(--display);font-weight:800;font-size:11pt;color:var(--ink);margin-bottom:2mm;}
+.duo-card p{font-size:9.6pt;line-height:1.5;color:var(--slate);}
+.duo-card b{color:var(--ink);}
+/* ---- Passos + botao WhatsApp ---- */
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:5mm;margin-top:9mm;}
+.step{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.18);border-radius:10px;padding:5mm;}
+.step .n{font-family:var(--display);font-weight:800;color:var(--amarelo-300);font-size:13pt;}
+.step .tt{color:#fff;font-weight:600;margin-top:1.5mm;font-size:11pt;}
+.step .ds{color:#cfd6ff;font-size:9pt;margin-top:1mm;}
+.btn-wpp{display:inline-flex;align-items:center;gap:3mm;margin-top:9mm;background:var(--amarelo);color:var(--ink);font-family:var(--display);font-weight:800;font-size:13pt;padding:4.5mm 9mm;border-radius:999px;text-decoration:none;box-shadow:0 10px 26px rgba(255,196,0,.3);}
+.btn-wpp svg{width:18px;height:18px;}
 </style></head>
 <body>
 
@@ -369,9 +418,8 @@ h1,h2,h3,.display{font-family:var(--display);}
   </div>
   <div class="cover-hero">${img("/assets/prints/home-dashboard.svg")}<img class="cover-mascot" src="${asset("/assets/mascots/edu-ia.png")}" alt="" /></div>
   <div class="cover-foot">
-    <span><b>Site</b> &nbsp;kodaredu.com.br</span>
-    <span><b>E-mail</b> &nbsp;${SITE.email}</span>
-    <span><b>WhatsApp</b> &nbsp;${SITE.whatsappNumber}</span>
+    <a href="https://kodaredu.com.br"><b>Site</b> &nbsp;kodaredu.com.br</a>
+    <a href="mailto:${SITE.email}"><b>E-mail</b> &nbsp;${SITE.email}</a>
   </div>
 </section>
 
@@ -459,6 +507,23 @@ h1,h2,h3,.display{font-family:var(--display);}
   </div>
 </section>
 
+<!-- 8b. TUDO INCLUSO -->
+<section class="page">
+  <span class="eyebrow">Tudo incluso</span>
+  <h2 class="h2">Mais que uma plataforma: um parceiro de operação</h2>
+  <p class="lead">Você não leva só um software: leva uma operação completa, no ar e evoluindo, com suporte humano de verdade, sem custos ocultos.</p>
+  <div class="duo">
+    ${DUO.map(([h, d]) => `<div class="duo-card"><div class="duo-h">${h}</div><p>${d}</p></div>`).join("")}
+  </div>
+  <div class="incluso">
+    ${INCLUSO.map(([b, d]) => `<div class="inc"><span class="ck">✓</span><div><b>${edu(b)}.</b> <span>${edu(d)}</span></div></div>`).join("")}
+  </div>
+  <div style="margin-top:10mm"><span class="eyebrow" style="margin-bottom:0">SLA · tempo de resposta</span></div>
+  <div class="sla">
+    ${SLA.map(([l, tm, d]) => `<div class="s"><div class="lvl">${l}</div><div class="tm">${tm}</div><div class="ds">${d}</div></div>`).join("")}
+  </div>
+</section>
+
 <!-- 9. PARA QUEM -->
 <section class="page">
   <span class="eyebrow">Para quem</span>
@@ -475,20 +540,23 @@ h1,h2,h3,.display{font-family:var(--display);}
   </div>
 </section>
 
-<!-- 10. CTA / CONTATO -->
+<!-- 10. CTA / PROXIMOS PASSOS -->
 <section class="page surface-dark cta">
-  <span class="eyebrow">Vamos conversar</span>
+  <span class="eyebrow">Próximos passos</span>
   <h1>Leve a plataforma educacional completa para a sua instituição.</h1>
-  <p class="sub">Agende uma demonstração e veja a KodarEdu funcionando com a marca da sua instituição. Implantação em poucos dias, sem equipe de TI, com suporte humano por WhatsApp.</p>
-  <div class="contact">
-    <div class="ci"><div class="k">E-mail</div><div class="v">${SITE.email}</div></div>
-    <div class="ci"><div class="k">WhatsApp / Telefone</div><div class="v">${SITE.whatsappNumber}</div></div>
-    <div class="ci"><div class="k">Plataforma</div><div class="v">app.kodaredu.com.br</div></div>
-    <div class="ci"><div class="k">Site</div><div class="v">kodaredu.com.br</div></div>
+  <p class="sub">Veja a KodarEdu funcionando com a sua marca. Implantação em poucos dias, sem equipe de TI, com suporte humano dedicado.</p>
+  <div class="steps">
+    <div class="step"><div class="n">01</div><div class="tt">Demonstração</div><div class="ds">Conheça a plataforma com a marca da sua instituição.</div></div>
+    <div class="step"><div class="n">02</div><div class="tt">Implantação</div><div class="ds">Embarque de dados, infraestrutura e branding white label.</div></div>
+    <div class="step"><div class="n">03</div><div class="tt">Operação</div><div class="ds">No ar, com suporte 24/7 e atendimento aos professores.</div></div>
   </div>
-  <div class="guarantee">
-    <span><b>Garantia de 30 dias.</b> Sem risco para a instituição.</span>
-    <span><b>Planos sob consulta,</b> do essencial ao enterprise de redes.</span>
+  <a class="btn-wpp" href="${SITE.whatsapp}">
+    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 00-8.5 15.3L2 22l4.8-1.5A10 10 0 1012 2zm0 1.8a8.2 8.2 0 11-4.2 15.2l-.3-.2-2.8.9.9-2.7-.2-.3A8.2 8.2 0 0112 3.8zm4.7 10.3c-.3-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 01-2-1.2 7.5 7.5 0 01-1.4-1.7c-.1-.3 0-.4.1-.5l.4-.5.3-.4v-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 00-.7.3 3 3 0 00-.9 2.2c0 1.3.9 2.5 1.1 2.7s1.9 2.9 4.6 4c1.6.7 2.2.7 3 .6.5 0 1.5-.6 1.7-1.2s.2-1.1.1-1.2l-.4-.2z"/></svg>
+    Fale com um especialista
+  </a>
+  <div class="contact">
+    <div class="ci"><div class="k">E-mail</div><div class="v"><a href="mailto:${SITE.email}">${SITE.email}</a></div></div>
+    <div class="ci"><div class="k">Site</div><div class="v"><a href="https://kodaredu.com.br">kodaredu.com.br</a></div></div>
   </div>
   <div class="footer-brand">
     <div class="brand">Kodar${edu("Edu")}</div>
