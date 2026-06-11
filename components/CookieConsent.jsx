@@ -28,7 +28,8 @@ export default function CookieConsent() {
       /* ignore */
     }
     setOpen(false);
-    // TODO: ativar/desativar tracking (GA4/Pixel) conforme `value` ("accepted" | "rejected").
+    // Avisa quem ouve (ex.: ClarityAnalytics) pra ligar/desligar tracking na hora.
+    window.dispatchEvent(new CustomEvent("kodaredu:consent", { detail: value }));
   }
 
   if (!open) return null;

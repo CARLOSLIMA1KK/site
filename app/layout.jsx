@@ -1,10 +1,10 @@
 import "./globals.css";
-import Script from "next/script";
 import { Sora, Public_Sans } from "next/font/google";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import BackToTop from "@/components/BackToTop";
 import CookieConsent from "@/components/CookieConsent";
+import ClarityAnalytics from "@/components/ClarityAnalytics";
 import { SITE } from "@/lib/site";
 
 const display = Sora({
@@ -57,14 +57,6 @@ export default function RootLayout({ children }) {
   return (
     <html lang="pt-BR" className={`${display.variable} ${body.variable}`}>
       <body className="font-sans antialiased">
-        {/* Microsoft Clarity — analytics de comportamento (heatmaps/gravações) */}
-        <Script id="ms-clarity" strategy="afterInteractive">
-          {`(function(c,l,a,r,i,t,y){
-              c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-              t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-              y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-            })(window, document, "clarity", "script", "x5gh5tf7nf");`}
-        </Script>
         <a
           href="#conteudo"
           className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[100] focus:rounded-md focus:bg-verde-900 focus:px-4 focus:py-2 focus:text-white"
@@ -76,6 +68,7 @@ export default function RootLayout({ children }) {
         <Footer />
         <BackToTop />
         <CookieConsent />
+        <ClarityAnalytics />
       </body>
     </html>
   );
