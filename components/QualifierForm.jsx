@@ -18,8 +18,10 @@ const PROFILES = ["Aluno", "Professor", "Coordenador(a)", "Diretor(a)", "Gestor(
 export default function QualifierForm() {
   const [sent, setSent] = useState(false);
   const [errors, setErrors] = useState({});
+  const [loading, setLoading] = useState(false);
+  const [errorMsg, setErrorMsg] = useState("");
 
-  function handleSubmit(e) {
+  async function handleSubmit(e) {
     e.preventDefault();
     const form = e.currentTarget;
     const data = Object.fromEntries(new FormData(form));
@@ -29,9 +31,26 @@ export default function QualifierForm() {
     if (!data.email?.trim() || !/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(data.email)) next.email = "E-mail inválido.";
     if (!data.consent) next.consent = "É necessário concordar com a Política de Privacidade.";
     setErrors(next);
-    if (Object.keys(next).length === 0) {
-      // TODO: integrar com CRM/endpoint + tracking GA4/Pixel (placeholder).
-      setSent(true);
+    if (Object.keys(next).length > 0) return;
+
+    setLoading(true);
+    setErrorMsg("");
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(data),
+      });
+      const json = await res.json().catch(() => ({}));
+      if (res.ok && json.ok) {
+        setSent(true);
+      } else {
+        setErrorMsg(json.error || "Não foi possível enviar agora. Tente pelo WhatsApp.");
+      }
+    } catch {
+      setErrorMsg("Não foi possível enviar agora. Tente pelo WhatsApp.");
+    } finally {
+      setLoading(false);
     }
   }
 
@@ -82,9 +101,18 @@ export default function QualifierForm() {
       </label>
       {errors.consent && <p className="mt-1 text-sm text-red-600">{errors.consent}</p>}
 
+      {errorMsg && (
+        <p className="mt-4 rounded-md border border-red-200 bg-red-50 px-4 py-2.5 text-sm text-red-700">
+          {errorMsg}{" "}
+          <a href={SITE.whatsapp} target="_blank" rel="noopener noreferrer" className="font-semibold underline">
+            Falar no WhatsApp
+          </a>
+        </p>
+      )}
+
       <div className="mt-6">
-        <Button type="submit" variant="primary" size="lg" arrow className="w-full sm:w-auto">
-          Quero uma demonstração
+        <Button type="submit" variant="primary" size="lg" arrow disabled={loading} className="w-full disabled:cursor-not-allowed disabled:opacity-60 sm:w-auto">
+          {loading ? "Enviando..." : "Quero uma demonstração"}
         </Button>
       </div>
     </form>
