@@ -39,7 +39,8 @@ const SECTIONS = [
   },
   {
     h: "8. Contato do Encarregado (DPO)",
-    p: "Para exercer seus direitos ou esclarecer dúvidas, entre em contato pelo e-mail privacidade@kodaredu.com.br. [Placeholder, substituir pelo canal oficial.]",
+    p: "Para exercer seus direitos ou esclarecer dúvidas sobre o tratamento dos seus dados, entre em contato com o nosso Encarregado pelo e-mail ",
+    email: "contato@kodartech.com.br",
   },
 ];
 
@@ -49,16 +50,23 @@ export default function PrivacidadePage() {
       <div className="mx-auto max-w-3xl">
         <Pill tone="verde">LGPD</Pill>
         <h1 className="mt-4 font-display text-h2 font-bold text-ink">Política de Privacidade</h1>
-        <p className="mt-3 text-sm text-slate">
-          Última atualização: junho de 2026 ·{" "}
-          <span className="font-medium">Documento modelo, revisar com o jurídico antes da publicação.</span>
-        </p>
+        <p className="mt-3 text-sm text-slate">Última atualização: junho de 2026.</p>
 
         <div className="mt-10 space-y-8">
           {SECTIONS.map((s) => (
             <section key={s.h}>
               <h2 className="font-display text-xl font-bold text-ink">{s.h}</h2>
-              <p className="mt-2 leading-relaxed text-slate">{s.p}</p>
+              <p className="mt-2 leading-relaxed text-slate">
+                {s.p}
+                {s.email && (
+                  <>
+                    <a href={`mailto:${s.email}`} className="font-semibold text-verde-700 underline">
+                      {s.email}
+                    </a>
+                    .
+                  </>
+                )}
+              </p>
             </section>
           ))}
         </div>
